@@ -1,0 +1,12 @@
+:root {
+  --color1at: #f4a942;
+  --color2at: #ffdc73;
+  --color3at: #f4a942;
+  --color4at: #f4a942;
+  --image-url-header: url("https://timotheechalamet.net/photos/albums/uploads/Photoshoots/2023/005/TCF-017.jpg");
+  --image-url-artist: url("https://timotheechalamet.net/photos/albums/uploads/Photoshoots/2023/005/TCF-018.jpg");
+}
+
+.artist-header{
+  background-position: center left;
+}

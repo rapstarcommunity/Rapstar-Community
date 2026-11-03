@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <title>Top Songs</title>
+  <style>
+    @media (max-width: 1200px) {
+      .menu-buttons button {
+        padding: 10px;
+        font-size: 12px;
+      }
+
+      .dropbtn {
+        padding: 10px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .menu-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu-buttons button, .dropbtn {
+        margin: 5px 0;
+      }
+
+      .container{
+        margin-top: 600px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .menu-buttons button, .dropbtn {
+        padding: 5px 10px;
+        font-size: 10px;
+      }
+
+      .container{
+        margin-top: 600px;
+      }
+    }
+
+    footer {
+      background-color: #333;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), -2px -2px 10px rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-family: 'Commons Regular', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      padding: 20px;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 0px;
+    }
+
+    footer:hover {
+      color: #773797;
+      cursor: pointer;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #333;
+      border-top: 5px solid;
+      border-image: linear-gradient(to right, #773797, whitesmoke);
+      border-image-slice: 1;
+      color: #fff;
+      position: fixed;
+      left: 0px;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), -2px -2px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .menu-buttons {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .menu-buttons button {
+      text-transform: uppercase;
+      font-family: 'Commons Regular', sans-serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+      background-color: #773797;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .menu-buttons button:hover{
+      background-color: #7ea;
+      cursor: pointer;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      min-width: 200px;
+      z-index: 1;
+      margin-left: 10px;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content a {
+      color: white;
+      font-family: 'Commons Regular', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 12px;
+      margin-top: 5px;
+      padding: 8px 8px;
+      text-decoration: none;
+      display: block;
+      border-radius: 15px;
+      background-color: #773797;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #77eeaa;
+      transition-duration: 1s;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      transition-duration: 1s;
+    }
+
+    .dropbtn {
+      text-transform: uppercase;
+      font-family: 'Commons Regular', sans-serif;
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: white;
+      background-color: #77eeaa;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+      transition-duration: 1s;
+    }
+
+    .dropbtn:hover {
+      background-color: #7ea;
+      transition-duration: 1s;
+    }
+
+    .menu-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @font-face {
+      font-family: Spotify Chart;
+      src: url('../../fontes/marbletext-condensedsemibold.otf') format('opentype');
+    }
+    @font-face {
+      font-family: Spotify Chart Bold;
+      src: url('../../fontes/IntegralCF-Bold.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: Spotify Chart Titles;
+      src: url('../../fontes/Florida Serial Medium Regular.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: Spotify Chart Names;
+      src: url('../../fontes/Cerebri Sans SemiBold.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: Spotify;
+      src: url('../../fontes/GothamBold.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Commons Regular';
+      src: url('../../fontes/TT Commons Regular.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Commons Bold';
+      src: url('../../fontes/TT Commons Bold.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Commons DemiBold';
+      src: url('../../fontes/TT Commons DemiBold.otf') format('opentype');
+    }
+
+    body {
+      background-image: linear-gradient(to top, whitesmoke 10%, #69358C);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    .header-date {
+      margin-top: 20%;
+      font-family: Spotify Chart Bold, sans-serif;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #773797;
+      font-size: 25px;
+      color: #fff;
+      padding: 10px 10px 15px 20px;
+      width: 670px;
+      letter-spacing: 1px;
+      margin-bottom: -6px;
+      border-radius: 10px 10px 0 0;
+      position: relative;
+    }
+
+    .spotify-logo {
+      width: 24px;
+      height: 24px;
+    }
+
+    .top-songs-header {
+      display: flex;
+      align-items: center;
+      background-color: #F4EFEC;
+      color: #773797;
+      padding-left: 20px;
+      width: 700px;
+      box-sizing: border-box;
+    }
+
+    .header-text {
+      font-family: Spotify Chart, sans-serif;
+      flex-grow: 1;
+    }
+
+    .header-title {
+      font-family: Spotify Chart, sans-serif;
+      font-size: 115px;
+      letter-spacing: -3px;
+      margin-top: -40px;
+    }
+
+    .header-subtitle {
+      font-family: Spotify Chart Bold, sans-serif;
+      font-size: 43px;
+      letter-spacing: 0px;
+      margin: -123px 0 20px;
+      transform: scaleY(0.7);
+      transform-origin: center;
+    }
+
+    .header-image {
+      width: 184px;
+      height: 184px;
+      background-size: cover;
+      transition: 1s;
+    }
+
+    .header-image:hover{
+      transition: 1s;
+      cursor: pointer;
+      transform: scale(1.1);
+      z-index: 9999;
+    }
+
+    .container {
+      position: relative;
+      width: 700px;
+      border-top: #E3D8DE solid 2px;
+      background-color: #F4EFEC;
+      padding: 20px 20px 0px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .table-container {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .table-column {
+      width: 47.0%;
+    }
+
+    .table {
+      table-layout: auto;
+      width: 100%;
+      margin-bottom: 0;
+      margin-top: -22px;
+    }
+
+    .table tbody tr {
+      border-top: 2px solid #f0f0f0;
+    }
+
+    .song-cell{
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid #E3D8DE;
+      border-right: 2px solid #E3D8DE;
+      padding: 10px;
+      min-height: 130px;
+      height: 130px;
+      box-sizing: border-box;
+      width: 351px;
+      margin-bottom: -4px;
+      margin-left: -22px;
+      transition: 1s;
+    }
+
+    .song-cell-2{
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid #E3D8DE;
+      min-height: 130px;
+      height: 130px;
+      box-sizing: border-box;
+      width: 351px;
+      margin-bottom: -4px;
+      margin-left: -22px;
+      transition: 1s;
+    }
+
+    .song-cell-4{
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      min-height: 132px;
+      height: 132px;
+      box-sizing: border-box;
+      width: 351px;
+      margin-bottom: -4px;
+      margin-left: -22px;
+      transition: 1s;
+    }
+
+    .song-cell-5{
+      border-right: 2px solid #E3D8DE;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      min-height: 130px;
+      height: 130px;
+      box-sizing: border-box;
+      width: 351px;
+      margin-bottom: -4px;
+      margin-left: -22px;
+      transition: 1s;
+    }
+
+    .song-cell:hover, .song-cell-2:hover, .song-cell-4:hover, .song-cell-5:hover{
+      transition: 1s;
+      background-color: #F4EFEC;
+      transform: scale(1.1);
+      cursor: pointer;
+      border: 2px solid #E3D8DE;
+    }
+
+    .song-cell img, .song-cell-2 img, .song-cell-4 img, .song-cell-5 img {
+      padding-left: 20px;
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    .song-info {
+      text-align: left;
+      flex-grow: 1;
+    }
+
+    .song-title {
+      text-transform: uppercase;
+      font-family: Spotify Chart, sans-serif;
+      font-size: 20px;
+      line-height: 20px;
+      color: #69358C;
+      margin: 0 0 5px 0;
+    }
+
+    .artist-name {
+      font-size: 14px;
+      font-family: Spotify Chart Names, sans-serif;
+      color: #69358C;
+      margin: 0;
+    }
+
+    .song-cell.rank-1 {
+      background-color: #DBCADC;
+      color: #333;
+    }
+
+    .rank {
+      font-family: Spotify Chart, sans-serif;
+      padding-left: 20px;
+      font-size: 1.8rem;
+      color: #69358C;
+      text-align: center;
+      margin-right: 10px;
+    }
+
+    .table-wrapper {
+      margin-top: 10%;
+      margin-bottom: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        top: -601px;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+<header id="header">
+  <div class="header-content">
+    <div class="menu-buttons">
+      <button class="home-btn">
+        <a href="../../index.html" class="menu-link"><i class="fas fa-home"></i></a>
+      </button>
+
+      <div class="dropdown">
+        <button class="dropbtn">Charts <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href='../../charts/billboard/hot100.html'>Billboard Hot 100</a>
+          <a href='../../charts/billboard/billboard200.html'>Billboard 200</a>
+          <a href="../../charts/billboard/artist100.html">Billboard Artist 100</a>
+          <a href='../../charts/spotify/spotify-singles.html'>Spotify Global Singles</a>
+          <a href='../../charts/spotify/spotify-albums.html'>Spotify Global Albums</a>
+        </div>
+      </div>
+      <button><a class='menu-link' href='../../metacritic/metacritic.html'>Metacritic</a></button>
+      <button><a href="https://discord.gg/PxNUBCHF4Q" class="menu-link">Discord</a></button>
+      <button><a class='menu-link' href='../../artistas/linhadotempo.html'>Artistas</a></button>
+    </div>
+  </div>
+</header>
+
+
+<div class="container-fluid">
+  <div class="table-wrapper">
+    <div class="header-date col-md-12 d-flex">
+      <span>FEBRUARY 16 - 22</span>
+      <img src="https://i.imgur.com/MR2U2Pw.png" alt="Spotify Logo" class="spotify-logo">
+    </div>
+
+    <div class="top-songs-header col-md-12 d-flex">
+      <div class="header-text">
+        <h1 class="header-title">TOP SONGS</h1>
+        <p class="header-subtitle">GLOBAL</p>
+      </div>
+      <div class="header-image" style="background-image: url('https://ffw.uol.com.br/wp-content/uploads/2025/01/img_0224.jpg');"></div>
+    </div>
+
+    <div class="container col-md-12 d-flex">
+      <div class="table-container">
+        <!-- Primeira Coluna -->
+        <div class="table-column">
+          <table class="table table-borderless">
+            <tbody>
+            <!-- Linha 1 -->
+            <tr>
+              <td class="song-cell rank-1">
+                <span class="rank" id="pos1"></span>
+                <div class="song-cover" id="img1">
+                  <img id="imagem1" alt="Imagem 1" class="tabela-imagem">
+                </div>
+                <div class="song-info">
+                  <p class="song-title" id="song1"></p>
+                  <p class="artist-name" id="artist1"></p>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Linha 2 -->
+            <tr>
+              <td class="song-cell">
+                <span class="rank" id="pos2"></span>
+                <div class="song-cover" id="img2">
+                  <img id="imagem2" alt="Imagem 2" class="tabela-imagem">
+                </div>
+                <div class="song-info">
+                  <p class="song-title" id="song2"></p>
+                  <p class="artist-name" id="artist2"></p>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Linha 3 -->
+            <tr>
+              <td class="song-cell">
+                <span class="rank" id="pos3"></span>
+                <div class="song-cover" id="img3">
+                  <img id="imagem3" alt="Imagem 3" class="tabela-imagem">
+                </div>
+                <div class="song-info">
+                  <p class="song-title" id="song3"></p>
+                  <p class="artist-name" id="artist3"></p>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Linha 4 -->
+            <tr>
+              <td class="song-cell">
+                <span class="rank" id="pos4"></span>
+                <div class="song-cover" id="img4">
+                  <img id="imagem4" alt="Imagem 4" class="tabela-imagem">
+                </div>
+                <div class="song-info">
+                  <p class="song-title" id="song4"></p>
+                  <p class="artist-name" id="artist4"></p>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Linha 5 -->
+            <tr>
+              <td class="song-cell-5">
+                <span class="rank" id="pos5"></span>
+                <div class="song-cover" id="img5">
+                  <img id="imagem5" alt="Imagem 5" class="tabela-imagem">
+                </div>
+                <div class="song-info">
+                  <p class="song-title" id="song5"></p>
+                  <p class="artist-name" id="artist5"></p>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Segunda Coluna -->
+        <div class="table-column">
+          <table class="table table-borderless">
+            <tbody>
+            <!-- Linha 1 -->
+            <tr>
+              <td class="song-cell-2">
+                <span class="rank" id="pos6"></span>
+                <div class="song-cover" id="img6">
+                  <img id="imagem6" alt="Imagem 6" class="tabela-imagem">
+                </div>
+                <div class="song-info">
+                  <p class="song-title" id="song6"></p>
+                  <p class="artist-name" id="artist6"></p>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Linha 2 -->
+            <tr>
+              <td class="song-cell-2">
+                <span class="rank" id="pos7"></span>
+                <div class="song-cover" id="img7">
+                  <img id="imagem7" alt="Imagem 7" class="tabela-imagem">
+                </div>
+                <div class="song-info">
+                  <p class="song-title" id="song7"></p>
+                  <p class="artist-name" id="artist7"></p>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Linha 3 -->
+            <tr>
+              <td class="song-cell-2">
+                <span class="rank" id="pos8"></span>
+                <div class="song-cover" id="img8">
+                  <img id="imagem8" alt="Imagem 8" class="tabela-imagem">
+                </div>
+                <div class="song-info">
+                  <p class="song-title" id="song8"></p>
+                  <p class="artist-name" id="artist8"></p>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Linha 4 -->
+            <tr>
+              <td class="song-cell-2">
+                <span class="rank" id="pos9"></span>
+                <div class="song-cover" id="img9">
+                  <img id="imagem9" alt="Imagem 9" class="tabela-imagem">
+                </div>
+                <div class="song-info">
+                  <p class="song-title" id="song9"></p>
+                  <p class="artist-name" id="artist9"></p>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Linha 5 -->
+            <tr>
+              <td class="song-cell-4">
+                <span class="rank" id="pos10"></span>
+                <div class="song-cover" id="img10">
+                  <img id="imagem10" alt="Imagem 6" class="tabela-imagem">
+                </div>
+                <div class="song-info">
+                  <p class="song-title" id="song10"></p>
+                  <p class="artist-name" id="artist10"></p>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <footer>
+    <p>© 2024 Star World Community - Beta</p>
+  </footer>
+</div>
+
+<script src="../../artistas/singles.js"></script>
+<script src="../spotify/script-spotify-singles.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+:root {
+  --color1at: #004c47;
+  --color2at: #004c47;
+  --color3at: #006d5b;
+  --color4at: #006d5b;
+  --image-url-header: url("https://i.imgur.com/Hpf2yIC.png");
+  --image-url-artist: url("https://i.imgur.com/w4S8Xo3.png");
+}
+
+.artist-header{
+  background-position: center left;
+}

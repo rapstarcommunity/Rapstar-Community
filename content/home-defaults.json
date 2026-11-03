@@ -1,0 +1,97 @@
+{
+  "releasesTitle": "Últimos lançamentos",
+  "highlightsTitle": "Destaques",
+  "labelsTitle": "Gravadoras Oficiais",
+  "footer": "© 2024 Star World Community - Beta",
+  "releases": [
+    {
+      "title": "Boogie",
+      "artist": "Blair",
+      "cover": "https://i.imgur.com/43L8OKY.png",
+      "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1340136890870923339"
+    },
+    {
+      "title": "Reflections",
+      "artist": "Ivy Sinclair",
+      "cover": "https://i.imgur.com/Kcb4ESk.png",
+      "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1336096992996098181"
+    },
+    {
+      "title": "Even After All",
+      "artist": "Even Grace",
+      "cover": "https://i.imgur.com/uZemeHK.png",
+      "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1330376377249173544"
+    },
+    {
+      "title": "Once Upon a Time...",
+      "artist": "Conan Woolridge",
+      "cover": "https://i.imgur.com/dudcjbk.png",
+      "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1320274314427109387"
+    }
+  ],
+  "highlights": [
+    {
+      "title": "SUMMER REMAINS",
+      "artist": "Nate",
+      "cover": "https://i.imgur.com/CX87G23.png",
+      "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1320224976699260948"
+    },
+    {
+      "title": "HONEY",
+      "artist": "Bianca",
+      "cover": "https://i.imgur.com/5513RiP.png",
+      "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1315880115535745056"
+    },
+    {
+      "title": "Dandelions",
+      "artist": "Riley",
+      "cover": "https://i.imgur.com/Fp8M9ZI.png",
+      "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1310405514718351381"
+    },
+    {
+      "title": "THE COUNTRY CLUB",
+      "artist": "Hannah",
+      "cover": "https://i.imgur.com/mzd5oqC.png",
+      "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1307779024621142208"
+    },
+    {
+      "title": "Overgrown",
+      "artist": "Eric",
+      "cover": "https://i.imgur.com/SjmmVKv.png",
+      "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1302077197342740483"
+    },
+    {
+      "title": "The Drive",
+      "artist": "Ava",
+      "cover": "https://i.imgur.com/xkyQrbf.png",
+      "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1302074976488132729"
+    }
+  ],
+  "labels": [
+    {
+      "title": "Dawn Records",
+      "cover": "https://i.imgur.com/QKIzmbB.png",
+      "link": "https://discord.com/channels/1200848484518080512/1200970158487904306/1251193762995245076"
+    },
+    {
+      "title": "Illuminati Records",
+      "cover": "https://i.imgur.com/zqwm3wr.png",
+      "link": "https://discord.com/channels/1200848484518080512/1200970181720146000/1211443289111396434"
+    },
+    {
+      "title": "Starlight Group",
+      "cover": "https://i.imgur.com/GNGG0oG.png",
+      "link": "https://discord.com/channels/1200848484518080512/1213651513918890004/1256031320455249952"
+    },
+    {
+      "title": "Pacific Records",
+      "cover": "https://i.imgur.com/osNhVIj.png",
+      "link": "https://discord.com/channels/1200848484518080512/1248470798587531336"
+    },
+    {
+      "title": "YG Entertainment",
+      "cover": "https://i.imgur.com/O7CjUUq.png",
+      "link": "https://discord.com/channels/1200848484518080512/1298484161685880872"
+    }
+  ]
+}

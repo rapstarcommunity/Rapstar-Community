@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billboard Artist 100</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  @font-face {
+    font-family: 'Billboard';
+    src: url('../../fontes/TafelSansPro-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Billboard Regular';
+    src: url('../../fontes/TafelSansPro-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: Spotify;
+    src: url('../../fontes/GothamBold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Commons Regular';
+    src: url('../../fontes/TT Commons Regular.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'Commons Bold';
+    src: url('../../fontes/TT Commons Bold.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'Commons DemiBold';
+    src: url('../../fontes/TT Commons DemiBold.otf') format('opentype');
+  }
+  @media (max-width: 1200px) {
+    .menu-buttons button {
+      padding: 10px;
+      font-size: 12px;
+    }
+
+    .dropbtn {
+      padding: 10px;
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .menu-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu-buttons button, .dropbtn {
+      margin: 5px 0;
+    }
+
+    .container{
+      margin-top: 600px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .menu-buttons button, .dropbtn {
+      padding: 5px 10px;
+      font-size: 10px;
+    }
+
+    .container{
+      margin-top: 600px;
+    }
+  }
+
+  footer {
+    width: 100%;
+    background-color: #333;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), -2px -2px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-family: 'Commons Regular', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+    bottom: -500px;
+    left: 0;
+  }
+
+  footer:hover{
+    color: #C2FF01;
+    cursor: pointer;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  }
+
+  header {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    border-top: 5px solid;
+    border-image: linear-gradient(to right, #C2FF01, whitesmoke);
+    border-image-slice: 1;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    transition-duration: 1s;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    z-index: 1;
+    margin-left: 10px;
+    transition-duration: 1s;
+  }
+
+  .dropdown-content a {
+    color: white;
+    font-family: 'Commons Regular', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 6px 8px;
+    text-decoration: none;
+    display: block;
+    border-radius: 15px;
+    background-color: #C2FF01;
+    transition-duration: 1s;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #77eeaa;
+    transition-duration: 1s;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    transition-duration: 1s;
+  }
+
+  .dropbtn {
+    text-transform: uppercase;
+    font-family: 'Commons Regular', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+    background-color: #77eeaa;
+    border: none;
+    cursor: pointer;
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition-duration: 1s;
+  }
+
+  .dropbtn:hover {
+    background-color: #7ea;
+    transition-duration: 1s;
+  }
+
+  .menu-buttons {
+    margin-left: -15px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .menu-buttons button {
+    text-transform: uppercase;
+    font-family: 'Commons Regular', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    background-color: #C2FF01;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .menu-buttons button:hover {
+    background-color: #7ea;
+    cursor: pointer;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  }
+
+  .menu-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  body {
+    background-image: linear-gradient(to top, #191414 60%, #C2FF01);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .gradient-background {
+    background-image: linear-gradient(to top, #191414 60%, #C2FF01);
+  }
+
+  .bg-neon-green {
+    background-color: black;
+  }
+
+  .text-neon-green {
+    color: #C2FF01;
+  }
+
+  .billboard-name {
+    font-size: 65px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    font-family: Billboard, sans-serif;
+    margin-left: -245px;
+  }
+
+  .subtitle{
+    font-size: 130px;
+    margin-left: -245px;
+    margin-top: -30px;
+    color: white;
+    font-family: Billboard, sans-serif;
+  }
+
+  .artist-chart-container {
+    width: 600px;
+    border-left: 25px solid #000;
+    border-right: 25px solid #000;
+    border-bottom: 25px solid #000;
+    border-top: 25px solid #000;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10% auto 0;
+    padding-bottom: 20px;
+    position: relative;
+    background-color: black;
+  }
+
+  .dated {
+    right: -300px;
+    position: relative;
+    text-align: left;
+    padding: 10px 25px;
+    color: #fff;
+    justify-content: flex-start;
+  }
+
+  .dated-text{
+    z-index: 999;
+    justify-content: flex-start;
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: Billboard Regular, sans-serif;
+  }
+
+  .artist-chart {
+    border-collapse: collapse;
+    width: 700px;
+  }
+
+  .chart-row {
+    border: solid 2px white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0px 0px -1px -1px;
+    transition: 1s;
+  }
+
+  .rank {
+    width: 60px;
+    height: 100px;
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .rank h2 {
+    margin-top: 15px;
+    color: black;
+    font-family: Billboard, sans-serif;
+    font-size: 40px;
+  }
+
+  .artist-image {
+    transition: 1s;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    filter: brightness(90%) saturate(120%) grayscale(100%) sepia(64%) saturate(514%) hue-rotate(25deg) brightness(109%) contrast(103%);
+  }
+
+  .chart-row:hover{
+    cursor: pointer;
+    transform: translateX(-8%);
+    transition: 1s;
+    z-index: 999;
+    .artist-image{
+      transition: 1s;
+      filter: grayscale(100%);
+    }
+  }
+
+  .artist-name {
+    font-weight: bold;
+    font-family: Billboard Regular, sans-serif;
+    font-size: 38px;
+    position: relative;
+    left: 50px;
+    text-align: left;
+    justify-content: flex-start;
+    flex-grow: 1;
+  }
+
+  .status .badge {
+    font-size: 1rem;
+    padding: 0.3em 0.5em;
+  }
+
+  .image-container img {
+    margin-left: -230px;
+    margin-top: -200px;
+    position: absolute;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: 1s;
+    filter: brightness(90%) saturate(120%) grayscale(100%) sepia(64%) saturate(514%) hue-rotate(25deg) brightness(109%) contrast(103%);
+  }
+
+  .image-container img:hover{
+    transition: 1s;
+    transform: scale(1.05);
+    filter: grayscale(100%);
+    cursor: pointer;
+  }
+
+  .d-flex {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .d-flex img {
+    margin-right: 10px;
+  }
+
+  .chart-row > * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo {
+    width: 50px;
+    height: auto;
+    margin-left: -20px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+
+</style>
+<body>
+
+<header id="header">
+  <div class="header-content">
+    <div class="menu-buttons">
+      <button class="home-btn">
+        <a href="../../index.html" class="menu-link"><i class="fas fa-home"></i></a>
+      </button>
+      <div class="dropdown">
+        <button class="dropbtn">Charts <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="../billboard/hot100.html">Billboard Hot 100</a>
+          <a href="../billboard/billboard200.html">Billboard 200</a>
+          <a href="../billboard/artist100.html">Billboard Artist 100</a>
+          <a href="../spotify/spotify-singles.html">Spotify Global Songs</a>
+          <a href="../spotify/spotify-albums.html">Spotify Global Albums</a>
+        </div>
+      </div>
+      <button><a href="../../metacritic/metacritic.html" class="menu-link">Metacritic</a></button>
+      <button><a href="https://discord.gg/PxNUBCHF4Q" class="menu-link">Discord</a></button>
+      <button><a href="../../artistas/linhadotempo.html" class="menu-link">Artistas</a></button>
+    </div>
+  </div>
+</header>
+
+<div class="gradient-background py-5">
+  <div class="container">
+    <!-- Contêiner da tabela com borda preta ao redor -->
+    <div class="artist-chart-container">
+      <!-- Cabeçalho -->
+      <div class="header bg-neon-green text-black p-3 d-flex justify-content-between align-items-center">
+        <div class="logo-container d-flex align-items-center">
+          <img src="https://i.imgur.com/94YnxsJ.png" alt="Logo" class="logo">
+          <span class="billboard-name d-block ms-2"></span>
+        </div>
+        <div>
+          <span class="billboard-name d-block">ARTIST</span>
+          <h1 class="subtitle display-5 fw-bold mb-0">100</h1>
+        </div>
+        <div class="image-container">
+          <img src="https://ffw.uol.com.br/wp-content/uploads/2025/01/img_0224.jpg" id="imagem0" alt="Top Artist Group" class="img-fluid">
+        </div>
+      </div>
+
+      <!-- Linhas da Tabela -->
+      <div class="chart-row bg-black text-neon-green">
+        <div class="d-flex">
+          <div class="rank">
+            <h2 id="pos1"></h2>
+          </div>
+          <img src="imagem1" id="imagem1" alt="artist1" class="artist-image">
+        </div>
+        <div class="artist-name" id="artist1"></div>
+      </div>
+
+      <div class="chart-row bg-black">
+        <div class="d-flex">
+          <div class="rank">
+            <h2 id="pos2"></h2>
+          </div>
+          <img src="imagem2" id="imagem2" alt="artist2" class="artist-image">
+        </div>
+        <div class="artist-name" id="artist2"></div>
+      </div>
+
+      <div class="chart-row bg-black">
+        <div class="d-flex">
+          <div class="rank">
+            <h2 id="pos3"></h2>
+          </div>
+          <img src="imagem3" id="imagem3" alt="artist3" class="artist-image">
+        </div>
+        <div class="artist-name" id="artist3"></div>
+      </div>
+
+      <div class="chart-row bg-black">
+        <div class="d-flex">
+          <div class="rank">
+            <h2 id="pos4"></h2>
+          </div>
+          <img src="imagem4" id="imagem4" alt="artist4" class="artist-image">
+        </div>
+        <div class="artist-name" id="artist4"></div>
+      </div>
+
+      <div class="chart-row bg-black">
+        <div class="d-flex">
+          <div class="rank">
+            <h2 id="pos5"></h2>
+          </div>
+          <img src="imagem5" id="imagem5" alt="artist5" class="artist-image">
+        </div>
+        <div class="artist-name" id="artist5"></div>
+      </div>
+
+      <div class="dated">
+        <p class="dated-text">Chart dated February 22, 2025</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>© 2024 Star World Community - Beta</p>
+  </footer>
+</div>
+
+<script src="script-artist100.js"></script>
+
+</body>
+</html>

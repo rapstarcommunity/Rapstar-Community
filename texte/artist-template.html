@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artist Template</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../artistas/style-artists.css">
+  <link rel="stylesheet" href="../artistas/alanagrace/style-alanagrace.css">
+</head>
+<body>
+<header id="header">
+  <div class="header-content">
+    <div class="menu-buttons">
+      <button><a href="index.html" class="menu-link">Home</a></button>
+      <div class="dropdown">
+        <button class="dropbtn">Charts <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="charts/hot100.html">Billboard Hot 100</a>
+          <a href="charts/billboard200.html">Billboard 200</a>
+          <a href="charts/spotify-singles.html">Spotify Global Songs</a>
+          <a href="charts/spotify-albums.html">Spotify Global Albums</a>
+        </div>
+      </div>
+      <button><a href="metacritic.html" class="menu-link">Metacritic</a></button>
+      <button><a href="discord.html" class="menu-link">Discord</a></button>
+      <button><a href="artists.html" class="menu-link">Artistas</a></button>
+    </div>
+  </div>
+</header>
+
+<header class="artist-header">
+  <div class="artist-info-box">
+    <h1 id="artist-name" class="artist-title"></h1>
+  </div>
+  <div class="artist-photo-box">
+    <div class="artist-photo" id="artist-photo"></div>
+    <div class="artist-details">
+      <h1 id="artist-age" class="artist-details-cels"></h1>
+      <h1 id="artist-location" class="artist-details-cels"></h1>
+      <h1 id="artist-label" class="artist-details-cels"></h1>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="discography-container">
+    <div class="border-top">
+      <p>DISCOGRAFIA</p>
+    </div>
+    <h3>Álbuns</h3>
+    <table id="albums-table"></table>
+    <h3>Singles e EPs</h3>
+    <table id="singles-table"></table>
+    <div class="gradient-overlay"></div>
+  </div>
+
+  <div class="events-container">
+    <div class="border-top">
+      <p>TURNÊS, CONCERTOS E EVENTOS</p>
+    </div>
+    <h3>Turnês</h3>
+    <div id="tours-grid" class="events-grid"></div>
+    <h3>Concertos e Eventos</h3>
+    <div id="events-grid" class="events-grid"></div>
+    <div class="gradient-overlay"></div>
+  </div>
+
+  <div class="grammy-container">
+    <div class="border-top">
+      <p>GRAMMY AWARDS</p>
+    </div>
+    <div id="grammy-categories"></div>
+    <div class="gradient-overlay"></div>
+  </div>
+
+  <div class="films-container">
+    <div class="border-top">
+      <p>FILMES</p>
+    </div>
+    <h3>Filmes</h3>
+    <div id="films-grid" class="events-grid"></div>
+    <div class="gradient-overlay"></div>
+  </div>
+</div>
+
+<script src="../texte/artist-data.js"></script>
+<script src="../texte/script.js"></script>
+<footer>
+  <p>© 2024 Star World Community - Beta</p>
+</footer>
+</body>
+</html>

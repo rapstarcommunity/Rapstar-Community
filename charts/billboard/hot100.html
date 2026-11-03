@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <title>Billboard Hot 100 Top 10</title>
+  <style>
+
+    @media (max-width: 1200px) {
+      .menu-buttons button {
+        padding: 10px;
+        font-size: 12px;
+      }
+
+      .dropbtn {
+        padding: 10px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .menu-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu-buttons button, .dropbtn {
+        margin: 5px 0;
+      }
+
+      .container{
+        margin-top: 600px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .menu-buttons button, .dropbtn {
+        padding: 5px 10px;
+        font-size: 10px;
+      }
+
+      .container{
+        margin-top: 600px;
+      }
+    }
+
+    html, body {
+      overflow-x: hidden;
+    }
+
+    @font-face {
+      font-family: Billboard-Bold;
+      src: url('../../fontes/Neuwelt-ExtraBold.otf') format('opentype'), url('../../fontes/Neuwelt-ExtraBold.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: Billboard-Regular;
+      src: url('../../fontes/NimbusSanL-Reg.otf') format('opentype');
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Commons Regular';
+      src: url('../../fontes/TT Commons Regular.otf') format('opentype');
+    }
+    .texto-sobreposto {
+      position: absolute;
+      bottom: -45px;
+      right: calc(6% - 30px);
+      font-family: Billboard-Regular, sans-serif;
+      text-align: right;
+      color: #F2EDEB;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    html {
+      background: linear-gradient(to top, whitesmoke 10%, #8C3575);
+      background-attachment: fixed;
+    }
+
+    footer {
+      width: 100%;
+      background-color: #333;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), -2px -2px 10px rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-family: 'Commons Regular', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      padding: 20px;
+      margin-top: 70px;
+    }
+
+    footer:hover{
+      color: #8C3575;
+      cursor: pointer;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      min-width: 200px;
+      z-index: 1;
+      margin-left: 10px;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content a {
+      color: white;
+      font-family: 'Commons Regular', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 12px;
+      margin-top: 5px;
+      padding: 8px 8px;
+      text-decoration: none;
+      display: block;
+      border-radius: 15px;
+      background-color: #8C3575;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #77eeaa;
+      transition-duration: 1s;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      transition-duration: 1s;
+    }
+
+    .dropbtn {
+      text-transform: uppercase;
+      font-family: 'Commons Regular', sans-serif;
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: white;
+      background-color: #77eeaa;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+      transition-duration: 1s;
+    }
+
+    .dropbtn:hover {
+      background-color: #7ea;
+      transition-duration: 1s;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #333;
+      border-top: 5px solid;
+      border-image: linear-gradient(to right, #8C3575, #fff);
+      border-image-slice: 1;
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), -2px -2px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .menu-buttons {
+      margin-left: -15px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .menu-buttons button {
+      text-transform: uppercase;
+      font-family: 'Commons Regular', sans-serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+      background-color: #8C3575;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .menu-buttons button:hover {
+      background-color: #7ea;
+      cursor: pointer;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+    }
+
+    .menu-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    body {
+      font-family: Billboard-Regular, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      position: relative;
+      width: 650px;
+      margin-top: 150px;
+      background-color: #F2EDEB;
+      border-radius: 10px;
+      transition: 1s;
+      animation: fadeIn 2s ease forwards;
+      margin-left: 30px;
+      border-bottom: solid black 50px;
+      border-left: solid black 10px;
+      border-right: solid black 10px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .table-header {
+      background-color: #000;
+      text-align: center;
+      height: 180px;
+      margin-bottom: -40px;
+      padding-top: 10px;
+    }
+
+    .logo {
+      max-width: 650px;
+      height: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      font-size: 20px;
+      transition-duration: 1s;
+      max-width: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+
+    td:hover {
+      background-color: #D8D8D8;
+      color: #333;
+      cursor: pointer;
+      transition-duration: 1s;
+    }
+
+    td.position {
+      text-align: right;
+      padding-left: 15px;
+      width: 20px;
+      font-family: Billboard-Bold, sans-serif;
+      font-size: 20px;
+      color: black;
+    }
+
+    th:not(:first-child),
+    td:not(:first-child) {
+      border-left: 1px dashed #666666;
+    }
+
+    td.song-title{
+      font-family: Billboard-Bold, sans-serif;
+      color: black;
+    }
+
+
+    th.song-title-column {
+      font-size: 20px;
+      margin-bottom: -5px;
+      font-family: Billboard-Bold, sans-serif;
+      color: #fff;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    thead th {
+      background-color: #000;
+      color: #fff;
+      border: solid black 2px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-bottom: 20px;
+      animation: fade-in 1s forwards 0.5s;
+      border-radius: 100px;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #F2EDEB;
+      color: black;
+      text-decoration: none;
+      border-radius: 100px;
+      font-family: Billboard-Bold;
+      font-size: 17px;
+      margin-right: 10px;
+      border-radius: 20px 20px 20px 20px;
+      transition: transform 0.3s ease-in-out;
+      margin-top: 40px;
+    }
+
+    .button:hover {
+      background-color: #946AA6;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+
+<header id="header">
+  <div class="header-content">
+    <div class="menu-buttons">
+      <button class="home-btn">
+        <a href="../../index.html" class="menu-link"><i class="fas fa-home"></i></a>
+      </button>
+      <div class="dropdown">
+        <button class="dropbtn">Charts <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="../billboard/hot100.html">Billboard Hot 100</a>
+          <a href="../billboard/billboard200.html">Billboard 200</a>
+          <a href="../billboard/artist100.html">Billboard Artist 100</a>
+          <a href="../spotify/spotify-singles.html">Spotify Global Songs</a>
+          <a href="../spotify/spotify-albums.html">Spotify Global Albums</a>
+        </div>
+      </div>
+      <button><a href="../../metacritic/metacritic.html" class="menu-link">Metacritic</a></button>
+      <button><a href="https://discord.gg/PxNUBCHF4Q" class="menu-link">Discord</a></button>
+      <button><a href="../../artistas/linhadotempo.html" class="menu-link">Artistas</a></button>
+    </div>
+  </div>
+</header>
+
+<body>
+<div class="container">
+  <p class="texto-sobreposto">chart dated February 22, 2025</p>
+  <div class="table-header">
+    <img src="https://i.imgur.com/CXzkiic.png" alt="Billboard Hot 100 Logo" class="logo">
+  </div>
+  <table id="billboard-table">
+    <thead>
+    <tr>
+      <th></th>
+      <th class="song-title-column">SONG</th>
+      <th class="song-title-column">ARTIST</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <img id="imagemhot1" alt="Imagem 1" class="tabela-imagem" style="display: none;">
+      <td class="position" id="poshot1"></td>
+      <td class="song-title" id="songhot1"></td>
+      <td class="artist-title" id="artisthot1"></td>
+    </tr>
+    <tr>
+      <img id="imagemhot2" alt="Imagem 2" class="tabela-imagem" style="display: none;">
+      <td class="position" id="poshot2"></td>
+      <td class="song-title" id="songhot2"></td>
+      <td id="artisthot2"></td>
+    </tr>
+    <tr>
+      <img id="imagemhot3" alt="Imagem 3" class="tabela-imagem" style="display: none;">
+      <td class="position" id="poshot3"></td>
+      <td class="song-title" id="songhot3"></td>
+      <td id="artisthot3"></td>
+    </tr>
+    <tr>
+      <img id="imagemhot4" alt="Imagem 4" class="tabela-imagem" style="display: none;">
+      <td class="position" id="poshot4"></td>
+      <td class="song-title" id="songhot4"></td>
+      <td id="artisthot4"></td>
+    </tr>
+    <tr>
+      <img id="imagemhot5" alt="Imagem 5" class="tabela-imagem" style="display: none;">
+      <td class="position" id="poshot5"></td>
+      <td class="song-title" id="songhot5"></td>
+      <td id="artisthot5"></td>
+    </tr>
+    <tr>
+      <img id="imagemhot6" alt="Imagem 6" class="tabela-imagem" style="display: none;">
+      <td class="position" id="poshot6"></td>
+      <td class="song-title" id="songhot6"></td>
+      <td id="artisthot6"></td>
+    </tr>
+    <tr>
+      <img id="imagemhot7" alt="Imagem 7" class="tabela-imagem" style="display: none;">
+      <td class="position" id="poshot7"></td>
+      <td class="song-title" id="songhot7"></td>
+      <td id="artisthot7"></td>
+    </tr>
+    <tr>
+      <img id="imagemhot8" alt="Imagem 8" class="tabela-imagem" style="display: none;">
+      <td class="position" id="poshot8"></td>
+      <td class="song-title" id="songhot8"></td>
+      <td id="artisthot8"></td>
+    </tr>
+    <tr>
+      <img id="imagemhot9" alt="Imagem 9" class="tabela-imagem" style="display: none;">
+      <td class="position" id="poshot9"></td>
+      <td class="song-title" id="songhot9"></td>
+      <td id="artisthot9"></td>
+    </tr>
+    <tr>
+      <img id="imagemhot10" alt="Imagem 10" class="tabela-imagem" style="display: none;">
+      <td class="position" id="poshot10"></td>
+      <td class="song-title" id="songhot10"></td>
+      <td id="artisthot10"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<script src="script-hot100.js"></script>
+<footer>
+  <p>© 2024 Star World Community - Beta</p>
+</footer>
+</body>
+
+</html>

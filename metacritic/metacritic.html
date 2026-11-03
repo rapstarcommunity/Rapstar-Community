@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">]
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <title>Álbuns e Avaliações</title>
+  <style>
+
+    @font-face {
+      font-family: 'Commons Regular';
+      src: url('../fontes/TT Commons Regular.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Commons Bold';
+      src: url('../fontes/TT Commons Bold.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Commons DemiBold';
+      src: url('../fontes/TT Commons DemiBold.otf') format('opentype');
+    }
+
+    footer {
+      background-color: #333;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), -2px -2px 10px rgba(0, 0, 0, 0.5);
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      padding: 20px;
+      margin-top: 70px;
+      font-family: 'Commons Regular', sans-serif;
+    }
+
+    footer:hover{
+      font-family: 'Commons Regular', sans-serif;
+      color: #f0ad4e;
+      cursor: pointer;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      min-width: 200px;
+      z-index: 1;
+      margin-left: 10px;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content a {
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 12px;
+      margin-top: 5px;
+      padding: 8px 8px;
+      text-decoration: none;
+      display: block;
+      border-radius: 15px;
+      background-color: #f0ad4e;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #77eeaa;
+      transition-duration: 1s;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      transition-duration: 1s;
+    }
+
+    .dropbtn {
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: white;
+      background-color: #77eeaa;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+      transition-duration: 1s;
+    }
+
+    .dropbtn:hover {
+      background-color: #7ea;
+      transition-duration: 1s;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #333;
+      border-top: 5px solid;
+      border-image: linear-gradient(to right, #f0ad4e, #F2EDEB);
+      border-image-slice: 1;
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), -2px -2px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .menu-buttons {
+      margin-left: -15px;
+      font-family: 'TT Commons Regular', sans-serif;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .menu-buttons button {
+      text-transform: uppercase;
+      font-family: 'TT Commons Regular', sans-serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+      background-color: #f0ad4e;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .menu-buttons button:hover {
+      background-color: #7ea;
+      cursor: pointer;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+    }
+
+    .menu-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: linear-gradient(to top, #f8f8f8 70%, #f0ad4e);
+      animation: fadeIn 1s forwards;
+    }
+
+    .albums-container {
+      transition: transform 0.3s ease, opacity 2s ease;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1070px;
+      margin: 50px auto;
+      display: grid;
+      justify-content: center;
+    }
+
+    .album {
+      background-color: #fff;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition-duration: 1s;
+    }
+
+    .album:hover{
+      background: #333333;
+      transform: translateY(-10px);
+      transition-duration: 1s;
+      cursor: pointer;
+    }
+
+    .album img {
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 15px;
+    }
+
+    .album img:hover {
+      cursor: pointer;
+    }
+
+    .album-title {
+      font-family: 'Commons Bold', sans-serif;
+      font-size: 22px;
+      margin-top: -5px;
+      margin-bottom: 5px;
+      transition-duration: 1s;
+    }
+
+    .album:hover .album-title {
+      transition-duration: 1s;
+      color: #fff;
+    }
+
+    .artist-info {
+      font-family: 'Commons Bold', sans-serif;
+      font-size: 14px;
+      color: #666;
+      margin-top: -3px;
+      margin-bottom: 10px;
+    }
+
+    .average-rating {
+      font-family: 'Commons Bold', sans-serif;
+      font-size: 0px;
+      margin-bottom: 10px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .rating-square {
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      margin-top: 0px;
+      line-height: 65px;
+      text-align: center;
+      border-radius: 10px;
+      font-size: 40px;
+      position: relative;
+      margin-right: 5px;
+    }
+
+    .excellent {
+      background-color: #5cb85c;
+      color: #fff;
+    }
+
+    .good {
+      background-color: #f0ad4e;
+      color: #fff;
+    }
+
+    .average {
+      background-color: #d9534f;
+      color: #fff;
+    }
+
+    .reviews {
+      font-family: 'Commons Regular', sans-serif;
+      font-size: 17px;
+      position: absolute;
+      margin-top: -50px;
+      margin-left: 90px;
+      color: #666;
+      margin-bottom: 10px;
+      transition-duration: 1s;
+    }
+
+    .reviews0 {
+      position: relative;
+      font-family: 'Commons Regular', sans-serif;
+      font-size: 20px;
+      position: absolute;
+      margin-top: -70px;
+      margin-left: 90px;
+      color: #666;
+      margin-bottom: 10px;
+      transition-duration: 1s;
+    }
+
+    .album:hover .reviews0{
+      color: #e9e9e9;
+      transition-duration: 1s;
+    }
+
+    .album:hover .reviews{
+      color: #e9e9e9;
+      transition-duration: 1s;
+    }
+
+    .album-info hr {
+      border: none;
+      height: 1px;
+      background-color: #ccc;
+      margin: 10px 0;
+      transition-duration: 1s;
+    }
+
+    .album:hover .album-info hr{
+      background-color: #555555;
+      transition-duration: 1s;
+    }
+
+
+    .review-scores {
+      font-family: 'Commons Regular', sans-serif;
+      margin-top: 10px;
+    }
+
+    .review-score {
+      font-family: 'Commons Regular', sans-serif;
+      display: inline-block;
+      margin-right: 10px;
+      padding: 5px 10px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      font-size: 14px;
+      position: relative;
+      opacity: 0.6;
+      transition-duration: 1s;
+    }
+
+    .review-score:hover{
+      opacity: 1;
+      transition-duration: 1s;
+      cursor: pointer;
+    }
+
+    .review-score span {
+      vertical-align: middle;
+    }
+    .review-source {
+      font-size: 12px;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    .back-to-home {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      margin-right: 10px;
+      border-radius: 50px 50px 50px 50px;
+      transition-duration: 1s;
+    }
+
+    .back-to-home:hover {
+      opacity: 0.8;
+      transition-duration: 1s;
+      cursor: pointer;
+    }
+
+    .pagination-container {
+      background-color: #333333;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+      width: 300px;
+      margin-left: 515px;
+      padding: 12px;
+      border-radius: 15px;
+      color: white;
+      font-family: 'TT Commons Regular', sans-serif;
+      margin-top: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .pagination-label {
+      font-family: 'TT Commons Regular', sans-serif;
+      font-size: 12px;
+      margin-right: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .pagination-select {
+      font-family: 'TT Commons Regular', sans-serif;
+      font-size: 12px;
+      background-color: #333;
+      padding: 5px 10px;
+      border-radius: 15px;
+      color: white;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .album-title{
+      font-family: 'Commons DemiBold', sans-serif;
+      font-size: 22px;
+      color: #333333;
+    }
+
+    .artist-info > span,
+    .artist-info > p {
+      white-space: nowrap;
+      display: inline-block;
+      align-items: center;
+      margin-bottom: -10px;
+      font-family: 'Commons DemiBold', sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+      margin-top: 7px;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+    }
+
+    .album,
+    .footer,
+    .header {
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .review-bar-container {
+      position: absolute;
+      width: 200px;
+      display: flex;
+      height: 6px;
+      margin-top: 135px;
+      margin-left: 90px;
+      border-radius: 100px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .review-segment {
+      height: 100%;
+      width: 200px;
+    }
+
+    .good {
+      background-color: #5cb85c;
+    }
+
+    .average {
+      background-color: #f0ad4e;
+    }
+
+    .bad {
+      background-color: #d9534f;
+    }
+
+    .good {
+      background-color: #5cb85c;
+    }
+
+    .average {
+      background-color: #f0ad4e;
+    }
+
+    .bad {
+      background-color: #d9534f;
+    }
+
+    .none {
+      background-color: #cccccc;
+      color: white;
+      transition-duration: 1s;
+    }
+
+    .album:hover .none{
+      background-color: #444444;
+      transition-duration: 1s;
+    }
+
+    .review-segment span {
+      left: 50%;
+      top: 10px;
+      transform: translateX(-50%);
+      background-color: ;
+      padding: 2px 5px;
+      opacity: 100%;
+      border-radius: 5px;
+      font-size: 10px;
+      white-space: nowrap;
+      z-index: 0;
+    }
+
+    .black-box {
+      background-color: #D3D3D3;
+      border-radius: 3px 3px 3px 3px;
+      color: white;
+      padding: 2px 5px;
+      transition-duration: 1s;
+      margin-right: 1px;
+    }
+
+    .black-box:hover {
+      background-color: grey;
+      cursor: pointer;
+      transition-duration: 1s;
+    }
+
+    .album:hover .black-box{
+      background-color: #444444;
+      color: #777777;
+    }
+
+    .album:hover .black-box:hover{
+      background-color: #666666;
+      color: #999999;
+    }
+
+    .green-box {
+      opacity: 0.6;
+      margin-right: 5px;
+      font-family: 'TT Commons Regular', sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background-color: #5cb85c;
+      border-radius: 3px 3px 3px 3px;
+      color: white;
+      padding: 2px 5px;
+      transition-duration: 1s;
+    }
+
+    .green-box:hover {
+      opacity: 1;
+      background-color: #5cb85c;
+      cursor: pointer;
+      transition-duration: 1s;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<header id="header">
+  <div class="header-content">
+    <div class="menu-buttons">
+      <button class="home-btn">
+        <a href="../index.html" class="menu-link"><i class="fas fa-home"></i></a>
+      </button>
+      <div class="dropdown">
+        <button class="dropbtn">Charts <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="../charts/billboard/hot100.html">Billboard Hot 100</a>
+          <a href="../charts/billboard/billboard200.html">Billboard 200</a>
+          <a href="../charts/billboard/artist100.html">Billboard Artist 100</a>
+          <a href="../charts/spotify/spotify-singles.html">Spotify Global Songs</a>
+          <a href="../charts/spotify/spotify-albums.html">Spotify Global Albums</a>
+        </div>
+      </div>
+      <button><a href="../metacritic/metacritic.html" class="menu-link">Metacritic</a></button>
+      <button><a href="https://discord.gg/PxNUBCHF4Q" class="menu-link">Discord</a></button>
+      <button><a href="../artistas/linhadotempo.html" class="menu-link">Artistas</a></button>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <ul class="pagination"></ul>
+</nav>
+
+<div class="pagination-container">
+  <span class="pagination-label">Selecione a página:</span>
+  <select class="pagination-select"></select>
+</div>
+
+<div class="albums-container" id="albums-container"></div>
+
+<script>
+  fetch('albums.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Falha ao carregar os dados');
+      }
+      return response.json();
+    })
+    .then(data => {
+      const albumsContainer = document.getElementById('albums-container');
+      const paginationContainer = document.querySelector('.pagination');
+      const paginationSelect = document.querySelector('.pagination-select');
+
+      const albumsPerPage = 9;
+      const totalPages = Math.ceil(data.length / albumsPerPage);
+
+      for (let i = 1; i <= totalPages; i++) {
+        const pageOption = document.createElement('option');
+        pageOption.value = i;
+        pageOption.textContent = `Página ${i}`;
+        paginationSelect.appendChild(pageOption);
+      }
+
+      paginationSelect.addEventListener('change', function () {
+        const selectedPage = parseInt(paginationSelect.value);
+        showPage(selectedPage);
+      });
+
+      function showPage(pageNumber) {
+        albumsContainer.innerHTML = '';
+
+        const startIndex = (pageNumber - 1) * albumsPerPage;
+        const endIndex = startIndex + albumsPerPage;
+
+        const currentPageAlbums = data.slice(startIndex, endIndex);
+
+        currentPageAlbums.forEach(album => {
+
+          const albumDiv = document.createElement('div');
+          albumDiv.classList.add('album');
+
+          const coverElement = document.createElement('img');
+          coverElement.src = album.cover;
+          coverElement.alt = `Capa do ${album.title}`;
+          albumDiv.appendChild(coverElement);
+
+          const albumInfoDiv = document.createElement('div');
+          albumInfoDiv.classList.add('album-info');
+
+          const titleElement = document.createElement('album-title');
+          titleElement.classList.add('album-title');
+          titleElement.textContent = album.title;
+          albumInfoDiv.appendChild(titleElement);
+
+          const artistInfoElement = document.createElement('p');
+          artistInfoElement.classList.add('artist-info');
+
+          const artistSpan = document.createElement('span');
+          artistSpan.classList.add('black-box');
+          artistSpan.textContent = album.artist;
+
+          const genreSpan = document.createElement('span');
+          genreSpan.classList.add('black-box');
+          genreSpan.textContent = album.genre;
+
+          const labelSpan = document.createElement('span');
+          labelSpan.classList.add('black-box');
+          labelSpan.textContent = album.label;
+
+          artistInfoElement.appendChild(artistSpan);
+          artistInfoElement.appendChild(document.createTextNode('   '));
+          artistInfoElement.appendChild(genreSpan);
+          artistInfoElement.appendChild(document.createTextNode('   '));
+          artistInfoElement.appendChild(labelSpan);
+
+          albumInfoDiv.appendChild(artistInfoElement);
+
+          if (album.universalAcclaim) {
+            const universalAcclaimElement = document.createElement('span');
+            universalAcclaimElement.textContent = 'Universal Acclaim';
+            universalAcclaimElement.classList.add('green-box');
+
+            artistInfoElement.appendChild(document.createTextNode('   '));
+            artistInfoElement.appendChild(universalAcclaimElement);
+          }
+
+          if (album.generallyFavorableReviews) {
+            const generallyFavorableReviewsElement = document.createElement('span');
+            generallyFavorableReviewsElement.textContent = 'Generally Favorable Reviews';
+            generallyFavorableReviewsElement.classList.add('black-box');
+
+            artistInfoElement.appendChild(document.createTextNode('   '));
+            artistInfoElement.appendChild(generallyFavorableReviewsElement);
+          }
+
+          if (album.mixedOrAverageReviews) {
+            const mixedOrAverageReviewsElement = document.createElement('span');
+            mixedOrAverageReviewsElement.textContent = 'Mixed Or Average Reviews';
+            mixedOrAverageReviewsElement.classList.add('black-box');
+
+            artistInfoElement.appendChild(document.createTextNode('   '));
+            artistInfoElement.appendChild(mixedOrAverageReviewsElement);
+          }
+
+          const averageRatingElement = document.createElement('div');
+          averageRatingElement.classList.add('average-rating');
+          const ratingSquareElement = document.createElement('span');
+          ratingSquareElement.classList.add('rating-square');
+          if (album.rating >= 70) {
+            ratingSquareElement.classList.add('good');
+          } else if (album.rating >= 50) {
+            ratingSquareElement.classList.add('average');
+          } else if (album.rating >= 0) {
+            ratingSquareElement.classList.add('bad');
+          } else{
+            ratingSquareElement.classList.add('none');
+          }
+          ratingSquareElement.textContent = album.rating;
+          averageRatingElement.appendChild(ratingSquareElement);
+          averageRatingElement.innerHTML += ` / 100`;
+          albumInfoDiv.appendChild(averageRatingElement);
+
+          const reviewsElement0 = document.createElement('div');
+          reviewsElement0.classList.add('reviews0');
+          reviewsElement0.textContent = `Metascore`;
+          albumInfoDiv.appendChild(reviewsElement0);
+
+          const reviewsElement = document.createElement('div');
+          reviewsElement.classList.add('reviews');
+          reviewsElement.textContent = `${album.reviews} reviews`;
+          albumInfoDiv.appendChild(reviewsElement);
+
+          const separatorLine = document.createElement('hr');
+          albumInfoDiv.appendChild(separatorLine);
+
+          const reviewScoresElement = document.createElement('div');
+          reviewScoresElement.classList.add('review-scores');
+          album.reviewScores.forEach(score => {
+            const scoreElement = document.createElement('span');
+            scoreElement.classList.add('review-score');
+            if (score.score >= 70) {
+              scoreElement.classList.add('good');
+            } else if (score.score >= 50) {
+              scoreElement.classList.add('average');
+            } else {
+              scoreElement.classList.add('bad');
+            }
+
+            const scoreValueElement = document.createElement('span');
+            scoreValueElement.textContent = score.score;
+            scoreElement.appendChild(scoreValueElement);
+
+            const sourceElement = document.createElement('div');
+            sourceElement.classList.add('review-source');
+            sourceElement.textContent = score.source;
+            scoreElement.appendChild(sourceElement);
+
+            reviewScoresElement.appendChild(scoreElement);
+
+            const totalReviews = album.reviews;
+
+            let goodReviews = 0;
+            let averageReviews = 0;
+            let badReviews = 0;
+
+            album.reviewScores.forEach(score => {
+              score.score >= 70 ? goodReviews++ : (score.score >= 50 ? averageReviews++ : badReviews++);
+            });
+
+            const barContainer = document.createElement('div');
+            barContainer.classList.add('review-bar-container');
+
+            const goodSegment = document.createElement('div');
+            goodSegment.classList.add('review-segment', 'good');
+            goodSegment.style.width = `${(goodReviews / totalReviews) * 100}%`;
+            goodSegment.style.backgroundColor = '#5cb85c';
+
+            const goodLabel = document.createElement('span');
+            goodLabel.textContent = `${goodReviews} (${Math.round((goodReviews / totalReviews) * 100)}%)`;
+            goodLabel.style.color = '#ffffff';
+            goodSegment.appendChild(goodLabel);
+
+            const averageSegment = document.createElement('div');
+            averageSegment.classList.add('review-segment', 'average');
+            averageSegment.style.width = `${(averageReviews / totalReviews) * 100}%`;
+            averageSegment.style.backgroundColor = '#f0ad4e'; // Cor para avaliações médias
+
+            const averageLabel = document.createElement('span');
+            averageLabel.textContent = `${averageReviews} (${Math.round((averageReviews / totalReviews) * 100)}%)`;
+            averageLabel.style.color = '#000000'; // Cor do texto para avaliações médias
+            averageSegment.appendChild(averageLabel);
+
+            const badSegment = document.createElement('div');
+            badSegment.classList.add('review-segment', 'bad');
+            badSegment.style.width = `${(badReviews / totalReviews) * 100}%`;
+            badSegment.style.backgroundColor = '#d9534f';
+
+            const badLabel = document.createElement('span');
+            badLabel.textContent = `${badReviews} (${Math.round((badReviews / totalReviews) * 100)}%)`;
+            badLabel.style.color = '#ffffff';
+            badSegment.appendChild(badLabel);
+
+            barContainer.appendChild(goodSegment);
+            barContainer.appendChild(averageSegment);
+            barContainer.appendChild(badSegment);
+
+            const existingBar = albumDiv.querySelector('.review-bar-container');
+            if (existingBar) {
+              albumDiv.replaceChild(barContainer, existingBar);
+            } else {
+              albumDiv.appendChild(barContainer);
+            }
+          });
+
+
+          albumInfoDiv.appendChild(reviewScoresElement);
+          albumDiv.appendChild(albumInfoDiv);
+          albumsContainer.appendChild(albumDiv);
+        });
+
+      }
+
+      showPage(1);
+    })
+    .catch(error => {
+      console.error('Erro:', error);
+      const albumsContainer = document.getElementById('albums-container');
+      albumsContainer.innerHTML = '<p>Ocorreu um erro ao carregar os dados.</p>';
+    });
+</script>
+
+<footer>
+  <p>© 2024 Star World Community - Beta</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 10 Spotify Singles</title>
+  <style>
+    @font-face {
+      font-family: 'Commons Regular';
+      src: url('../../fontes/TT Commons Regular.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Commons Bold';
+      src: url('../../fontes/TT Commons Bold.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Commons DemiBold';
+      src: url('../../fontes/TT Commons DemiBold.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: Spotify;
+      src: url('../../fontes/GothamBold.ttf') format('truetype');
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: Spotify-Normal;
+      src: url('../../fontes/Cerebri Sans SemiBold.ttf') format('truetype');
+      font-style: normal;
+    }
+
+    html {
+      background-image: linear-gradient(to top, #191414 50%, #69358C);
+      background-attachment: fixed;
+    }
+
+    footer {
+      background-color: #333;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), -2px -2px 10px rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-family: 'Commons Regular', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      padding: 20px;
+      margin-top: 70px;
+    }
+
+    footer:hover{
+      color: #CEB9CC;
+      cursor: pointer;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      min-width: 200px;
+      z-index: 1;
+      margin-left: 10px;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content a {
+      color: white;
+      font-family: 'Commons Regular', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 12px;
+      margin-top: 5px;
+      padding: 8px 8px;
+      text-decoration: none;
+      display: block;
+      border-radius: 15px;
+      background-color: #946AA6;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #77eeaa;
+      transition-duration: 1s;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      transition-duration: 1s;
+    }
+
+    .dropbtn {
+      text-transform: uppercase;
+      font-family: 'Commons Regular', sans-serif;
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: white;
+      background-color: #77eeaa;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+      transition-duration: 1s;
+    }
+
+    .dropbtn:hover {
+      background-color: #7ea;
+      transition-duration: 1s;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #333;
+      border-top: 5px solid;
+      border-image: linear-gradient(to right, #69358C, #CEB9CC);
+      border-image-slice: 1;
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), -2px -2px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .menu-buttons {
+      margin-left: -15px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .menu-buttons button {
+      text-transform: uppercase;
+      font-family: 'Commons Regular', sans-serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+      background-color: #69358C;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .menu-buttons button:hover {
+      background-color: #7ea;
+      cursor: pointer;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+    }
+
+    .menu-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    body {
+      font-family: Spotify-Normal;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      position: relative;
+      max-width: 700px;
+      margin: 150px auto;
+      padding: 20px;
+      background-color: #69358C;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+
+    .table-wrapper {
+      float: left;
+      width: 50%;
+      margin-bottom: 50px;
+    }
+    .circle-image {
+      width: 202px;
+      height: 202px;
+      margin-top: 125px;
+      left: 516px;
+      z-index: 1;
+      position: absolute;
+      border-radius: 100%;
+      object-fit: cover;
+      border: 1px solid #CEB9CC;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .circle-image:hover {
+      transform: scale(1.1);
+    }
+    .table-title {
+      font-size: 80px;
+      letter-spacing: -2px;
+      color: #F2EDEB;
+      margin-bottom: 10px;
+      text-align: left;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+    }
+    .table-title script {
+      display: block;
+      font-size: 40px;
+      letter-spacing: -2px;
+      color: #CEB9CC;
+      border-bottom: 1px solid #946AA6;
+      padding-bottom: 20px;
+      margin-top: 0px;
+      margin-bottom: -105px;
+    }
+    .table-title span {
+      height: 100px;
+      display: block;
+      font-size: 80px;
+      color: #CEB9CC;
+      letter-spacing: -2px;
+      border-top: 1px solid #946AA6;
+      margin-top: 2px;
+      margin-bottom: -10px;
+    }
+    .table-divider {
+      border-top: 1px solid #946AA6;
+      width: 100%;
+      left: -100px;
+      margin-bottom: 0px;
+      clear: both;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border-bottom: 1px solid #946AA6;
+      text-align: left;
+      padding: 10px 0 5px 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+    tr:hover {
+      transform: scale(1.12);
+      background-color: #7E528B;
+      transition-duration: 1s;
+      z-index: 9999;
+      cursor: pointer;
+    }
+    td {
+      color: #333;
+    }
+    .position {
+      font-family: Spotify-Normal;
+      font-size: 17px;
+      width: 20px;
+      color: #CEB9CC;
+      padding-left: 30px;
+      padding-right: -50px;
+    }
+    .song-title {
+      width: 170px;
+      padding: 10px;
+      font-family: Spotify-Normal;
+      margin-bottom: -17px;
+      font-size: 17px;
+      color: #F2EDEB;
+      line-height: 1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-left: -10px;
+    }
+
+    .artist {
+      width: 170px;
+      padding: 10px;
+      margin-left: -10px;
+      font-family: Spotify-Normal;
+      font-size: 17px;
+      line-height: 1px;
+      color: #CEB9CC;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .cover {
+      width: 70px;
+      height: 70px;
+      overflow: hidden;
+      margin-right: 10px;
+      padding-right: 10px;
+      object-fit: cover;
+      z-index: 999;
+    }
+
+    .cover img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      z-index: 999;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fade-in 1s forwards 0.5s;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #CEB9CC;
+      color: #69358C;
+      text-decoration: none;
+      margin-right: 10px;
+      border-radius: 20px 20px 20px 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .button:hover {
+      background-color: #946AA6;
+      transform: scale(1.1);
+    }
+
+    .discord-logo {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 60px;
+      height: auto;
+      z-index: 999;
+    }
+
+    .spotify-logo {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      width: 150px;
+      height: auto;
+      z-index: 999;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header id="header">
+  <div class="header-content">
+    <div class="menu-buttons">
+      <button><a href="../../index.html" class="menu-link">Home</a></button>
+      <div class="dropdown">
+        <button class="dropbtn">Charts <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="../billboard/hot100.html">Billboard Hot 100</a>
+          <a href="../billboard/billboard200.html">Billboard 200</a>
+          <a href="../spotify/spotify-singles-antigo.html">Spotify Global Songs</a>
+          <a href="spotify-albums-antigo.html">Spotify Global Albums</a>
+        </div>
+      </div>
+      <button><a href="../../metacritic/metacritic.html" class="menu-link">Metacritic</a></button>
+      <button><a href="https://discord.gg/PxNUBCHF4Q" class="menu-link">Discord</a></button>
+      <button><a href="../../artistas/linhadotempo.html" class="menu-link">Artistas</a></button>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <img class="circle-image" src="https://i.imgur.com/egopiOi.jpeg" alt="Circle Image">
+  <img class="spotify-logo" src="https://i.imgur.com/SXvwJlY.png" alt="Spotify Logo">
+  <img class="discord-logo" src="https://i.imgur.com/9xEGJ9l.png" alt="Discord Logo">
+  <h1 class="table-title"><script>October 27 - November 02</script><br>Top Songs<br><span>Global</span></h1>
+  <div class="table-divider"></div>
+  <div class="table-wrapper">
+    <table>
+      <!-- MUSICA 1 LUGAR -->
+      <tr>
+        <td class="position" id="pos1"></td>
+        <td class="cover" id="img1">
+          <img id="imagem1" alt="Imagem 1" class="tabela-imagem">
+        </td>
+        <td>
+          <p class="song-title" id="song1"></p>
+          <p class="artist" id="artist1"></p>
+        </td>
+      </tr>
+
+      <!-- MUSICA 2 LUGAR -->
+      <tr>
+        <td class="position" id="pos2"></td>
+        <td class="cover" id="img2">
+          <img id="imagem2" alt="Imagem 2" class="tabela-imagem">
+        </td>
+        <td>
+          <p class="song-title" id="song2"></p>
+          <p class="artist" id="artist2"></p>
+        </td>
+      </tr>
+
+      <!-- MUSICA 3 LUGAR -->
+      <tr>
+        <td class="position" id="pos3"></td>
+        <td class="cover" id="img3">
+          <img id="imagem3" alt="Imagem 3" class="tabela-imagem">
+        </td>
+        <td>
+          <p class="song-title" id="song3"></p>
+          <p class="artist" id="artist3"></p>
+        </td>
+      </tr>
+
+
+      <!-- MUSICA 4 LUGAR -->
+      <tr>
+        <td class="position" id="pos4"></td>
+        <td class="cover" id="img4">
+          <img id="imagem4" alt="Imagem 4" class="tabela-imagem">
+        </td>
+        <td>
+          <p class="song-title" id="song4"></p>
+          <p class="artist" id="artist4"></p>
+        </td>
+      </tr>
+
+      <!-- MUSICA 5 LUGAR -->
+      <tr>
+        <td class="position" id="pos5"></td>
+        <td class="cover" id="img5">
+          <img id="imagem5" alt="Imagem 5" class="tabela-imagem">
+        </td>
+        <td>
+          <p class="song-title" id="song5"></p>
+          <p class="artist" id="artist5"></p>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+
+
+  <div class="table-wrapper">
+    <table>
+
+      <!-- MUSICA 6 LUGAR -->
+      <tr>
+        <td class="position" id="pos6"></td>
+        <td class="cover" id="img6">
+          <img id="imagem6" alt="Imagem 6" class="tabela-imagem">
+        </td>
+        <td>
+          <p class="song-title" id="song6"></p>
+          <p class="artist" id="artist6"></p>
+        </td>
+      </tr>
+
+      <!-- MUSICA 7 LUGAR -->
+      <tr>
+        <td class="position" id="pos7"></td>
+        <td class="cover" id="img7">
+          <img id="imagem7" alt="Imagem 7" class="tabela-imagem">
+        </td>
+        <td>
+          <p class="song-title" id="song7"></p>
+          <p class="artist" id="artist7"></p>
+        </td>
+      </tr>
+
+      <!-- MUSICA 8 LUGAR -->
+      <tr>
+        <td class="position" id="pos8"></td>
+        <td class="cover" id="img8">
+          <img id="imagem8" alt="Imagem 8" class="tabela-imagem">
+        </td>
+        <td>
+          <p class="song-title" id="song8"></p>
+          <p class="artist" id="artist8"></p>
+        </td>
+      </tr>
+
+      <!-- MUSICA 9 LUGAR -->
+      <tr>
+        <td class="position" id="pos9"></td>
+        <td class="cover" id="img9">
+          <img id="imagem9" alt="Imagem 9" class="tabela-imagem">
+        </td>
+        <td>
+          <p class="song-title" id="song9"></p>
+          <p class="artist" id="artist9"></p>
+        </td>
+      </tr>
+
+      <!-- MUSICA 10 LUGAR -->
+      <tr>
+        <td class="position" id="pos10"></td>
+        <td class="cover" id="img10">
+          <img id="imagem10" alt="Imagem 10" class="tabela-imagem">
+        </td>
+        <td>
+          <p class="song-title" id="song10"></p>
+          <p class="artist" id="artist10"></p>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+</div>
+
+<script src="../imagens/imagens-singles.js"></script>
+<script src="script-spotify-singles.js"></script>
+
+<footer>
+  <p>© 2024 Star World Community - Beta</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,424 @@
+[
+  {
+    "cover": "https://i.imgur.com/43L8OKY.png",
+    "title": "Boogie",
+    "artist": "Blair",
+    "genre": "Pop",
+    "label": "Starlight Studios®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1340136890870923339",
+    "rating": "tbd",
+    "reviews": 0,
+    "reviewScores": [
+    ],
+    "generallyFavorableReviews": false  },
+  {
+    "cover": "https://i.imgur.com/Kcb4ESk.png",
+    "title": "Reflections",
+    "artist": "Ivy Sinclair",
+    "genre": "Pop/Hip-Hop",
+    "label": "Dawn Records®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1336096992996098181",
+    "rating": "tbd",
+    "reviews": 0,
+    "reviewScores": [
+    ],
+    "generallyFavorableReviews": false  },
+  {
+    "cover": "https://i.imgur.com/uZemeHK.png",
+    "title": "Even After All",
+    "artist": "Even Grace",
+    "genre": "Pop/Rock",
+    "label": "Dawn Records®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1330376377249173544",
+    "rating": "tbd",
+    "reviews": 0,
+    "reviewScores": [
+    ],
+    "generallyFavorableReviews": false  },
+  {
+    "cover": "https://i.imgur.com/dudcjbk.png",
+    "title": "Once Upon a Time...",
+    "artist": "Conan Woolridge",
+    "genre": "Pop/Rock",
+    "label": "Starlight Studios®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1320274314427109387",
+    "rating": 75,
+    "reviews": 2,
+    "reviewScores": [
+      {"source": "Pitchfork", "score": 77},
+      {"source": "Variety", "score": 74}
+    ],
+    "generallyFavorableReviews": false  },
+  {
+    "cover": "https://i.imgur.com/CX87G23.png",
+    "title": "SUMMER REMAINS",
+    "artist": "Nate",
+    "genre": "Pop/Country",
+    "label": "Dawn Records®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1320224976699260948",
+    "rating": "82",
+    "reviews": 3,
+    "reviewScores": [
+      {"source": "Variety", "score": 86},
+      {"source":"RollingStone", "score": 80},
+      {"source": "Pitchfork", "score": 80}
+    ],
+    "universalAcclaim": true  },
+  {
+    "cover": "https://i.imgur.com/5513RiP.png",
+    "title": "HONEY",
+    "artist": "Bianca",
+    "genre": "Pop",
+    "label": "Dawn Records®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1315880115535745056",
+    "rating": "81",
+    "reviews": 3,
+    "reviewScores": [
+      {"source": "Pitchfork", "score": 83},
+      {"source": "Variety", "score": 81},
+      {"source": "Rolling Stone", "score": 80}
+    ],
+    "universalAcclaim": true  },
+  {
+    "cover": "https://i.imgur.com/Fp8M9ZI.png",
+    "title": "Dandelions",
+    "artist": "Riley",
+    "genre": "Pop/Synth-Pop",
+    "label": "Starlight Studios®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1310405514718351381",
+    "rating": "tbd",
+    "reviews": 0,
+    "reviewScores": [
+    ],
+    "generallyFavorableReviews": false
+  },
+  {
+    "cover": "https://i.imgur.com/mzd5oqC.png",
+    "title": "THE COUNTRY CLUB",
+    "artist": "Hannah",
+    "genre": "Country/R&B/Pop",
+    "label": "Dawn Records®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1307779024621142208",
+    "rating": "85",
+    "reviews": 4,
+    "reviewScores": [
+      {"source": "Variety", "score": 96},
+      {"source": "NME", "score": 87},
+      {"source": "Pitchfork", "score": 79},
+      {"source": "RollingStone", "score": 79}
+    ],
+    "universalAcclaim": true  },
+  {
+    "cover": "https://i.imgur.com/SjmmVKv.png",
+    "title": "Overgrown",
+    "artist": "Eric",
+    "genre": "R&B/Folk",
+    "label": "YG Entertainment®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1302077197342740483",
+    "rating": "83",
+    "reviews": 4,
+    "reviewScores": [
+      {"source": "Variety", "score": 88},
+      {"source": "Pitchfork", "score": 85},
+      {"source": "NME", "score": 82},
+      {"source": "RollingStone", "score": 78}
+    ],
+    "universalAcclaim": true  },
+  {
+    "cover": "https://i.imgur.com/xkyQrbf.png",
+    "title": "The Drive",
+    "artist": "Ava",
+    "genre": "Pop/Rock",
+    "label": "Dawn Records®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1302074976488132729",
+    "rating": "83",
+    "reviews": 4,
+    "reviewScores": [
+      {"source": "Variety", "score": 86},
+      {"source": "Pitchfork", "score": 86},
+      {"source": "NME", "score": 83},
+      {"source": "RollingStone", "score": 78}
+    ],
+    "universalAcclaim": true  },
+  {
+    "cover": "https://i.imgur.com/yhwmxiR.png",
+    "title": "Poets Can't Be Murdered",
+    "artist": "Trevor",
+    "genre": "Rap",
+    "label": "Starlight Studios®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1300300835678322750",
+    "rating": "86",
+    "reviews": 2,
+    "reviewScores": [
+      {"source": "Variety", "score": 92},
+      {"source": "Pitchfork", "score": 81}
+    ],
+    "universalAcclaim": true  },
+  {
+    "cover": "https://i.imgur.com/4lwZZtP.png",
+    "title": "Salute",
+    "artist": "4Music",
+    "genre": "Pop",
+    "label": "Dawn Records®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1261188197233332329",
+    "rating": "68",
+    "reviews": 3,
+    "reviewScores": [
+      {"source": "NME", "score": 71},
+      {"source": "Variety", "score": 68},
+      {"source": "Pitchfork", "score": 67}
+    ],
+    "mixedOrAverageReviews": true
+  },
+  {
+    "cover": "https://i.imgur.com/n5OTHPi.png",
+    "title": "MELANCHOLIA",
+    "artist": "Alana Grace",
+    "genre": "Pop/Folk",
+    "label": "Dawn Records®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1259352360245919866",
+    "rating": "73",
+    "reviews": 3,
+    "reviewScores": [
+      {"source": "NME", "score": 75},
+      {"source": "Pitchfork", "score": 74},
+      {"source": "Variety", "score": 70}
+    ],
+    "generallyFavorableReviews": true
+  },
+  {
+    "cover": "https://i.imgur.com/YOeKr4e.png",
+    "title": "Dreamscape",
+    "artist": "Aria",
+    "genre": "Pop",
+    "label": "Illuminati Records®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1241225181926522912",
+    "rating": 77,
+    "reviews": 4,
+    "reviewScores": [
+      {"source": "The Guardian", "score": 80},
+      {"source": "Pitchfork", "score": 79},
+      {"source": "Variety", "score": 75},
+      {"source": "NME", "score": 76}
+    ],
+    "generallyFavorableReviews": true
+  },
+  {
+    "cover": "https://i.imgur.com/8QfuQKE.png",
+    "title": "What Ever Happened?",
+    "artist": "Even Grace",
+    "genre": "Rock",
+    "label": "Dawn Records®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1240868842494758922",
+    "rating": 85,
+    "reviews": 4,
+    "reviewScores": [
+      {"source": "The Guardian", "score": 89},
+      {"source": "Variety", "score": 88},
+      {"source": "NME", "score": 83},
+      {"source": "Pitchfork", "score": 82}
+    ],
+    "universalAcclaim": true
+  },
+  {
+    "cover": "https://i.imgur.com/dcXh0vd.png",
+    "title": "Forbidden Whispers",
+    "artist": "Conan Woolridge",
+    "genre": "Rock",
+    "label": "Starlight Studios®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1232011198774644877",
+    "rating": 86,
+    "reviews": 3,
+    "reviewScores": [
+      {"source": "Variety", "score": 90},
+      {"source": "The Guardian", "score": 85},
+      {"source": "Pitchfork", "score": 83}
+    ],
+    "universalAcclaim": true
+  },
+  {
+    "cover": "https://i.imgur.com/H2zKlDG.png",
+    "title": "meaningless",
+    "artist": "Anthony",
+    "genre": "Rock",
+    "label": "Illuminati Records®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1213952192600477727",
+    "rating": 65,
+    "reviews": 3,
+    "reviewScores": [
+      {"source": "Variety", "score": 70},
+      {"source": "NME", "score": 67},
+      {"source": "Pitchfork", "score": 60}
+    ],
+    "mixedOrAverageReviews": true
+  },
+  {
+    "cover": "https://i.imgur.com/5kfkjb9.png",
+    "title": "KIDS SEE GHOSTS",
+    "artist": "Trevor",
+    "genre": "Rap",
+    "label": "Starlight Studios®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1209706504454799390",
+    "rating": 78,
+    "reviews": 4,
+    "reviewScores": [
+      {"source": "The Guardian", "score": 83},
+      {"source": "Variety", "score": 78},
+      {"source": "Pitchfork", "score": 77},
+      {"source": "Rolling Stone", "score": 76}
+    ],
+    "generallyFavorableReviews": true
+  },
+
+  {
+    "cover": "https://i.imgur.com/GSbs5fC.png",
+    "title": "House Of The Rising Sun",
+    "artist": "Ava Thompson",
+    "genre": "Pop",
+    "label": "Dawn Records®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1210045179197657088",
+    "rating": 75,
+    "reviews": 4,
+    "reviewScores": [
+      {"source": "The Guardian", "score": 79},
+      {"source": "NME", "score": 78},
+      {"source": "Rolling Stone", "score": 73},
+      {"source": "Pitchfork", "score": 70}
+    ],
+    "generallyFavorableReviews": true
+  },
+
+  {
+    "cover": "https://i.imgur.com/4HlsfSc.png",
+    "title": "everlasting",
+    "artist": "Liz",
+    "genre": "Pop",
+    "label": "YG Entertainment®",
+    "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1208845669025063004",
+    "rating": 79,
+    "reviews": 5,
+    "reviewScores": [
+      {"source": "Variety", "score": 85},
+      {"source": "NME", "score": 83},
+      {"source": "Pitchfork", "score": 81},
+      {"source": "Rolling Stone", "score": 80},
+      {"source": "The Guardian", "score": 65}
+    ],
+    "generallyFavorableReviews": true
+  },
+
+  {
+    "cover": "https://i.imgur.com/49TR7PM.jpeg",
+    "title": "Confessions Of A Broken Heart",
+    "artist": "Fiona",
+    "genre": "Pop/Rock",
+    "label": "Dawn Records®",
+    "link": "",
+    "rating": 76,
+    "reviews": 2,
+    "reviewScores": [
+      {"source": "NME", "score": 78},
+      {"source": "Pitchfork", "score": 74}
+    ],
+    "generallyFavorableReviews": true
+  },
+
+  {
+    "cover": "https://i.imgur.com/VSfImF5.png",
+    "title": "I owe it to myself",
+    "artist": "Owen Graham",
+    "genre": "Country",
+    "label": "Dawn Records®",
+    "link": "",
+    "rating": 80,
+    "reviews": 2,
+    "reviewScores": [
+      {"source": "Pitchfork", "score": 80},
+      {"source": "Rolling Stone", "score": 80}
+    ],
+    "generallyFavorableReviews": true
+  },
+
+  {
+    "cover": "https://i.imgur.com/j6v7gMU.png",
+    "title": "Soundscape",
+    "artist": "Mayleen",
+    "genre": "Pop",
+    "label": "Spotlight Records®",
+    "link": "",
+    "rating": 77,
+    "reviews": 2,
+    "reviewScores": [
+      {"source": "Rolling Stone", "score": 78},
+      {"source": "Pitchfork", "score": 75}
+    ],
+    "generallyFavorableReviews": true
+  },
+
+  {
+    "cover": "https://i.imgur.com/cYWu7Yx.jpeg",
+    "title": "Love Signal",
+    "artist": "Zion",
+    "genre": "R&B",
+    "label": "Spotlight Records®",
+    "link": "",
+    "rating": 77,
+    "reviews": 2,
+    "reviewScores": [
+      {"source": "Rolling Stone", "score": 78},
+      {"source": "Pitchfork", "score": 75}
+    ],
+    "generallyFavorableReviews": true
+  },
+
+  {
+    "cover": "https://i.imgur.com/3RlKr4c.jpeg",
+    "title": "EVERYTHING IS FREEDOM",
+    "artist": "Trevor",
+    "genre": "Rap",
+    "label": "Spotlight Studios®",
+    "link": "",
+    "rating": 73,
+    "reviews": 2,
+    "reviewScores": [
+      {"source": "Pitchfork", "score": 76},
+      {"source": "Rolling Stone", "score": 70}
+    ],
+    "generallyFavorableReviews": true
+  },
+
+  {
+    "cover": "https://i.imgur.com/jXLvpzn.jpeg",
+    "title": "Pure Feeling",
+    "artist": "Liza",
+    "genre": "Pop/Country",
+    "label": "Spotlight Records®",
+    "link": "",
+    "rating": 84,
+    "reviews": 4,
+    "reviewScores": [
+      {"source": "Pitchfork", "score": 86},
+      {"source": "NME", "score": 85},
+      {"source": "Fader", "score": 83},
+      {"source": "Rolling Stone", "score": 80}
+    ],
+    "universalAcclaim": true
+  },
+
+  {
+    "cover": "https://i.imgur.com/pXBYVJp.png",
+    "title": "Purple Dream",
+    "artist": "Even Grace",
+    "genre": "Rock",
+    "label": "Dawn Records®",
+    "link": "",
+    "rating": 81,
+    "reviews": 2,
+    "reviewScores": [
+      {"source": "NME", "score": 82},
+      {"source": "Pitchfork", "score": 81}
+    ],
+    "universalAcclaim": true
+  }
+]
+

@@ -1,0 +1,12 @@
+:root {
+  --color1at: #78B8BF;
+  --color2at: #78B8BF;
+  --color3at: #B078BF;
+  --color4at: #B078BF;
+  --image-url-header: url("https://sabrinacarpenter.com.br/galeria/albums/userpics/10001/Sabrina_0362_V1.jpg");
+  --image-url-artist: url("https://sabrinacarpenter.com.br/galeria/albums/userpics/10001/SCBR002.jpg");
+}
+
+.artist-header{
+  background-position: top left;
+}
