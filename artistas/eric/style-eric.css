@@ -1,0 +1,16 @@
+:root {
+  --color1at: #bababa;
+  --color2at: #bababa;
+  --color3at: #FF0000;
+  --color4at: #FF0000;
+  --image-url-header: url("https://i.imgur.com/MDJosTn.jpeg");
+  --image-url-artist: url("https://i.imgur.com/Mpbg0kw.jpeg");
+}
+
+.artist-header{
+  background-position: top left;
+}
+
+.events-img{
+  object-fit: cover;
+}

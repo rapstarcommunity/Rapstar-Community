@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+
+    @media (max-width: 1200px) {
+
+      .menu-buttons button {
+        padding: 10px;
+        font-size: 12px;
+      }
+
+      .dropbtn {
+        padding: 10px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .menu-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu-buttons button, .dropbtn {
+        margin: 5px 0;
+      }
+
+      .container{
+        margin-top: 600px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .menu-buttons button, .dropbtn {
+        padding: 5px 10px;
+        font-size: 10px;
+      }
+
+      .container{
+        margin-top: 600px;
+      }
+    }
+
+    @font-face {
+      font-family: Spotify;
+      src: url('fontes/GothamBold.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Commons Regular';
+      src: url('fontes/TT Commons Regular.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Commons Bold';
+      src: url('fontes/TT Commons Bold.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Commons DemiBold';
+      src: url('fontes/TT Commons DemiBold.otf') format('opentype');
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #333;
+      border-top: 5px solid;
+      border-image: linear-gradient(to right, #FFC0CB, #7ea);
+      border-image-slice: 1;
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), -2px -2px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .menu-buttons {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .menu-buttons button {
+      text-transform: uppercase;
+      font-family: 'Commons Regular', sans-serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+      background-color: #f1a5c0;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .menu-buttons button:hover{
+      background-color: #7ea;
+      cursor: pointer;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+    }
+
+    footer {
+      background-color: #333;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), -2px -2px 10px rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-family: 'Commons Regular', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      padding: 20px;
+      margin-top: 70px;
+    }
+
+    footer:hover{
+      color: #FFC0CB;
+      cursor: pointer;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+    }
+
+    .album-cover:hover{
+      -webkit-filter: grayscale(100%);
+      cursor: pointer;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+    }
+
+    body {
+      font-family: 'Commons Regular', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background-image: linear-gradient(to top, #191414 60%, #FFC0CB);
+      overflow-x: hidden;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .container {
+      position: relative;
+      margin-top: 7%;
+      justify-content: center;
+      padding: 50px;
+      animation: fadeIn 1s forwards;
+    }
+
+    .section {
+      flex: 1;
+      text-align: center;
+      padding: 30px;
+      background-color: #212121;
+      border-bottom: solid 0px #FFC0CB;
+      border-radius: 15px;
+      width: 230px;
+      height: 100%;
+      position: relative;
+      margin-left: 0px;
+      transition-duration: 1s;
+    }
+
+    .section:hover{
+      transform: translateY(-10px);
+      transition-duration: 1s;
+      cursor: pointer;
+    }
+
+    .swiper-container {
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .swiper-slide {
+      width: 100%;
+    }
+
+    h1 {
+      margin-top: 15px;
+      font-family: 'Commons DemiBold', sans-serif;
+      letter-spacing: 1px;
+      font-size: 20px;
+    }
+
+    h2 {
+      margin-top: -10px;
+      color: #999999;
+      font-size: 16px;
+      font-family: 'Commons Regular', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    h3 {
+      margin-top: 15px;
+      border-top: 1px solid #333333;
+      padding-top: 10px;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-family: 'Commons Regular', sans-serif;
+      letter-spacing: 2px;
+    }
+
+    h1:hover, h2:hover, h3:hover{
+      color: #FFC0CB;
+      cursor: pointer;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .header h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .album-cover {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);*/
+      transition-duration: 1s;
+    }
+
+    .feature-content h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .feature-content p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .number-one img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    .number-one-content h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .number-one-content p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+      position: absolute;
+      top: 50%;
+      width: 50px;
+      height: 50px;
+      padding: 5px;
+      margin-top: -20px;
+      border-radius: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      color: #FFC0CB;
+      z-index: 10;
+      cursor: pointer;
+      transition-duration: 1s;
+    }
+
+    .swiper-button-prev:hover, .swiper-button-next:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+      transition-duration: 1s;
+    }
+
+    .swiper-button-prev {
+      left: 10px;
+    }
+
+    .swiper-button-next {
+      right: 10px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .section-button-spot {
+      position: absolute;
+      display: none;
+      justify-content: center;
+      top: 120px;
+      left: 90px;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background: #f1a5c0;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.3s ease, opacity 1s ease, background 1s ease;
+    }
+
+    .section-button-spot::before {
+      content: "";
+      position: absolute;
+      width: 70%;
+      height: 70%;
+      background-image: url('https://static-00.iconduck.com/assets.00/spotify-icon-1024x1024-f6cjkgb7.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .section-button-spot:hover {
+      background: #7ea;
+      cursor: pointer;
+      transition: background 1s;
+    }
+
+    .section:hover .section-button-spot {
+      display: flex;
+      transition: transform 0.3s ease, opacity 1s ease, background 1s ease; /* Adicione a mesma transição aqui */
+    }
+
+    .section-button-dc {
+      position: absolute;
+      display: none;
+      justify-content: center;
+      top: 120px;
+      left: 150px;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background: #f1a5c0;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      overflow: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .section-button-dc::before {
+      content: "";
+      position: absolute;
+      width: 70%;
+      height: 70%;
+      background-image: url('https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-white-icon.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .section-button-dc:hover {
+      background: #7ea;
+      cursor: pointer;
+      transition: background 1s;
+    }
+
+    .section:hover .section-button-dc {
+      display: flex;
+      transition-duration: 1s;
+      opacity: 1;
+    }
+
+    .section:hover .album-cover {
+      filter: grayscale(100%);
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      min-width: 200px;
+      z-index: 1;
+      margin-left: 10px;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content a {
+      color: white;
+      font-family: 'Commons Regular', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 12px;
+      margin-top: 5px;
+      padding: 8px 8px;
+      text-decoration: none;
+      display: block;
+      border-radius: 15px;
+      background-color: #FFC0CB;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #77eeaa;
+      transition-duration: 1s;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      transition-duration: 1s;
+    }
+
+    .dropbtn {
+      text-transform: uppercase;
+      font-family: 'Commons Regular', sans-serif;
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: white;
+      background-color: #77eeaa;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+      transition-duration: 1s;
+    }
+
+    .dropbtn:hover {
+      background-color: #7ea;
+      transition-duration: 1s;
+    }
+
+    .menu-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 24px;
+      font-family: 'Commons Bold', sans-serif;
+      margin-top: 50px;
+      z-index: 999;
+    }
+
+  </style>
+</head>
+<body>
+<header id="header">
+  <div class="header-content">
+    <div class="menu-buttons">
+      <div class="dropdown">
+        <button class="dropbtn">Charts <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href='./charts/billboard/hot100.html'>Billboard Hot 100</a>
+          <a href='./charts/billboard/billboard200.html'>Billboard 200</a>
+          <a href='charts/spotify/spotify-singles-antigo.html'>Spotify Global Singles</a>
+          <a href='charts/spotify/spotify-albums-antigo.html'>Spotify Global Albums</a>
+        </div>
+      </div>
+      <button><a class='menu-link' href='./metacritic/metacritic.html'>Metacritic</a></button>
+      <button><a href="https://discord.gg/PxNUBCHF4Q" class="menu-link">Discord</a></button>
+      <button><a class='menu-link' href='./artistas/linhadotempo.html'>Artistas</a></button>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <div style="width: 75%;">
+    <div style="display: flex; justify-content: space-between;">
+
+      <div class="section" style="width: 45%; margin-left: 20px;">
+        <img src="https://11bitstudios.com/wp-content/uploads/2021/03/1280px-Metacritic_logo.svg-1.png" alt="Logo" style=" margin-left: 110px; bottom: -50px; width: 120px; transform: translateX(-50%);">
+        <h1>HIGHEST RATED ALBUM</h1>
+        <img class="album-cover" src="https://i.imgur.com/dcXh0vd.png" style="margin-left: -100px; width: 45%;" alt="Capa do Álbum">
+        <h1>Forbidden Whispers</h1>
+        <h2>Conan Woolridge</h2>
+        <h1 style="font-size: 20px; font-family: 'Commons Regular', sans-serif; position: absolute; margin-top: -180px; margin-left: 150px;">Rating:</h1>
+        <h1 style="font-size: 70px; font-family: 'Commons Bold', sans-serif; position: absolute; margin-top: -170px; margin-left: 150px;">86</h1>
+      </div>
+
+      <div class="section" style="width: 45%; margin-left: 20px;">
+        <img src="https://i.imgur.com/I5Tjuqg.png" alt="Logo" style=" margin-left: 110px; bottom: -50px; width: 120px; transform: translateX(-50%);">
+        <h1>#1 IN THIS WEEK</h1>
+        <img class="album-cover" src="https://i.imgur.com/Q94Pawr.png" style="margin-left: -60px; width: 45%;" alt="Capa do Álbum">
+        <h1>Oh, Was That Yours?</h1>
+        <h2>Ava</h2>
+        <h1 style="font-size: 100px; font-family: 'Commons Bold', sans-serif; -webkit-text-stroke: 3px #212121; position: absolute; margin-top: -175px; margin-left: 120px;">#1</h1>
+      </div>
+
+      <div class="section" style="width: 45%; margin-left: 20px;">
+        <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="Logo" style=" margin-left: 110px; bottom: -50px; width: 100px; transform: translateX(-50%);">
+        <h1>#1 IN THIS WEEK</h1>
+        <img class="album-cover" src="https://i.imgur.com/Q94Pawr.png" style="margin-left: -60px; width: 45%;" alt="Capa do Álbum">
+        <h1>Oh, Was That Yours?</h1>
+        <h2>Ava</h2>
+        <h1 style="font-size: 100px; font-family: 'Commons Bold', sans-serif; -webkit-text-stroke: 3px #212121; position: absolute; margin-top: -175px; margin-left: 120px;">#1</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer>
+  <p>© 2024 Star World Community - Beta</p>
+</footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  window.addEventListener('load', function() {
+    function initSwiper() {
+      const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          2560: {
+            slidesPerView: 7,
+            spaceBetween: 70,
+          },
+          1920: {
+            slidesPerView: 6,
+            spaceBetween: 60,
+          },
+          1520: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+          1290: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1080: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+        },
+      });
+    }
+
+    function populateAlbums(data) {
+      const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+      data.forEach((album) => {
+        const slide = document.createElement('div');
+        slide.classList.add('swiper-slide');
+
+        const albumInfo = document.createElement('div');
+        albumInfo.classList.add('section');
+
+        const albumCover = document.createElement('img');
+        albumCover.classList.add('album-cover');
+        albumCover.src = album.cover;
+
+        const artistName = document.createElement('h1');
+        artistName.textContent = album.artist;
+
+        const albumTitle = document.createElement('h2');
+        albumTitle.textContent = album.title;
+
+        const labelName = document.createElement('h3');
+        labelName.textContent = album.label;
+
+        const playlistButton = document.createElement('button');
+        playlistButton.classList.add('section-button-spot');
+        playlistButton.textContent = ' ';
+        playlistButton.addEventListener('click', () => window.open(album.playlistLink));
+
+        const trackButton = document.createElement('button');
+        trackButton.classList.add('section-button-dc');
+        trackButton.textContent = ' ';
+        trackButton.addEventListener('click', () => window.open(album.trackLink));
+
+        albumInfo.appendChild(albumCover);
+        albumInfo.appendChild(artistName);
+        albumInfo.appendChild(albumTitle);
+        albumInfo.appendChild(labelName);
+        albumInfo.appendChild(playlistButton);
+        albumInfo.appendChild(trackButton);
+
+        slide.appendChild(albumInfo);
+        swiperWrapper.appendChild(slide);
+      });
+
+      initSwiper();
+    }
+
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          const data = JSON.parse(xhr.responseText);
+          populateAlbums(data);
+        } else {
+          console.error('Erro ao carregar os dados do arquivo JSON');
+        }
+      }
+    };
+    xhr.open('GET', 'albums-index.json');
+    xhr.send();
+
+    window.addEventListener('resize', function() {
+      if (swiper !== undefined) {
+        swiper.destroy();
+      }
+      initSwiper();
+    });
+
+  });
+</script>
+
+</body>
+</html>

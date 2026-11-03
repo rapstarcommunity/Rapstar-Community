@@ -1,0 +1,12 @@
+:root {
+  --color1at: #DEB887;
+  --color2at: #DEB887;
+  --color3at: #800000;
+  --color4at: #800000;
+  --image-url-header: url("https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2016%2F10%2Fkendrick-lamar-gq-style-cover-5.jpg?cbr=1&q=90");
+  --image-url-artist: url("https://i.imgur.com/RXnXSNA.png");
+}
+
+.artist-header{
+  background-position: top left;
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Painel de conteúdo · Star World</title>
+<link rel="stylesheet" href="/admin/panel.css">
+</head>
+<body>
+<aside><a class="brand" href="/admin/">STAR WORLD<span>ESTÚDIO DE CONTEÚDO</span></a><p class="edition">01 / PÁGINA INICIAL</p><h1>Seu site.<br>Sua edição.</h1><p>Troque as imagens, ajuste os textos e publique quando estiver pronto.</p><a class="site-link" href="/" target="_blank" rel="noopener">Abrir site ↗</a><p class="aside-note">As alterações do painel atualizam a página inicial. O catálogo e as páginas dos artistas mantêm seus conteúdos próprios.</p></aside>
+<main>
+<header><div><p class="eyebrow">STAR WORLD COMMUNITY</p><h2>Painel de conteúdo</h2></div><button id="logout" hidden>Sair</button></header>
+<p id="status" role="status" aria-live="polite">Carregando painel…</p>
+<section id="auth" hidden>
+<div class="intro"><span class="badge">ACESSO RESTRITO</span><h3>Entre para editar</h3><p>Use sua conta de administrador do site.</p></div>
+<form id="login-form"><label>E-mail<input id="email" type="email" autocomplete="username" required></label><label>Senha<input id="password" type="password" autocomplete="current-password" required></label><button class="primary" type="submit">Entrar no painel</button><button id="forgot" type="button">Esqueci minha senha</button></form>
+<div class="setup"><strong>Primeiro acesso</strong><p>No painel Netlify deste projeto, abra Identity, convide seu e-mail e atribua o papel <b>admin</b> à sua conta. Abra o link recebido para definir sua senha.</p></div>
+</section>
+<section id="password-section" hidden><h3 id="password-title">Definir senha</h3><form id="password-form"><label>Nova senha (mínimo de 10 caracteres)<input id="new-password" type="password" minlength="10" autocomplete="new-password" required></label><button class="primary">Salvar senha</button></form></section>
+<section id="editor" hidden>
+<div class="toolbar"><p id="save-state">Conteúdo publicado</p><div><button id="preview-button" type="button">Ver prévia</button><button class="primary" id="publish" type="button">Publicar alterações</button></div></div>
+<nav aria-label="Seções do conteúdo"><button data-tab="texts" aria-pressed="true">Textos</button><button data-tab="releases">Lançamentos</button><button data-tab="highlights">Destaques</button><button data-tab="labels">Gravadoras</button></nav>
+<div id="fields"></div>
+<dialog id="preview-dialog"><div class="dialog-header"><h3>Prévia da página inicial</h3><button id="close-preview">Fechar prévia</button></div><iframe id="preview" title="Prévia da página inicial"></iframe></dialog>
+</section>
+<noscript>Ative o JavaScript para usar o painel de conteúdo.</noscript>
+</main>
+<script type="module" src="/admin/panel.js"></script>
+</body></html>

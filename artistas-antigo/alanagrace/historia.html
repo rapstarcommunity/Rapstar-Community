@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alana Grace</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../style-artists.css">
+  <link rel="stylesheet" href="../alanagrace/style-alanagrace.css">
+</head>
+<body>
+<header2 id="header">
+  <div class="header-content">
+    <div class="menu-buttons">
+      <button><a href="../../index.html" class="menu-link">Home</a></button>
+      <div class="dropdown">
+        <button class="dropbtn">Charts <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="../../charts/billboard/hot100.html">Billboard Hot 100</a>
+          <a href="../../charts/billboard/billboard200.html">Billboard 200</a>
+          <a href="../../charts/spotify/spotify-singles-antigo.html">Spotify Global Songs</a>
+          <a href="../../charts/spotify/spotify-albums-antigo.html">Spotify Global Albums</a>
+        </div>
+      </div>
+      <button><a href="../../metacritic/metacritic.html" class="menu-link">Metacritic</a></button>
+      <button><a href="https://discord.gg/PxNUBCHF4Q" class="menu-link">Discord</a></button>
+      <button><a href="../linhadotempo.html" class="menu-link">Artistas</a></button>
+    </div>
+  </div>
+</header2>
+
+<header class="artist-header">
+  <div class="artist-info-box">
+    <h1 class="artist-title">Alana Grace</h1>
+  </div>
+  <div class="artist-photo-box">
+    <div class="artist-photo">
+    </div>
+    <div class="artist-details">
+      <h1 class="artist-details-cels">23 anos</h1>
+      <h1 class="artist-details-cels">Inglaterra, Londres</h1>
+      <h1 class="artist-details-cels">℗ © Dawn Records</h1>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="discography-container">
+    <div class="border-top">
+      <p>DISCOGRAFIA</p>
+    </div>
+    <h3><br><br>Álbuns</h3>
+    <table id="albums-table"></table>
+    <h3><br>Singles e EPs</h3>
+    <table id="singles-table"></table>
+    <div class="gradient-overlay"></div>
+  </div>
+
+  <div class="events-container">
+    <div class="border-top">
+      <p>TURNÊS, CONCERTOS E EVENTOS</p>
+    </div>
+    <h3><br><br>Turnês</h3>
+    <div id="tours-grid" class="events-grid"></div>
+    <h3><br>Concertos e Eventos</h3>
+    <div id="events-grid" class="events-grid"></div>
+    <div class="gradient-overlay"></div>
+  </div>
+
+  <div class="grammy-container">
+    <div class="border-top">
+      <p>GRAMMY AWARDS</p>
+    </div>
+    <div id="grammy-categories"></div>
+    <div class="gradient-overlay"></div>
+  </div>
+
+  <div class="films-container">
+    <div class="border-top">
+      <p>FILMES</p>
+    </div>
+    <h3><br><br>Filmes</h3>
+    <div id="films-grid" class="events-grid"></div>
+    <div class="gradient-overlay"></div>
+  </div>
+</div>
+
+<script src="header-script.js"></script>
+
+<script src="../grammy-data.js"></script>
+<script>
+  function displayGrammyAwards() {
+    const grammyCategoriesDiv = document.getElementById('grammy-categories');
+    grammyCategoriesDiv.innerHTML = '';
+
+    let totalNominees = 0;
+    let totalWins = 0;
+
+    grammyData.forEach((edition, index) => {
+      if (index > 0) {
+        const divider = document.createElement('hr');
+        divider.classList.add('edition-divider');
+        grammyCategoriesDiv.appendChild(divider);
+      }
+
+      const editionDiv = document.createElement('div');
+      editionDiv.classList.add('edition-item');
+
+      const editionTitle = document.createElement('h3');
+      editionTitle.textContent = edition.edition;
+      editionTitle.classList.add('edition-title');
+      editionDiv.appendChild(editionTitle);
+
+      let editionNominees = 0;
+      let editionWins = 0;
+
+      edition.categories.forEach(category => {
+        const nominees = category.nominees;
+        const winner = category.winner;
+
+        const artistName = "Alana Grace";
+
+        const isNominee = nominees.some(nominee => {
+          const artists = nominee.artist.split(/\s+&\s+|\s+feat\s+/i);
+          return artists.some(name => name.trim() === artistName);
+        });
+
+        if (isNominee) {
+          editionNominees += nominees.filter(nominee => {
+            const artists = nominee.artist.split(/\s+&\s+|\s+feat\s+/i);
+            return artists.some(name => name.trim() === artistName);
+          }).length;
+          totalNominees += nominees.filter(nominee => {
+            const artists = nominee.artist.split(/\s+&\s+|\s+feat\s+/i);
+            return artists.some(name => name.trim() === artistName);
+          }).length;
+        }
+
+        const winnerArtists = winner.artist.split(/\s+&\s+|\s+feat\s+/i);
+        if (winnerArtists.some(name => name.trim() === artistName) && winner.song === category.nominees.find(nominee => {
+          const artists = nominee.artist.split(/\s+&\s+|\s+feat\s+/i);
+          return artists.some(name => name.trim() === artistName);
+        }).song) {
+          editionWins++;
+          totalWins++;
+        }
+
+        nominees.forEach(nominee => {
+          const artists = nominee.artist.split(/\s+&\s+|\s+feat\s+/i);
+          if (artists.some(name => name.trim() === artistName)) {
+            const categoryDiv = document.createElement('div');
+            categoryDiv.classList.add('category-item');
+
+            const categoryImage = document.createElement('img');
+            categoryImage.src = 'https://naras.a.bigcontent.io/v1/static/artist_default_200x200'; // Substitua pelo caminho da sua imagem
+            categoryImage.alt = 'Categoria Image';
+            categoryImage.classList.add('category-image');
+            categoryDiv.appendChild(categoryImage);
+
+            const categoryContent = document.createElement('div');
+            categoryContent.classList.add('category-content');
+
+            const categoryTitle = document.createElement('h4');
+            categoryTitle.textContent = category.category;
+            categoryTitle.classList.add('category-title');
+            categoryContent.appendChild(categoryTitle);
+
+            if (nominee.song) {
+              const songInfo = document.createElement('p');
+              songInfo.textContent = nominee.song;
+              songInfo.classList.add('song-info');
+              categoryContent.appendChild(songInfo);
+            }
+
+            if ((isNominee && !winnerArtists.some(name => name.trim() === artistName))||(isNominee && !(winner.song === nominee.song))) {
+              const nomineeLabel = document.createElement('p');
+              nomineeLabel.textContent = "NOMINEE";
+              nomineeLabel.classList.add('nominee-label');
+              categoryContent.appendChild(nomineeLabel);
+            }
+
+            if (winnerArtists.some(name => name.trim() === artistName) && winner.song === nominee.song) {
+              const winnerLabel = document.createElement('p');
+              winnerLabel.textContent = "WINNER";
+              winnerLabel.classList.add('winner-label');
+              categoryContent.appendChild(winnerLabel);
+            }
+
+            categoryDiv.appendChild(categoryContent);
+            editionDiv.appendChild(categoryDiv);
+          }
+        });
+      });
+
+      if (editionNominees > 0 || editionWins > 0) {
+        grammyCategoriesDiv.appendChild(editionDiv);
+      }
+    });
+
+    const artistName = "Alana Grace"; // Nome do artista
+    const totalStats = document.createElement('div');
+    totalStats.classList.add('total-stats');
+    totalStats.innerHTML = `
+        <h3 class="name-grammy">${artistName}</br></h3>
+        <div class="stats-container">
+            <div class="stats-item">
+                <p1>WINS*</p1>
+                <p1-1 class="stats-number"><br>${totalWins}</br></p1-1>
+            </div>
+            <div class="stats-item">
+                <p2>NOMINEES*</p2>
+                <p2-2 class="stats-number"><br>${totalNominees}</br></p2-2>
+            </div>
+        </div>
+    `;
+
+    grammyCategoriesDiv.insertBefore(totalStats, grammyCategoriesDiv.firstChild);
+
+    if (grammyCategoriesDiv.children.length === 0) {
+      const noInfoLabel = document.createElement('p');
+      songInfo.classList.add('empty-info');
+      noInfoLabel.textContent = "Nenhuma informação disponível para este artista.";
+      grammyCategoriesDiv.appendChild(noInfoLabel);
+    }
+  }
+
+  displayGrammyAwards();
+
+</script>
+
+<script src="films.js"></script>
+<script>
+  function displayFilms() {
+    const filmsGrid = document.getElementById("films-grid");
+    filmsGrid.innerHTML = '';
+
+    if (filmsData.length === 0) {
+      const noDataMessage = document.createElement('p');
+      noDataMessage.classList.add('empty-info');
+      noDataMessage.textContent = "Nenhuma informação disponível para este artista.";
+      filmsGrid.appendChild(noDataMessage);
+      return;
+    }
+
+    filmsData.forEach(film => {
+      const filmCard = createConcertosCard(film.title, film.year, film.image, film.label);
+      filmsGrid.appendChild(filmCard);
+    });
+  }
+
+  function createConcertosCard(title, year, image, label) {
+    const filmCard = document.createElement("div");
+
+    if (image) {
+      const filmImage = document.createElement("img");
+      filmImage.src = image;
+      filmImage.alt = "Poster do Filme";
+      filmImage.classList.add("events-img");
+      filmCard.appendChild(filmImage);
+    }
+
+    const titleHeading = document.createElement("h1");
+    titleHeading.textContent = title;
+    titleHeading.classList.add("events-title");
+    filmCard.appendChild(titleHeading);
+
+    const yearInfo = document.createElement("h1");
+    yearInfo.textContent = year;
+    yearInfo.classList.add("events-info");
+    filmCard.appendChild(yearInfo);
+
+    const labelInfo = document.createElement("h1");
+    labelInfo.textContent = label;
+    labelInfo.classList.add("events-info");
+    filmCard.appendChild(labelInfo);
+
+    return filmCard;
+  }
+
+  displayFilms();
+</script>
+
+
+<script src="events.js"></script>
+<script>
+  function displayData() {
+    const toursGrid = document.getElementById("tours-grid");
+    const eventsGrid = document.getElementById("events-grid");
+
+    toursGrid.innerHTML = '';
+    eventsGrid.innerHTML = '';
+
+    if (toursData.length === 0) {
+      const noToursMessage = document.createElement('p');
+      noToursMessage.classList.add('empty-info');
+      noToursMessage.textContent = "Nenhuma informação disponível para este artista.";
+      toursGrid.appendChild(noToursMessage);
+    } else {
+      toursData.forEach(tour => {
+        const tourCard = createConcertosCard(tour.title, tour.year, tour.image, tour.label);
+        toursGrid.appendChild(tourCard);
+      });
+    }
+
+    if (eventsData.length === 0) {
+      const noEventsMessage = document.createElement('p');
+      noEventsMessage.classList.add('empty-info');
+      noEventsMessage.textContent = "Nenhuma informação disponível para este artista.";
+      eventsGrid.appendChild(noEventsMessage);
+    } else {
+      // Itera sobre os dados de events e cria os cartões
+      eventsData.forEach(event => {
+        const eventCard = createConcertosCard(event.title, event.year, event.image, event.label);
+        eventsGrid.appendChild(eventCard);
+      });
+    }
+  }
+
+  function createConcertosCard(title, year, image, label) {
+    const card = document.createElement("div");
+
+    if (image) {
+      const albumImage = document.createElement("img");
+      albumImage.src = image;
+      albumImage.alt = "Capa do Álbum";
+      albumImage.classList.add("events-img");
+      card.appendChild(albumImage);
+    }
+
+    const titleHeading = document.createElement("h1");
+    titleHeading.textContent = title;
+    titleHeading.classList.add("events-title");
+    card.appendChild(titleHeading);
+
+    const yearInfo = document.createElement("h1");
+    yearInfo.textContent = year;
+    yearInfo.classList.add("events-info");
+    card.appendChild(yearInfo);
+
+    const labelInfo = document.createElement("h1");
+    labelInfo.textContent = label;
+    labelInfo.classList.add("events-info");
+    card.appendChild(labelInfo);
+
+    return card;
+  }
+
+  displayData();
+</script>
+
+<script src="discography.js"></script>
+<script>
+  function displayAlbums() {
+    const albumsTable = document.getElementById("albums-table");
+    albumsData.forEach(album => {
+      const albumRow = createDiscographyRow(album.title, album.year, album.image, album.label);
+      albumsTable.appendChild(albumRow);
+    });
+  }
+
+  function displaySingles() {
+    const singlesTable = document.getElementById("singles-table");
+    singlesData.forEach(single => {
+      const singleRow = createDiscographyRow(single.title, single.year, single.image, single.label);
+      singlesTable.appendChild(singleRow);
+    });
+  }
+
+  function createDiscographyRow(title, year, image, label) {
+    const row = document.createElement("tr");
+
+    const albumImageCell = document.createElement("td");
+    const albumImage = document.createElement("img");
+    albumImage.src = image;
+    albumImage.alt = "Capa do Álbum";
+    albumImage.classList.add("discography-album-img");
+    albumImageCell.appendChild(albumImage);
+    row.appendChild(albumImageCell);
+
+    const titleCell = document.createElement("td");
+    const titleHeading = document.createElement("h1");
+    titleHeading.textContent = title;
+    titleHeading.classList.add("discography-album-title");
+    titleCell.appendChild(titleHeading);
+    row.appendChild(titleCell);
+
+    const yearCell = document.createElement("td");
+    const yearInfo = document.createElement("h1");
+    yearInfo.textContent = year;
+    yearInfo.classList.add("discography-album-info");
+    yearCell.appendChild(yearInfo);
+    row.appendChild(yearCell);
+
+    const recordLabelCell = document.createElement("td");
+    const recordLabelInfo = document.createElement("h1");
+    recordLabelInfo.textContent = label;
+    recordLabelInfo.classList.add("discography-album-info");
+    recordLabelCell.appendChild(recordLabelInfo);
+    row.appendChild(recordLabelCell);
+
+    return row;
+  }
+
+  displayAlbums();
+  displaySingles();
+</script>
+
+<script>
+  const artistInfoBox = document.querySelector('.artist-info-box');
+  const artistPhotoBox = document.querySelector('.artist-photo-box');
+
+  // Adiciona um evento de rolagem à janela
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+      artistInfoBox.classList.add('hidden');
+    } else {
+      artistInfoBox.classList.remove('hidden');
+    }
+  });
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+      artistPhotoBox.classList.add('hidden');
+    } else {
+      artistPhotoBox.classList.remove('hidden');
+    }
+  });
+</script>
+
+<footer>
+  <p>© 2024 Star World Community - Beta</p>
+</footer>
+</body>
+</html>

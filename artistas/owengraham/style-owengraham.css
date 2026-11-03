@@ -1,0 +1,12 @@
+:root {
+  --color1at: #efca6f;
+  --color2at: #efca6f;
+  --color3at: #1759a9;
+  --color4at: #1759a9;
+  --image-url-header: url("https://i.imgur.com/ZJcAlZF.jpeg");
+  --image-url-artist: url("https://64.media.tumblr.com/a3d3123256590e196b8fea78bf800f65/80248a6da0af5e42-97/s1280x1920/355950a055aee05bfa09d0fe2cf9455c7192a4e4.jpg");
+}
+
+.artist-header{
+  background-position: 10% 20%;
+}

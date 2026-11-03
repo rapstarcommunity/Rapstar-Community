@@ -1,0 +1,12 @@
+:root {
+  --color1at: #FFC0CB;
+  --color2at: #FFC0CB;
+  --color3at: #F9629F;
+  --color4at: #F9629F;
+  --image-url-header: url("https://arianaphotos.com/albums/userpics/10001/elle_287129.jpg");
+  --image-url-artist: url("https://arianaphotos.com/albums/userpics/10001/elle_2814229.jpg");
+}
+
+.artist-header{
+  background-position: top left;
+}

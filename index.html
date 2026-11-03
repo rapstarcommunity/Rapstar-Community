@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  if (/^#(?:invite_token|recovery_token|confirmation_token|access_token|email_change_token)=/.test(location.hash)) {
+    location.replace('/admin/' + location.hash);
+  }
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star World Community</title>
+  <meta name="description" content="Explore artistas, últimos lançamentos, destaques e gravadoras da Star World Community.">
+  <meta property="og:site_name" content="Star World Community">
+  <meta property="og:title" content="Star World Community">
+  <meta property="og:description" content="Explore artistas, últimos lançamentos, destaques e gravadoras da Star World Community.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    @font-face {
+      font-family: Spotify;
+      src: url('fontes/GothamBold.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'Commons Regular';
+      src: url('fontes/TT Commons Regular.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'Commons Bold';
+      src: url('fontes/TT Commons Bold.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'Commons DemiBold';
+      src: url('fontes/TT Commons DemiBold.otf') format('opentype');
+    }
+    @media (max-width: 1200px) {
+      .menu-buttons button {
+        padding: 10px;
+        font-size: 12px;
+      }
+
+      .dropbtn {
+        padding: 10px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .menu-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu-buttons button, .dropbtn {
+        margin: 5px 0;
+      }
+
+      .container{
+        margin-top: 600px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .menu-buttons button, .dropbtn {
+        padding: 5px 10px;
+        font-size: 10px;
+      }
+
+      .container{
+        margin-top: 600px;
+      }
+    }
+
+    footer {
+      width: 100%;
+      background-color: #333;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), -2px -2px 10px rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-family: 'Commons Regular', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      padding-top: 20px;
+      margin-top: 70px;
+    }
+
+    footer:hover{
+      color: #FFC0CB;
+      cursor: pointer;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      min-width: 200px;
+      z-index: 1;
+      margin-left: 10px;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content a {
+      color: white;
+      font-family: 'Commons Regular', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 12px;
+      margin-top: 5px;
+      padding: 6px 8px;
+      text-decoration: none;
+      display: block;
+      border-radius: 15px;
+      background-color: #f1a5c0;
+      transition-duration: 1s;
+    }
+
+    .dropdown-content a:hover {
+      color: white;
+      background-color: #77eeaa;
+      transition-duration: 1s;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      transition-duration: 1s;
+    }
+
+    .dropbtn {
+      text-transform: uppercase;
+      font-family: 'Commons Regular', sans-serif;
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: white;
+      background-color: #77eeaa;
+      border: none;
+      cursor: pointer;
+      padding: 8px 20px;
+      border-radius: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+      transition-duration: 1s;
+    }
+
+    .dropbtn:hover {
+      background-color: #7ea;
+      transition-duration: 1s;
+    }
+
+    .menu-buttons {
+      margin-left: -15px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .menu-buttons button {
+      text-transform: uppercase;
+      font-family: 'Commons Regular', sans-serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+      background-color: #f1a5c0;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      padding: 8px 20px;
+      border-radius: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .menu-buttons button:hover {
+      background-color: #7ea;
+      cursor: pointer;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+    }
+
+    .menu-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h1{
+      font-family: 'Commons Bold', sans-serif;
+      font-size: 20px;
+      line-height: 2px;
+    }
+
+    h1:hover{
+      cursor: pointer;
+      color: #7ea;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #333;
+      border-top: 5px solid;
+      border-image: linear-gradient(to right, #f1a5c0, #7ea);
+      border-image-slice: 1;
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    footer {
+      background-color: #333;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-family: 'Commons Regular', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      padding: 20px;
+      margin-top: 70px;
+    }
+
+    a:hover{
+      color: white;
+      text-decoration: none;
+    }
+
+    body {
+      font-family: 'Commons Regular', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background-image: linear-gradient(to top, #191414 60%, #FFC0CB);
+      overflow-x: hidden;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .container {
+      position: relative;
+      margin-top: 100px;
+      justify-content: center;
+      padding: 50px;
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .music-section {
+      background-color: #212121;
+      padding: 50px;
+      color: white;
+      border-radius: 15px;
+      margin-bottom: -150px;
+      width: 95%;
+    }
+
+    a{
+      color: white;
+
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .header h2 {
+      font-size: 30px;
+      margin: 0;
+      transition: 1s;
+      font-family: 'Commons DemiBold', sans-serif;
+    }
+
+    h2:hover{
+      transition: 1s;
+      cursor: pointer;
+      color: #7ea;
+    }
+
+    .show-all {
+      font-family: 'Commons DemiBold', sans-serif;
+      font-size: 14px;
+      color: #FFC0CB;
+      text-decoration: none;
+      transition: 1s;
+    }
+
+    .show-all:hover {
+      text-decoration: underline;
+      color: #7ea;
+      transition: 1s;
+    }
+
+    .music-list {
+      display: flex;
+      gap: 40px;
+    }
+
+    .music-item {
+      width: 195px;
+      padding-left: 15px;
+    }
+
+    .music-item img {
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+    }
+
+    .music-item h3 {
+      font-family: 'Commons DemiBold', sans-serif;
+      font-size: 20px;
+      margin: 10px 0 5px;
+      transition: 1s;
+    }
+
+    .music-item p {
+      font-family: 'Commons Regular', sans-serif;
+      font-size: 16px;
+      color: #b3b3b3;
+      margin: 0;
+      transition: 1s;
+    }
+
+    .music-item h3:hover, .music-item p:hover{
+      cursor: pointer;
+      color: #7ea;
+      transition: 1s;
+    }
+
+    .highlight-section {
+      background-color: #212121;
+      padding: 50px;
+      border-radius: 15px;
+      margin-top: 30px;
+    }
+
+    .highlight-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .highlight-item {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      height: 50px;
+      width: 48%;
+      padding-right: 10px;
+      line-height: 17px;
+      display: flex;
+      align-items: center;
+      background-color: #333;
+      border-radius: 4px;
+      color: #fff;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      overflow: hidden;
+      gap: 10px;
+      box-sizing: border-box;
+    }
+
+    .highlight-item img {
+      width: 50px;
+      height: 50px;
+      border-radius: 4px 0px 0px 4px;
+      margin-right: 10px;
+    }
+
+    .highlight-item span {
+      font-family: 'Commons DemiBold', sans-serif;
+      font-size: 16px;
+      color: #fff;
+      transition: 1s;
+    }
+
+    .highlight-item span:hover{
+      color: #77eeaa;
+      transition: 1s;
+    }
+
+    .highlight-item:hover {
+      background-color: #3a3a3a;
+    }
+
+    .label-section {
+      background-color: #212121;
+      padding: 40px;
+      border-radius: 15px;
+      margin-top: 30px;
+    }
+
+    .label-item {
+      position: relative;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #333;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+      margin-right: 30px;
+      margin-bottom: 20px;
+    }
+
+    .label-item img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    .label-item:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .label-item::after {
+      content: attr(data-label-name);
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 5px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .label-item:hover::after {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    .highlight-item a {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+  </style>
+</head>
+<body>
+
+<header id="header">
+  <div class="header-content">
+    <div class="menu-buttons">
+      <button class="home-btn">
+        <a href="/index.html" class="menu-link"><i class="fas fa-home"></i></a>
+      </button>
+      <div class="dropdown">
+        <button class="dropbtn">Charts <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="/charts/billboard/hot100.html">Billboard Hot 100</a>
+          <a href="/charts/billboard/billboard200.html">Billboard 200</a>
+          <a href="/charts/billboard/artist100.html">Billboard Artist 100</a>
+          <a href="/charts/spotify/spotify-singles.html">Spotify Global Songs</a>
+          <a href="/charts/spotify/spotify-albums.html">Spotify Global Albums</a>
+        </div>
+      </div>
+      <button><a href="/metacritic/metacritic.html" class="menu-link">Metacritic</a></button>
+      <button><a href="https://discord.gg/PxNUBCHF4Q" class="menu-link">Discord</a></button>
+      <button><a href="/artistas/linhadotempo.html" class="menu-link">Artistas</a></button>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="music-section col-md-12 d-flex flex-column mx-auto px-6 mt-4">
+    <div class="header d-flex justify-content-between align-items-center">
+      <h2>Últimos lançamentos</h2>
+      <a href="/metacritic/metacritic.html" class="show-all">Mostrar tudo</a>
+    </div>
+    <div class="music-list row" id="musicList">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row gap-2">
+    <div class="highlight-section col-md-6 d-flex flex-column mx-auto px-4 mt-4 mb-4">
+      <div class="header d-flex justify-content-between align-items-center">
+        <h2>Destaques</h2>
+        <a href="/metacritic/metacritic.html" class="show-all">Mostrar tudo</a>
+      </div>
+      <div class="highlight-list d-flex flex-wrap" id="highlightList">
+      </div>
+    </div>
+
+    <!-- Nova seção de Gravadoras Oficiais -->
+    <div class="label-section col-md-4 d-flex flex-column mx-auto px-4 mt-4 mb-4">
+      <div class="header d-flex justify-content-between align-items-center">
+        <h2>Gravadoras Oficiais</h2>
+      </div>
+      <div class="label-list d-flex flex-wrap" id="labelList">
+        <div class="label-item" data-label-name="Dawn Records">
+          <a href="https://discord.com/channels/1200848484518080512/1200970158487904306/1251193762995245076">
+            <img src="https://i.imgur.com/QKIzmbB.png" alt="Dawn Records">
+          </a>
+        </div>
+        <div class="label-item" data-label-name="Illuminati Records">
+          <a href="https://discord.com/channels/1200848484518080512/1200970181720146000/1211443289111396434">
+            <img src="https://i.imgur.com/zqwm3wr.png" alt="Illuminati Records">
+          </a>
+        </div>
+        <div class="label-item" data-label-name="Starlight Group">
+          <a href="https://discord.com/channels/1200848484518080512/1213651513918890004/1256031320455249952">
+            <img src="https://i.imgur.com/GNGG0oG.png" alt="Starlight Group">
+          </a>
+        </div>
+        <div class="label-item" data-label-name="Pacific Records">
+          <a href="https://discord.com/channels/1200848484518080512/1248470798587531336">
+            <img src="https://i.imgur.com/osNhVIj.png" alt="Pacific Records">
+          </a>
+        </div>
+        <div class="label-item" data-label-name="YG Entertainment">
+          <a href="https://discord.com/channels/1200848484518080512/1298484161685880872">
+            <img src="https://i.imgur.com/O7CjUUq.png" alt="YG Entertainment">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2024 Star World Community - Beta</p>
+</footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<script type="module" src="/js/home-content.js"></script>
+</body>
+</html>
