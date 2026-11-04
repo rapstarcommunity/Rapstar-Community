@@ -5,9 +5,9 @@ redirectsOrigin = "config"
 plugins = []
 
 [build]
-# The site is served directly; do not infer the legacy Webpack build script.
-command = "echo 'Publishing static site files'"
-publish = "."
+# Use a dedicated output directory instead of the checkout's absolute path.
+command = "node scripts/prepare-publish.cjs"
+publish = "dist"
 publishOrigin = "config"
 functions = "netlify/functions"
 
