@@ -1,6 +1,6 @@
 const $ = id => document.getElementById(id);
 let identity, content, revision = 0, dirty = false, tab = 'texts', inviteToken = null, recovery = false, uploads = 0, busy = false;
-const titles = { releases: 'Lançamentos', highlights: 'Destaques', labels: 'Gravadoras' };
+const titles = { releases: 'Lançamentos', highlights: 'Destaques', labels: 'Gravadoras', news: 'Notícias' };
 function status(message, error = false) { $('status').textContent = message; $('status').classList.toggle('error', error); }
 function changed() { dirty = true; $('save-state').textContent = 'Alterações ainda não publicadas'; }
 function node(tag, text, className) { const e = document.createElement(tag); if (text) e.textContent = text; if (className) e.className = className; return e; }
@@ -23,7 +23,7 @@ function draw() {
     target.append(fields); return;
   }
   target.append(node('h3', titles[tab]), node('p', 'Escolha uma nova imagem ou cole sua URL. Use os botões para ordenar os itens. Até 30 itens por seção.', 'note'));
-  const collection = content[tab];
+  const collection = content[tab] ??= [];
   if (!collection.length) target.append(node('p', 'Esta seção está vazia. Adicione o primeiro item abaixo.', 'empty'));
   collection.forEach((item, index) => {
     const card = node('article', '', 'item'), images = node('div', '', 'image-editor'), details = node('div');
@@ -45,8 +45,8 @@ function draw() {
     });
     const remove = node('button', 'Remover'); remove.type = 'button'; remove.onclick = () => { collection.splice(index, 1); changed(); draw(); }; actions.append(remove);
     details.append(actions, field('Nome / título', item.title, value => { item.title = value; image.alt = value; }));
-    if (tab !== 'labels') details.append(field('Artista', item.artist, value => { item.artist = value; }, false));
-    details.append(field('Link de destino', item.link, value => { item.link = value; }), field('URL da imagem', item.cover, value => { item.cover = value; if (/^(https:\/\/|\/(?!\/))/.test(value)) image.src = value; }));
+    if (tab !== 'labels' && tab !== 'news') details.append(field('Artista', item.artist, value => { item.artist = value; }, false));
+    details.append(field(tab === 'news' ? 'Link de destino (opcional)' : 'Link de destino', item.link, value => { item.link = value; }, tab !== 'news'), field('URL da imagem', item.cover, value => { item.cover = value; if (/^(https:\/\/|\/(?!\/))/.test(value)) image.src = value; }));
     card.append(images, details); target.append(card);
   });
   const add = node('button', '+ Adicionar item'); add.id = 'add-item'; add.type = 'button'; add.disabled = collection.length >= 30;
@@ -93,8 +93,8 @@ document.querySelectorAll('[data-tab]').forEach(button => button.onclick = () =>
 $('publish').onclick = async () => {
   for (const key of ['releasesTitle','highlightsTitle','labelsTitle','footer']) if (!content[key].trim()) { status('Preencha todos os textos da página.', true); return; }
   const validURL = value => typeof value === 'string' && (/^\/(?!\/)/.test(value) || /^https:\/\//.test(value));
-  for (const key of ['releases','highlights','labels']) {
-    if (content[key].some(item => !item.title.trim() || !validURL(item.cover) || !validURL(item.link))) { tab = key; document.querySelector(`[data-tab="${key}"]`).click(); status('Preencha o título, o link e a imagem de cada item. Use HTTPS ou um caminho iniciado com /.', true); return; }
+  for (const key of ['releases','highlights','labels','news']) {
+    if ((content[key] ?? []).some(item => !item.title.trim() || !validURL(item.cover) || ((key !== 'news' || item.link) && !validURL(item.link)))) { tab = key; document.querySelector(`[data-tab="${key}"]`).click(); status('Preencha o título e a imagem de cada item e confira os links. Use HTTPS ou um caminho iniciado com /.', true); return; }
   }
   busy = true; $('fields').inert = true; document.querySelector('nav').inert = true; updatePublish(); status('Publicando alterações…');
   try {

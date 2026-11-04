@@ -14,6 +14,15 @@ test('rejects executable URLs, external HTTP links and malformed content', () =>
   assert.equal(validUrl('https://example.com/image.png'), true);
   for (const value of [null, {}, { ...defaults, releases: null }, { ...defaults, footer: '' }, { ...defaults, labels: Array(31).fill(defaults.labels[0]) }, { ...defaults, releases: [{ ...defaults.releases[0], link: 'javascript:alert(1)' }] }]) assert.equal(validContent(value), false);
 });
+test('accepts news without destinations and rejects invalid news content', () => {
+  assert.equal(defaults.news.length, 3);
+  assert.equal(validContent({ ...defaults, news: [] }), true);
+  const news = defaults.news[0];
+  for (const value of [null, Array(31).fill(news), [{ ...news, title: '' }], [{ ...news, cover: 'javascript:alert(1)' }], [{ ...news, link: 'javascript:alert(1)' }]]) {
+    assert.equal(validContent({ ...defaults, news: value }), false);
+  }
+  assert.equal(validContent({ ...defaults, news: [{ ...news, link: '' }] }), true);
+});
 test('rejects writes from other origins and unauthenticated requests', async () => {
   const crossOrigin = new Request('https://site.example/api/content', { method: 'PUT', headers: { Origin: 'https://other.example' } });
   assert.equal((await authorize(crossOrigin))?.status, 403);
