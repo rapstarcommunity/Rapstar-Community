@@ -29,7 +29,7 @@ const albumsData = [
     title: "Fantasmagoric Feelings",
     year: "-",
     image: "https://i.imgur.com/5Xgn5gI.jpeg",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Liza",
     featuring: []
   },
@@ -37,7 +37,7 @@ const albumsData = [
     title: "Everloved",
     year: "-",
     image: "https://i.imgur.com/j7fLWHV.jpeg",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Liza",
     featuring: []
   },
@@ -102,7 +102,7 @@ const albumsData = [
     title: "Flourish",
     year: "Year 02",
     image: "https://i.imgur.com/DwbD3KP.png",
-    label: "℗ © Illuminati Records",
+    label: "℗ © Empire Music Group",
     artist: "Matteo",
     featuring: []
   },
@@ -142,7 +142,7 @@ const albumsData = [
     title: "Overgrown",
     year: "Year 02",
     image: "https://i.imgur.com/SjmmVKv.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Eric",
     featuring: []
   },
@@ -150,7 +150,7 @@ const albumsData = [
     title: "Dreamscape (Deluxe)",
     year: "Year 02",
     image: "https://i.imgur.com/tEUHtTy.png",
-    label: "℗ © Illuminati Records",
+    label: "℗ © Empire Music Group",
     artist: "Aria",
     featuring: []
   },
@@ -166,7 +166,7 @@ const albumsData = [
     title: "meaningless",
     year: "Year 01",
     image: "https://i.imgur.com/YPbjHzk.png",
-    label: "℗ © Illuminati Records",
+    label: "℗ © Empire Music Group",
     artist: "Anthony",
     featuring: []
   },
@@ -182,7 +182,7 @@ const albumsData = [
     title: "Dreamscape",
     year: "Year 01",
     image: "https://i.imgur.com/YOeKr4e.png",
-    label: "℗ © Illuminati Records",
+    label: "℗ © Empire Music Group",
     artist: "Aria",
     featuring: []
   },
@@ -222,7 +222,7 @@ const albumsData = [
     title: "I Really Don't Wanna Hear It Anymore",
     year: "-",
     image: "https://pbs.twimg.com/media/FycJA3HacAAl4w7.jpg:large",
-    label: "℗ © Pacific Records",
+    label: "℗ © Sterling Records",
     artist: "Holligan",
     featuring: []
   },
@@ -358,7 +358,7 @@ const albumsData = [
     title: "everlasting",
     year: "Year 01",
     image: "https://i.imgur.com/5psYO2t.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Liz",
     featuring: []
   },
@@ -366,7 +366,7 @@ const albumsData = [
     title: "Lockdown",
     year: "-",
     image: "https://i.imgur.com/WasLUob.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Liz",
     featuring: []
   },
@@ -374,7 +374,7 @@ const albumsData = [
     title: "Alpha",
     year: "-",
     image: "https://i.imgur.com/aPJDMdP.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Liz",
     featuring: []
   },
@@ -382,7 +382,7 @@ const albumsData = [
     title: "Purpose",
     year: "-",
     image: "https://i.imgur.com/QVil8Ah.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Liz",
     featuring: []
   },
@@ -390,7 +390,7 @@ const albumsData = [
     title: "Becoming",
     year: "-",
     image: "https://i.imgur.com/eqUXWow.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Starlights",
     featuring: []
   },
