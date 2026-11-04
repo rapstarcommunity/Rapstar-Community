@@ -56,7 +56,7 @@
       width: 100%;
     }
 
-    .menu-buttons button {
+    .menu-buttons :is(button, a.home-btn) {
       text-transform: uppercase;
       font-family: 'Commons Regular', sans-serif;
       font-size: 14px;
@@ -70,7 +70,7 @@
       margin: 5px;
     }
 
-    .menu-buttons button:hover {
+    .menu-buttons :is(button, a.home-btn):hover {
       background-color: #7ea;
       cursor: pointer;
       transition: all 1s;
@@ -282,7 +282,7 @@
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       }
 
-      .menu-buttons button {
+      .menu-buttons :is(button, a.home-btn) {
         padding: 10px;
         font-size: 12px;
       }
@@ -314,7 +314,7 @@
         align-items: center;
       }
 
-      .menu-buttons button, .dropbtn {
+      .menu-buttons :is(button, a.home-btn), .dropbtn {
         margin: 5px 0;
       }
 
@@ -343,7 +343,7 @@
         font-size: 8px;
       }
 
-      .menu-buttons button, .dropbtn {
+      .menu-buttons :is(button, a.home-btn), .dropbtn {
         padding: 5px 10px;
         font-size: 10px;
       }
@@ -371,7 +371,7 @@
       align-items: center;
       justify-content: center;
       background-color: #333;
-      border-radius: 50%;
+      border-radius: 20px;
       margin-top: 10px;
       transition: 1s;
     }
@@ -384,7 +384,7 @@
     .label-item img {
       width: 100px;
       height: 100px;
-      border-radius: 50%;
+      border-radius: 14px;
       transition: transform 0.3s ease;
       object-fit: cover;
 
@@ -445,9 +445,7 @@
   <div class="header-content">
     <div class="menu-buttons">
       <div class="dropdown">
-        <button class="home-btn">
-          <a href="../index.html" class="menu-link"><i class="fas fa-home"></i></a>
-        </button>
+        <a href="/" class="home-btn menu-link" aria-label="Página inicial"><i class="fas fa-home" aria-hidden="true"></i></a>
         <button class="dropbtn">Charts <i class="fas fa-caret-down"></i></button>
         <div class="dropdown-content">
           <a href="../charts/billboard/hot100.html">Billboard Hot 100</a>
@@ -473,40 +471,40 @@
 
 
 <div class="artist-grid">
-  <!-- Dawn Records -->
+  <!-- Rocktopia -->
   <div class="label-section">
     <div class="header d-flex justify-content-between align-items-center">
-      <h2>Dawn Records</h2>
+      <h2>Rocktopia</h2>
     </div>
     <div class="label-list">
       <a href="../artistas/evengrace/historia.html">
-        <div class="label-item" data-label-name="Even Grace">
-          <img src="https://i.imgur.com/lhOrAtx.jpeg" alt="Even Grace">
+        <div class="label-item" data-label-name="Logan">
+          <img src="https://i.imgur.com/9R4ov7y.png" alt="Logan">
         </div>
       </a>
       <a href="../artistas/ava/historia.html">
-        <div class="label-item" data-label-name="Ava">
-          <img src="https://i.imgur.com/egopiOi.jpeg" alt="Ava">
+        <div class="label-item" data-label-name="Daniel">
+          <img src="https://i.imgur.com/egopiOi.jpeg" alt="Daniel">
         </div>
       </a>
       <a href="../artistas/alanagrace/historia.html">
-        <div class="label-item" data-label-name="Alana Grace">
-          <img src="https://i.imgur.com/BYJKBJX.jpeg" alt="Alana Grace">
+        <div class="label-item" data-label-name="Maeve">
+          <img src="https://i.imgur.com/BYJKBJX.jpeg" alt="Maeve">
         </div>
       </a>
       <a href="../artistas/hannah/historia.html">
-        <div class="label-item" data-label-name="Hannah">
-          <img src="https://graziamagazine.com/us/wp-content/uploads/sites/15/2022/07/Beyonce-Renaissance-12.jpeg" alt="Hannah">
+        <div class="label-item" data-label-name="Millie">
+          <img src="https://graziamagazine.com/us/wp-content/uploads/sites/15/2022/07/Beyonce-Renaissance-12.jpeg" alt="Millie">
         </div>
       </a>
       <a href="../artistas/ivysinclair/historia.html">
-        <div class="label-item" data-label-name="Ivy Sinclair">
-          <img src="https://i.imgur.com/tzdo6NG.png" alt="Ivy Sinclair">
+        <div class="label-item" data-label-name="Maya Caccini">
+          <img src="https://i.imgur.com/tzdo6NG.png" alt="Maya Caccini">
         </div>
       </a>
       <a href="../artistas/4music/historia.html">
-        <div class="label-item" data-label-name="4Music">
-          <img src="https://i.imgur.com/yat3cqm.png" alt="4Music">
+        <div class="label-item" data-label-name="Mason">
+          <img src="https://i.imgur.com/yat3cqm.png" alt="Mason">
         </div>
       </a>
       <a href="../artistas/fiona/historia.html">

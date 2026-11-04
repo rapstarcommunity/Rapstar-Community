@@ -57,25 +57,25 @@ const toursData = [
     title: "The Drive Tour",
     year: "(Year 02)",
     image: "https://i.imgur.com/LYcRTYJ.jpeg",
-    artists: ["Ava"]
+    artists: ["Daniel"]
   },
   {
     title: "THE CROSSOVER EUROPE TOUR",
     year: "(Year 02)",
     image: "https://i.imgur.com/HbvpY7h.png",
-    artists: ["Hannah"]
+    artists: ["Millie"]
   },
   {
     title: "The House Club Tour",
     year: "(Year 01)",
     image: "https://i.imgur.com/Hvzn499.png",
-    artists: ["Ava"]
+    artists: ["Daniel"]
   },
   {
     title: "Everything Now Continued Tour",
     year: "(Year 01)",
     image: "https://i.imgur.com/ywHzEp4.png",
-    artists: ["Even Grace"]
+    artists: ["Logan"]
   },
   {
     title: "To Myself Tour",
@@ -87,7 +87,7 @@ const toursData = [
     title: "The Gone Now Tour",
     year: "-",
     image: "https://i.imgur.com/XGYLp0O.png",
-    artists: ["Even Grace"]
+    artists: ["Logan"]
   },
   {
     title: "Purpose Tour",

@@ -1,6 +1,6 @@
 var tabelaDados = [
   { posicao: 1, artista: "Mia", imagem: "https://ffw.uol.com.br/wp-content/uploads/2025/01/img_0224.jpg" },
-  { posicao: 2, artista: "Ava", imagem: "https://i.imgur.com/egopiOi.jpeg" },
+  { posicao: 2, artista: "Daniel", imagem: "https://i.imgur.com/egopiOi.jpeg" },
   { posicao: 3, artista: "Blair", imagem: "https://i.imgur.com/kBajrdX.jpeg" },
   { posicao: 4, artista: "Bianca", imagem: "https://i.imgur.com/m0oI2Ll.jpeg" },
   { posicao: 5, artista: "Owen Graham", imagem: "https://64.media.tumblr.com/a3d3123256590e196b8fea78bf800f65/80248a6da0af5e42-97/s1280x1920/355950a055aee05bfa09d0fe2cf9455c7192a4e4.jpg" },

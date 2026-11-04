@@ -80,7 +80,7 @@ header {
   width: 100%;
 }
 
-.menu-buttons button {
+.menu-buttons :is(button, a.home-btn) {
   text-transform: uppercase;
   font-family: "Nunito Sans", sans-serif;
   font-size: 14px;
@@ -95,7 +95,7 @@ header {
   margin-right: 10px;
 }
 
-.menu-buttons button:hover{
+.menu-buttons :is(button, a.home-btn):hover{
   background-color: #7ea;
   cursor: pointer;
   -webkit-transition: all 1s;

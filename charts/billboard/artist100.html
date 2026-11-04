@@ -41,7 +41,7 @@
     src: url('../../fontes/TT Commons DemiBold.otf') format('opentype');
   }
   @media (max-width: 1200px) {
-    .menu-buttons button {
+    .menu-buttons :is(button, a.home-btn) {
       padding: 10px;
       font-size: 12px;
     }
@@ -58,7 +58,7 @@
       align-items: center;
     }
 
-    .menu-buttons button, .dropbtn {
+    .menu-buttons :is(button, a.home-btn), .dropbtn {
       margin: 5px 0;
     }
 
@@ -68,7 +68,7 @@
   }
 
   @media (max-width: 480px) {
-    .menu-buttons button, .dropbtn {
+    .menu-buttons :is(button, a.home-btn), .dropbtn {
       padding: 5px 10px;
       font-size: 10px;
     }
@@ -188,7 +188,7 @@
     width: 100%;
   }
 
-  .menu-buttons button {
+  .menu-buttons :is(button, a.home-btn) {
     text-transform: uppercase;
     font-family: 'Commons Regular', sans-serif;
     font-size: 14px;
@@ -203,7 +203,7 @@
     margin-right: 10px;
   }
 
-  .menu-buttons button:hover {
+  .menu-buttons :is(button, a.home-btn):hover {
     background-color: #7ea;
     cursor: pointer;
     -webkit-transition: all 1s;
@@ -405,9 +405,7 @@
 <header id="header">
   <div class="header-content">
     <div class="menu-buttons">
-      <button class="home-btn">
-        <a href="../../index.html" class="menu-link"><i class="fas fa-home"></i></a>
-      </button>
+      <a href="/" class="home-btn menu-link" aria-label="Página inicial"><i class="fas fa-home" aria-hidden="true"></i></a>
       <div class="dropdown">
         <button class="dropbtn">Charts <i class="fas fa-caret-down"></i></button>
         <div class="dropdown-content">

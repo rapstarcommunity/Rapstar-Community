@@ -1,63 +1,64 @@
 var tabelaDados = [
   {
-    posicao: 1,
-    musica: "False Idols",
-    artista: "Mia"
+    "posicao": 1,
+    "musica": "Who's That DJ?",
+    "artista": "Liberty",
+    "capa": "https://i.imgur.com/2jYc07o.jpeg"
   },
-
   {
-    posicao: 2,
-    musica: "In The End, Just Party",
-    artista: "Even Grace, Ava, Owen Graham"
+    "posicao": 2,
+    "musica": "Voz do Brasil",
+    "artista": "Nielly",
+    "capa": "https://i.imgur.com/uZemeHK.png"
   },
-
   {
-    posicao: 3,
-    musica: "Drinking About You",
-    artista: "Blair"
+    "posicao": 3,
+    "musica": "Nightmares",
+    "artista": "Logan",
+    "capa": "https://i.imgur.com/43L8OKY.png"
   },
-
   {
-    posicao: 4,
-    musica: "Be Careful",
-    artista: "Blair, Owen Graham"
+    "posicao": 4,
+    "musica": "Candy",
+    "artista": "Millie",
+    "capa": "https://i.imgur.com/WLvyscH.png"
   },
-
   {
-    posicao: 5,
-    musica: "Feeling",
-    artista: "Ava",
+    "posicao": 5,
+    "musica": "Carllie",
+    "artista": "Liberty",
+    "capa": "https://i.imgur.com/Lwde55l.png"
   },
-
   {
-    posicao: 6,
-    musica: "ORANGE TREES",
-    artista: "Bianca"
+    "posicao": 6,
+    "musica": "I'm Not That Girl",
+    "artista": "Maeve",
+    "capa": "https://i.imgur.com/UpUESsA.jpeg"
   },
-
   {
-   posicao: 7,
-   musica: "DRUNK!",
-   artista: "Ava"
-},
-
-  {
-    posicao: 8,
-    musica: "Alone In Days Like This",
-    artista: "Bianca"
+    "posicao": 7,
+    "musica": "Hero",
+    "artista": "Daniel",
+    "capa": "https://i.imgur.com/jQZfMAw.png"
   },
-
   {
-    posicao: 9,
-    musica: "The Drive",
-    artista: "Ava"
+    "posicao": 8,
+    "musica": "Postcards",
+    "artista": "Hazel Hansen",
+    "capa": "https://i.imgur.com/EIKnQDt.jpeg"
   },
-
   {
-    posicao: 10,
-    musica: "Finish Line",
-    artista: "Ava"
+    "posicao": 9,
+    "musica": "Illusion",
+    "artista": "Hazel Hansen, Millie",
+    "capa": "https://i.imgur.com/xkyQrbf.png"
   },
+  {
+    "posicao": 10,
+    "musica": "Eletrogasm",
+    "artista": "Aiddan King",
+    "capa": "https://i.imgur.com/xkyQrbf.png"
+  }
 ];
 
 function obterImagemPorTituloEArtista(titulo, artistaCompleto) {
@@ -93,7 +94,10 @@ function atualizarTabela() {
     var artistaCell = document.getElementById("artist" + dado.posicao);
 
     posicaoCell.textContent = dado.posicao;
-    imagemCell.src = obterImagemPorTituloEArtista(dado.musica, dado.artista);
+    var imagem = dado.capa || obterImagemPorTituloEArtista(dado.musica, dado.artista);
+    imagemCell.hidden = !imagem;
+    if (imagem) imagemCell.src = imagem;
+    else imagemCell.removeAttribute("src");
     musicaCell.textContent = dado.musica;
     artistaCell.textContent = dado.artista;
   });
@@ -110,7 +114,10 @@ function atualizarTop1() {
     var artistName = section.querySelector(".artist-name");
     var position = section.querySelector(".top1-number");
 
-    albumCover.src = obterImagemPorTituloEArtista(top1.musica, top1.artista);
+    var imagem = top1.capa || obterImagemPorTituloEArtista(top1.musica, top1.artista);
+    albumCover.hidden = !imagem;
+    if (imagem) albumCover.src = imagem;
+    else albumCover.removeAttribute("src");
     musicTitle.textContent = top1.musica;
     artistName.textContent = top1.artista;
     position.textContent = "#" + top1.posicao;

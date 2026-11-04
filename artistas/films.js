@@ -15,6 +15,6 @@ const filmsData = [
     title: "Little Mermaid",
     year: "(Year 01)",
     image: "https://i.imgur.com/BwOG5Fv.png",
-    artists: ["Trevor", "Hannah", "Ava", "Anthony", "Conan Woolridge", "Liz"]
+    artists: ["Trevor", "Millie", "Daniel", "Anthony", "Conan Woolridge", "Liz"]
   },
 ];

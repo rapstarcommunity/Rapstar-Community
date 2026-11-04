@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alana Grace</title>
+  <title>Maeve</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="../style-artists.css">
   <link rel="stylesheet" href="../../artistas/alanagrace/style-alanagrace.css">
@@ -12,9 +12,7 @@
 <header2 id="header">
   <div class="header-content">
     <div class="menu-buttons">
-      <button class="home-btn">
-        <a href="../../index.html" class="menu-link"><i class="fas fa-home"></i></a>
-      </button>
+      <a href="/" class="home-btn menu-link" aria-label="Página inicial"><i class="fas fa-home" aria-hidden="true"></i></a>
       <div class="dropdown">
         <button class="dropbtn">Charts <i class="fas fa-caret-down"></i></button>
         <div class="dropdown-content">
@@ -36,14 +34,14 @@
 
 
 <div class="artist-info-box">
-  <h1 class="artist-title">Alana Grace</h1>
+  <h1 class="artist-title">Maeve</h1>
 </div>
 <div class="artist-photo-box">
   <div class="artist-photo">
   </div>
   <div class="artist-details">
     <h1 class="artist-details-cels">Inglaterra, Londres</h1>
-    <h1 class="artist-details-cels">℗ © Dawn Records</h1>
+    <h1 class="artist-details-cels">℗ © Rocktopia</h1>
   </div>
 </div>
 
@@ -111,7 +109,7 @@
 <script>
   function populateEditionSelect() {
     const editionSelect = document.getElementById('edition-select');
-    const artistName = "Alana Grace";
+    const artistName = "Maeve";
 
     editionSelect.innerHTML = '';
 
@@ -164,7 +162,7 @@
         const nominees = category.nominees;
         const winner = category.winner;
 
-        const artistName = "Alana Grace";
+        const artistName = "Maeve";
 
         const isNominee = nominees.some(nominee => {
           const artists = nominee.artist.split(/\s+&\s+|\s+feat\s+/i);
@@ -249,7 +247,7 @@
       }
     });
 
-    const artistName = "Alana Grace";
+    const artistName = "Maeve";
     const totalStats = document.createElement('div');
     totalStats.classList.add('total-stats');
     totalStats.innerHTML = `
@@ -334,7 +332,7 @@
     return filmCard;
   }
 
-  displayFilms("Alana Grace");
+  displayFilms("Maeve");
 </script>
 
 <script src="../events.js"></script>
@@ -402,7 +400,7 @@
     return card;
   }
 
-  displayData("Alana Grace");
+  displayData("Maeve");
 </script>
 
 <script src="../albums.js"></script>
@@ -496,7 +494,7 @@
     }
   }
 
-  const artistName = "Alana Grace";
+  const artistName = "Maeve";
   displayAlbums(artistName);
   displaySingles(artistName);
 
