@@ -1,14 +1,14 @@
 const artistData = {
-  name: "Alana Grace",
+  name: "Maeve",
   age: "23 anos",
   location: "Inglaterra, Londres",
-  label: "℗ © Dawn Records",
+  label: "℗ © Rocktopia",
   albums: [
-    { title: "Album 1", year: "2021", image: "album1.jpg", label: "Dawn Records" },
-    { title: "Album 2", year: "2022", image: "album2.jpg", label: "Dawn Records" },
+    { title: "Album 1", year: "2021", image: "album1.jpg", label: "Rocktopia" },
+    { title: "Album 2", year: "2022", image: "album2.jpg", label: "Rocktopia" },
   ],
   singles: [
-    { title: "Single 1", year: "2020", image: "single1.jpg", label: "Dawn Records" },
+    { title: "Single 1", year: "2020", image: "single1.jpg", label: "Rocktopia" },
   ],
   tours: [
     { title: "Tour 1", year: "2021", image: "tour1.jpg", label: "World Tour" },

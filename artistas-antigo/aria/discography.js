@@ -17,7 +17,7 @@ const singlesData = [
     image: "https://i.imgur.com/1BYSxa1.png",
     label: "℗ © Illuminati Records"
   },
-  { title: "Boom Boom (feat. Liza & Hannah)",
+  { title: "Boom Boom (feat. Liza & Millie)",
     year: "Year 01",
     image: "https://i.imgur.com/3JncPKv.png",
     label: "℗ © Illuminati Records"

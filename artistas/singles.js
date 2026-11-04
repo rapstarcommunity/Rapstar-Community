@@ -12,7 +12,7 @@ const singlesData = [
     title: "Alone In Days Like This",
     year: "-",
     image: "https://i.imgur.com/EIKnQDt.jpeg",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Bianca",
     single: "nao",
     featuring: []
@@ -21,8 +21,8 @@ const singlesData = [
     title: "Finish Line",
     year: "Year 02",
     image: "https://i.imgur.com/xkyQrbf.png",
-    label: "℗ © Dawn Records",
-    artist: "Ava",
+    label: "℗ © Rocktopia",
+    artist: "Daniel",
     single: "nao",
     featuring: []
   },
@@ -30,8 +30,8 @@ const singlesData = [
     title: "The Drive",
     year: "Year 02",
     image: "https://i.imgur.com/xkyQrbf.png",
-    label: "℗ © Dawn Records",
-    artist: "Ava",
+    label: "℗ © Rocktopia",
+    artist: "Daniel",
     single: "nao",
     featuring: []
   },
@@ -81,20 +81,20 @@ const singlesData = [
     featuring: ["Owen Graham"]
   },
   {
-    title: "In The End, Just Party (with Ava & Owen Graham)",
+    title: "In The End, Just Party (with Daniel & Owen Graham)",
     year: "Year 03",
     image: "https://i.imgur.com/7nRvI5B.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     single: "sim",
-    featuring: ["Ava", "Owen Graham"]
+    featuring: ["Daniel", "Owen Graham"]
   },
   {
     title: "Unanswered Questions",
     year: "Year 03",
     image: "https://i.imgur.com/Kcb4ESk.png",
-    label: "℗ © Dawn Records",
-    artist: "Ivy Sinclair",
+    label: "℗ © Rocktopia",
+    artist: "Maya Caccini",
     single: "sim",
     featuring: []
   },
@@ -102,7 +102,7 @@ const singlesData = [
     title: "SOFTLY, FOREVER",
     year: "Year 03",
     image: "https://i.imgur.com/Rld7gSG.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Bianca",
     single: "sim",
     featuring: []
@@ -156,8 +156,8 @@ const singlesData = [
     title: "Nothing 2 Lose",
     year: "Year 03",
     image: "https://i.imgur.com/uZemeHK.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     single: "nao",
     featuring: ["Mayleen"]
   },
@@ -165,10 +165,10 @@ const singlesData = [
     title: "In The End, Just Party",
     year: "Year 03",
     image: "https://i.imgur.com/uZemeHK.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     single: "nao",
-    featuring: ["Ava", "Owen Graham"]
+    featuring: ["Daniel", "Owen Graham"]
   },
   {
     title: "NaNaNa",
@@ -183,17 +183,17 @@ const singlesData = [
     title: "WHISKEY FEVER",
     year: "Year 03",
     image: "https://i.imgur.com/CX87G23.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Nate",
     single: "nao",
-    featuring: ["Even Grace"]
+    featuring: ["Logan"]
   },
   {
     title: "RADICAL EXXXTASY",
     year: "Year 03",
     image: "https://i.imgur.com/q2Pih6j.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     single: "sim",
     featuring: []
   },
@@ -219,16 +219,16 @@ const singlesData = [
     title: "Chasing Freedom",
     year: "Year 03",
     image: "https://i.imgur.com/x5OuhY4.jpeg",
-    label: "℗ © Dawn Records",
-    artist: "Ivy Sinclair",
+    label: "℗ © Rocktopia",
+    artist: "Maya Caccini",
     single: "sim",
     featuring: []
   },
   {
-    title: "LANDSCAPE DUET WITH EVEN GRACE",
+    title: "LANDSCAPE DUET WITH LOGAN",
     year: "Year 03",
     image: "https://i.imgur.com/Rld7gSG.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Bianca",
     single: "nao",
     featuring: []
@@ -237,7 +237,7 @@ const singlesData = [
     title: "ORANGE TREES",
     year: "Year 03",
     image: "https://i.imgur.com/Rld7gSG.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Bianca",
     single: "nao",
     featuring: []
@@ -246,7 +246,7 @@ const singlesData = [
     title: "HONEY",
     year: "Year 03",
     image: "https://i.imgur.com/Rld7gSG.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Bianca",
     single: "nao",
     featuring: []
@@ -255,7 +255,7 @@ const singlesData = [
     title: "SOFTLY, FOREVER",
     year: "Year 03",
     image: "https://i.imgur.com/Rld7gSG.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Bianca",
     single: "nao",
     featuring: []
@@ -264,8 +264,8 @@ const singlesData = [
     title: "ALL AMERICAN",
     year: "Year 02",
     image: "https://i.imgur.com/mzd5oqC.png",
-    label: "℗ © Dawn Records",
-    artist: "Hannah",
+    label: "℗ © Rocktopia",
+    artist: "Millie",
     single: "nao",
     featuring: []
   },
@@ -279,13 +279,13 @@ const singlesData = [
     featuring: []
   },
   {
-    title: "Don't Play Me (feat. Even Grace)",
+    title: "Don't Play Me (feat. Logan)",
     year: "Year 02",
     image: "https://i.imgur.com/SQWX8YB.png",
     label: "℗ © Illuminati Records",
     artist: "Aria",
     single: "sim",
-    featuring: ["Even Grace"]
+    featuring: ["Logan"]
   },
   {
     title: "Sweetheart",
@@ -336,8 +336,8 @@ const singlesData = [
     title: "SHOTGUN",
     year: "Year 02",
     image: "https://i.imgur.com/pBfM0md.png",
-    label: "℗ © Dawn Records",
-    artist: "Hannah",
+    label: "℗ © Rocktopia",
+    artist: "Millie",
     single: "sim",
     featuring: []
   },
@@ -354,7 +354,7 @@ const singlesData = [
     title: "HIGHWAY BOYS",
     year: "Year 02",
     image: "https://i.imgur.com/zfilIku.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Nate",
     single: "sim",
     featuring: []
@@ -363,8 +363,8 @@ const singlesData = [
     title: "I Got The Power (feat. Miles Carson)",
     year: "Year 02",
     image: "https://i.imgur.com/B4KdAG1.png",
-    label: "℗ © Dawn Records",
-    artist: "4Music",
+    label: "℗ © Rocktopia",
+    artist: "Mason",
     single: "sim",
     featuring: ["Miles Carson"]
   },
@@ -372,8 +372,8 @@ const singlesData = [
     title: "DRUNK!",
     year: "Year 02",
     image: "https://i.imgur.com/jQZfMAw.png",
-    label: "℗ © Dawn Records",
-    artist: "Ava",
+    label: "℗ © Rocktopia",
+    artist: "Daniel",
     single: "sim",
     featuring: []
   },
@@ -390,8 +390,8 @@ const singlesData = [
     title: "LEGACY",
     year: "Year 02",
     image: "https://i.imgur.com/mzd5oqC.png",
-    label: "℗ © Dawn Records",
-    artist: "Hannah",
+    label: "℗ © Rocktopia",
+    artist: "Millie",
     single: "nao",
     featuring: []
   },
@@ -418,7 +418,7 @@ const singlesData = [
     year: "Year 02",
     image: "https://i.imgur.com/xkyQrbf.png",
     label: "℗ © Starlight Studios",
-    artist: "Ava",
+    artist: "Daniel",
     single: "nao",
     featuring: []
   },
@@ -462,8 +462,8 @@ const singlesData = [
     title: "Word Up!",
     year: "Year 02",
     image: "https://i.imgur.com/XvaycfD.png",
-    label: "℗ © Dawn Records",
-    artist: "4Music",
+    label: "℗ © Rocktopia",
+    artist: "Mason",
     single: "sim",
     featuring: []
   },
@@ -471,8 +471,8 @@ const singlesData = [
     title: "Move",
     year: "Year 02",
     image: "https://i.imgur.com/emvoHBm.png",
-    label: "℗ © Dawn Records",
-    artist: "4Music",
+    label: "℗ © Rocktopia",
+    artist: "Mason",
     single: "sim",
     featuring: []
   },
@@ -480,8 +480,8 @@ const singlesData = [
     title: "Wings",
     year: "Year 02",
     image: "https://i.imgur.com/FFwDAJ2.png",
-    label: "℗ © Dawn Records",
-    artist: "4Music",
+    label: "℗ © Rocktopia",
+    artist: "Mason",
     single: "sim",
     featuring: []
   },
@@ -489,8 +489,8 @@ const singlesData = [
     title: "Salute",
     year: "Year 02",
     image: "https://i.imgur.com/oxCDtRj.jpg",
-    label: "℗ © Dawn Records",
-    artist: "4Music",
+    label: "℗ © Rocktopia",
+    artist: "Mason",
     single: "sim",
     featuring: []
   },
@@ -498,8 +498,8 @@ const singlesData = [
     title: "AFTERMATH",
     year: "Year 02",
     image: "https://i.imgur.com/n5OTHPi.png",
-    label: "℗ © Dawn Records",
-    artist: "Alana Grace",
+    label: "℗ © Rocktopia",
+    artist: "Maeve",
     single: "sim",
     featuring: []
   },
@@ -516,8 +516,8 @@ const singlesData = [
     title: "feel like sheet",
     year: "Year 01",
     image: "https://i.imgur.com/x4b7aGQ.png",
-    label: "℗ © Dawn Records",
-    artist: "Ivy Sinclair",
+    label: "℗ © Rocktopia",
+    artist: "Maya Caccini",
     single: "sim",
     featuring: []
   },
@@ -525,8 +525,8 @@ const singlesData = [
     title: "you broke me first",
     year: "Year 01",
     image: "https://i.imgur.com/iYvzkRJ.png",
-    label: "℗ © Dawn Records",
-    artist: "Ivy Sinclair",
+    label: "℗ © Rocktopia",
+    artist: "Maya Caccini",
     single: "sim",
     featuring: []
   },
@@ -561,7 +561,7 @@ const singlesData = [
     title: "i didn't know any better",
     year: "-",
     image: "https://i.imgur.com/juP2TW0.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Owen Graham",
     single: "sim",
     featuring: []
@@ -570,7 +570,7 @@ const singlesData = [
     title: "second",
     year: "-",
     image: "https://i.imgur.com/VJiFvQN.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Owen Graham",
     single: "sim",
     featuring: []
@@ -579,7 +579,7 @@ const singlesData = [
     title: "timeless",
     year: "-",
     image: "https://i.imgur.com/ouWcGLu.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Owen Graham",
     single: "sim",
     featuring: []
@@ -597,7 +597,7 @@ const singlesData = [
     title: "Be Alive (Original Song from the Motion Picture \"Before Sunrise\")",
     year: "Year 02",
     image: "https://i.imgur.com/82p0m2k.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Fiona",
     single: "sim",
     featuring: []
@@ -606,7 +606,7 @@ const singlesData = [
     title: "When The Party's Over",
     year: "Year 02",
     image: "https://i.imgur.com/wN6WNhi.jpeg",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Fiona",
     single: "sim",
     featuring: []
@@ -615,8 +615,8 @@ const singlesData = [
     title: "Oh, Was That Yours?",
     year: "Year 02",
     image: "https://i.imgur.com/Q94Pawr.png",
-    label: "℗ © Dawn Records",
-    artist: "Ava",
+    label: "℗ © Rocktopia",
+    artist: "Daniel",
     single: "sim",
     featuring: []
   },
@@ -624,26 +624,26 @@ const singlesData = [
     title: "Bloodsucker",
     year: "Year 02",
     image: "https://i.imgur.com/n3DwAZF.png",
-    label: "℗ © Dawn Records",
-    artist: "Ava",
+    label: "℗ © Rocktopia",
+    artist: "Daniel",
     single: "sim",
     featuring: []
   },
   {
-    title: "My Game (Remix) feat. Ava",
+    title: "My Game (Remix) feat. Daniel",
     year: "Year 01",
     image: "https://i.imgur.com/hBMdtGF.jpeg",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Fiona",
     single: "sim",
-    featuring: ["Ava"]
+    featuring: ["Daniel"]
   },
   {
     title: "Soul For My Love",
     year: "Year 01",
     image: "https://i.imgur.com/jLupsIR.png",
-    label: "℗ © Dawn Records",
-    artist: "Ava",
+    label: "℗ © Rocktopia",
+    artist: "Daniel",
     single: "sim",
     featuring: []
   },
@@ -651,8 +651,8 @@ const singlesData = [
     title: "Feeling",
     year: "Year 01",
     image: "https://i.imgur.com/Lwde55l.png",
-    label: "℗ © Dawn Records",
-    artist: "Ava",
+    label: "℗ © Rocktopia",
+    artist: "Daniel",
     single: "sim",
     featuring: []
   },
@@ -660,7 +660,7 @@ const singlesData = [
     title: "My Game",
     year: "Year 01",
     image: "https://i.imgur.com/dPHfzSg.jpeg",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Fiona",
     single: "sim",
     featuring: []
@@ -669,7 +669,7 @@ const singlesData = [
     title: "Rockless",
     year: "-",
     image: "https://i.imgur.com/RXgkKT4.jpeg",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Fiona",
     single: "sim",
     featuring: []
@@ -678,7 +678,7 @@ const singlesData = [
     title: "Confessions Of A Broken Heart",
     year: "-",
     image: "https://i.imgur.com/kvQV8Dg.jpeg",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Fiona",
     single: "sim",
     featuring: []
@@ -687,7 +687,7 @@ const singlesData = [
     title: "Hold Me Close",
     year: "-",
     image: "https://i.imgur.com/OteWWIH.jpeg",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Fiona",
     single: "sim",
     featuring: []
@@ -696,7 +696,7 @@ const singlesData = [
     title: "True Romance",
     year: "-",
     image: "https://i.imgur.com/q4UISeb.jpeg",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Fiona",
     single: "sim",
     featuring: []
@@ -705,8 +705,8 @@ const singlesData = [
     title: "TEXAS ON FIRE",
     year: "Year 02",
     image: "https://i.imgur.com/sqDjXxy.png",
-    label: "℗ © Dawn Records",
-    artist: "Hannah",
+    label: "℗ © Rocktopia",
+    artist: "Millie",
     single: "sim",
     featuring: []
   },
@@ -720,13 +720,13 @@ const singlesData = [
     featuring: ["Zara"]
   },
   {
-    title: "Boom Boom (feat. Hannah & Liza)",
+    title: "Boom Boom (feat. Millie & Liza)",
     year: "Year 01",
     image: "https://i.imgur.com/3JncPKv.png",
     label: "℗ © Illuminati Records",
     artist: "Aria",
     single: "sim",
-    featuring: ["Hannah", "Liza"]
+    featuring: ["Millie", "Liza"]
   },
   {
     title: "Eyes On Me",
@@ -742,7 +742,7 @@ const singlesData = [
     year: "Year 01",
     image: "https://i.imgur.com/a7m7cFN.png",
     label: "℗ © Starlight Studios",
-    artist: "Hannah",
+    artist: "Millie",
     single: "sim",
     featuring: []
   },
@@ -750,8 +750,8 @@ const singlesData = [
     title: "HYPERSONIC",
     year: "-",
     image: "https://i.imgur.com/Vv6glzz.png",
-    label: "℗ © Dawn Records",
-    artist: "Hannah",
+    label: "℗ © Rocktopia",
+    artist: "Millie",
     single: "sim",
     featuring: []
   },
@@ -759,8 +759,8 @@ const singlesData = [
     title: "Maquerade",
     year: "-",
     image: "https://i.imgur.com/kQJJiZY.png",
-    label: "℗ © Dawn Records",
-    artist: "Hannah",
+    label: "℗ © Rocktopia",
+    artist: "Millie",
     single: "sim",
     featuring: []
   },
@@ -768,8 +768,8 @@ const singlesData = [
     title: "The Suburbs",
     year: "Year 02",
     image: "https://i.imgur.com/tHIl0ot.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     single: "sim",
     featuring: []
   },
@@ -777,8 +777,8 @@ const singlesData = [
     title: "Alone In Kyoto",
     year: "Year 01",
     image: "https://i.imgur.com/0ZbcWX7.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     single: "sim",
     featuring: []
   },
@@ -786,19 +786,19 @@ const singlesData = [
     title: "Beetlebum",
     year: "Year 01",
     image: "https://i.imgur.com/eTjuhMK.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     single: "sim",
     featuring: []
   },
   {
-    title: "Back To You (Even Grace Remix)",
+    title: "Back To You (Logan Remix)",
     year: "-",
     image: "https://i.imgur.com/8LdVvx7.png",
     label: "℗ © YG Entertainment",
     artist: "Starlights",
     single: "sim",
-    featuring: ["Even Grace"]
+    featuring: ["Logan"]
   },
   {
     title: "Back To You",
@@ -813,8 +813,8 @@ const singlesData = [
     title: "Stolen Brave Life",
     year: "-",
     image: "https://i.imgur.com/Vw8YK0s.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     single: "sim",
     featuring: []
   },
@@ -822,8 +822,8 @@ const singlesData = [
     title: "The Very Modern Dance",
     year: "-",
     image: "https://i.imgur.com/wtwIZMs.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     single: "sim",
     featuring: []
   },
@@ -831,8 +831,8 @@ const singlesData = [
     title: "Jesus Christ 2005 God Bless America (with Bianca)",
     year: "-",
     image: "https://i.imgur.com/vaOJSMP.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     single: "sim",
     featuring: ["Bianca"]
   },
@@ -840,8 +840,8 @@ const singlesData = [
     title: "Love It If We Made It",
     year: "-",
     image: "https://i.imgur.com/eAH1XDf.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     single: "sim",
     featuring: []
   },
@@ -849,8 +849,8 @@ const singlesData = [
     title: "Give Yourself A Try",
     year: "-",
     image: "https://i.imgur.com/ccO8i1u.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     single: "sim",
     featuring: []
   },
@@ -876,7 +876,7 @@ const singlesData = [
     title: "20",
     year: "Year 01",
     image: "https://i.imgur.com/YOVEmFd.jpeg",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Conan Woolridge",
     single: "sim",
     featuring: []
@@ -912,7 +912,7 @@ const singlesData = [
     title: "Evergreen",
     year: "-",
     image: "https://i.imgur.com/sGOv5NX.jpeg",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Nate",
     single: "sim",
     featuring: []
@@ -921,7 +921,7 @@ const singlesData = [
     title: "Out Of Sight, Out Of Mind",
     year: "-",
     image: "https://i.imgur.com/de5bbuF.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Nate",
     single: "sim",
     featuring: []
@@ -930,7 +930,7 @@ const singlesData = [
     title: "Side Effects",
     year: "-",
     image: "https://i.imgur.com/aaQMxFC.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Nate",
     single: "sim",
     featuring: []
@@ -939,7 +939,7 @@ const singlesData = [
     title: "Daylight",
     year: "-",
     image: "https://i.imgur.com/FUuure5.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Nate",
     single: "sim",
     featuring: []
@@ -948,7 +948,7 @@ const singlesData = [
     title: "Pillowtalk (feat. Bianca)",
     year: "-",
     image: "https://i.imgur.com/W8ra8K5.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Nate",
     single: "sim",
     featuring: []
@@ -957,7 +957,7 @@ const singlesData = [
     title: "Hypnosis",
     year: "-",
     image: "https://i.imgur.com/lje1Fta.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Nate",
     single: "sim",
     featuring: []
@@ -966,7 +966,7 @@ const singlesData = [
     title: "Two Ghosts",
     year: "-",
     image: "https://i.imgur.com/0he0tXf.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Nate",
     single: "sim",
     featuring: []

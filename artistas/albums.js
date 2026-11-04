@@ -11,16 +11,16 @@ const albumsData = [
     title: "Reflections",
     year: "Year 03",
     image: "https://i.imgur.com/Kcb4ESk.png",
-    label: "℗ © Dawn Records",
-    artist: "Ivy Sinclair",
+    label: "℗ © Rocktopia",
+    artist: "Maya Caccini",
     featuring: []
   },
   {
     title: "Even After All",
     year: "Year 03",
     image: "https://i.imgur.com/uZemeHK.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     featuring: []
   },
   {
@@ -51,7 +51,7 @@ const albumsData = [
     title: "SUMMER REMAINS",
     year: "Year 03",
     image: "https://i.imgur.com/CX87G23.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Nate",
     featuring: []
   },
@@ -59,7 +59,7 @@ const albumsData = [
     title: "HONEY",
     year: "Year 03",
     image: "https://i.imgur.com/Rld7gSG.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Bianca",
     featuring: []
   },
@@ -67,7 +67,7 @@ const albumsData = [
     title: "Alone In Days Like This",
     year: "-",
     image: "https://i.imgur.com/EIKnQDt.jpeg",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Bianca",
     featuring: []
   },
@@ -75,7 +75,7 @@ const albumsData = [
     title: "When I Open My Eyes",
     year: "-",
     image: "https://i.imgur.com/9u0GTOY.jpeg",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Bianca",
     featuring: []
   },
@@ -83,7 +83,7 @@ const albumsData = [
     title: "Don't Tell Your Friends",
     year: "-",
     image: "https://i.imgur.com/0J7ikHf.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Bianca",
     featuring: []
   },
@@ -107,32 +107,32 @@ const albumsData = [
     title: "Salute (Deluxe)",
     year: "Year 02",
     image: "https://i.imgur.com/cKHfsvQ.png",
-    label: "℗ © Dawn Records",
-    artist: "4Music",
+    label: "℗ © Rocktopia",
+    artist: "Mason",
     featuring: []
   },
   {
     title: "Salute",
     year: "Year 02",
     image: "https://i.imgur.com/4lwZZtP.png",
-    label: "℗ © Dawn Records",
-    artist: "4Music",
+    label: "℗ © Rocktopia",
+    artist: "Mason",
     featuring: []
   },
   {
     title: "MELANCHOLIA",
     year: "Year 02",
     image: "https://i.imgur.com/n5OTHPi.png",
-    label: "℗ © Dawn Records",
-    artist: "Alana Grace",
+    label: "℗ © Rocktopia",
+    artist: "Maeve",
     featuring: []
   },
   {
     title: "The Drive",
     year: "Year 02",
     image: "https://i.imgur.com/xkyQrbf.png",
-    label: "℗ © Dawn Records",
-    artist: "Ava",
+    label: "℗ © Rocktopia",
+    artist: "Daniel",
     featuring: []
   },
   {
@@ -195,7 +195,7 @@ const albumsData = [
     title: "When I Get Lost",
     year: "-",
     image: "https://i.imgur.com/O95qUG8.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Conan Woolridge",
     featuring: []
   },
@@ -203,16 +203,16 @@ const albumsData = [
     title: "What Ever Happened?",
     year: "Year 01",
     image: "https://i.imgur.com/4UxqnEn.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     featuring: []
   },
   {
     title: "House of the Rising Sun",
     year: "Year 01",
     image: "https://i.imgur.com/sifpteD.png",
-    label: "℗ © Dawn Records",
-    artist: "Ava",
+    label: "℗ © Rocktopia",
+    artist: "Daniel",
     featuring: []
   },
   {
@@ -227,7 +227,7 @@ const albumsData = [
     title: "i owe it to myself",
     year: "-",
     image: "https://i.imgur.com/QeOU7TT.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Owen Graham",
     featuring: []
   },
@@ -235,31 +235,31 @@ const albumsData = [
     title: "Purple Dream",
     year: "-",
     image: "https://i.imgur.com/gssMuy8.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     featuring: []
   },
   {
     title: "A Brief Inquiry Into Online Relationships",
     year: "-",
     image: "https://i.imgur.com/ZyaFSC1.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     featuring: []
   },
   {
     title: "Gone Now",
     year: "-",
     image: "https://i.imgur.com/40ePcbw.png",
-    label: "℗ © Dawn Records",
-    artist: "Even Grace",
+    label: "℗ © Rocktopia",
+    artist: "Logan",
     featuring: []
   },
   {
     title: "Confessions Of A Broken Heart (Deluxe)",
     year: "-",
     image: "https://i.imgur.com/BbAnTz7.jpg",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Fiona",
     featuring: []
   },
@@ -267,7 +267,7 @@ const albumsData = [
     title: "Confessions Of A Broken Heart",
     year: "-",
     image: "https://i.imgur.com/dowVhSr.jpeg",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Fiona",
     featuring: []
   },
@@ -331,24 +331,24 @@ const albumsData = [
     title: "THE COUNTRY CLUB",
     year: "Year 02",
     image: "https://i.imgur.com/mzd5oqC.png",
-    label: "℗ © Dawn Records",
-    artist: "Hannah",
+    label: "℗ © Rocktopia",
+    artist: "Millie",
     featuring: []
   },
   {
     title: "VANGUARD",
     year: "-",
     image: "https://i.imgur.com/fSJ9aJD.png",
-    label: "℗ © Dawn Records",
-    artist: "Hannah",
+    label: "℗ © Rocktopia",
+    artist: "Millie",
     featuring: []
   },
   {
     title: "The Lights Out",
     year: "-",
     image: "https://i.imgur.com/HmUiXD0.png",
-    label: "℗ © Dawn Records",
-    artist: "Hannah",
+    label: "℗ © Rocktopia",
+    artist: "Millie",
     featuring: []
   },
   {
@@ -395,7 +395,7 @@ const albumsData = [
     title: "A Trip Down Memory Lane",
     year: "-",
     image: "https://i.imgur.com/UvEtZtx.jpeg",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Nate",
     featuring: []
   },
@@ -403,7 +403,7 @@ const albumsData = [
     title: "Metamorphosis",
     year: "-",
     image: "https://i.imgur.com/CoXXuXd.png",
-    label: "℗ © Dawn Records",
+    label: "℗ © Rocktopia",
     artist: "Nate",
     featuring: []
   },

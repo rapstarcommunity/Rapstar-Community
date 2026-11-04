@@ -10,7 +10,7 @@
 
     @media (max-width: 1200px) {
 
-      .menu-buttons button {
+      .menu-buttons :is(button, a.home-btn) {
         padding: 10px;
         font-size: 12px;
       }
@@ -28,7 +28,7 @@
         align-items: center;
       }
 
-      .menu-buttons button, .dropbtn {
+      .menu-buttons :is(button, a.home-btn), .dropbtn {
         margin: 5px 0;
       }
 
@@ -38,7 +38,7 @@
     }
 
     @media (max-width: 480px) {
-      .menu-buttons button, .dropbtn {
+      .menu-buttons :is(button, a.home-btn), .dropbtn {
         padding: 5px 10px;
         font-size: 10px;
       }
@@ -100,7 +100,7 @@
       width: 100%;
     }
 
-    .menu-buttons button {
+    .menu-buttons :is(button, a.home-btn) {
       text-transform: uppercase;
       font-family: 'Commons Regular', sans-serif;
       font-size: 14px;
@@ -115,7 +115,7 @@
       margin-right: 10px;
     }
 
-    .menu-buttons button:hover{
+    .menu-buttons :is(button, a.home-btn):hover{
       background-color: #7ea;
       cursor: pointer;
       -webkit-transition: all 1s;
@@ -537,7 +537,7 @@
         <h1>#1 IN THIS WEEK</h1>
         <img class="album-cover" src="https://i.imgur.com/Q94Pawr.png" style="margin-left: -60px; width: 45%;" alt="Capa do Álbum">
         <h1>Oh, Was That Yours?</h1>
-        <h2>Ava</h2>
+        <h2>Daniel</h2>
         <h1 style="font-size: 100px; font-family: 'Commons Bold', sans-serif; -webkit-text-stroke: 3px #212121; position: absolute; margin-top: -175px; margin-left: 120px;">#1</h1>
       </div>
 
@@ -546,7 +546,7 @@
         <h1>#1 IN THIS WEEK</h1>
         <img class="album-cover" src="https://i.imgur.com/Q94Pawr.png" style="margin-left: -60px; width: 45%;" alt="Capa do Álbum">
         <h1>Oh, Was That Yours?</h1>
-        <h2>Ava</h2>
+        <h2>Daniel</h2>
         <h1 style="font-size: 100px; font-family: 'Commons Bold', sans-serif; -webkit-text-stroke: 3px #212121; position: absolute; margin-top: -175px; margin-left: 120px;">#1</h1>
       </div>
     </div>

@@ -3,7 +3,7 @@ var tabelaDados = [
   {
     posicao: 1,
     musica: "The Drive",
-    artista: "Ava"
+    artista: "Daniel"
   },
   {
     posicao: 2,
@@ -18,17 +18,17 @@ var tabelaDados = [
   {
     posicao: 4,
     musica: "Even After All",
-    artista: "Even Grace"
+    artista: "Logan"
   },
   {
     posicao: 5,
     musica: "House of the Rising Sun",
-    artista: "Ava"
+    artista: "Daniel"
   },
   {
     posicao: 6,
     musica: "Reflections",
-    artista: "Ivy Sinclair"
+    artista: "Maya Caccini"
   },
   {
     posicao: 7,
@@ -48,7 +48,7 @@ var tabelaDados = [
   {
     posicao: 10,
     musica: "THE COUNTRY CLUB",
-    artista: "Hannah"
+    artista: "Millie"
   },
 ];
 

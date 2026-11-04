@@ -2,23 +2,23 @@
   "releasesTitle": "Últimos lançamentos",
   "highlightsTitle": "Destaques",
   "labelsTitle": "Gravadoras Oficiais",
-  "footer": "© 2024 Star World Community - Beta",
+  "footer": "© 2026 Rapstar Community - Beta",
   "releases": [
     {
-      "title": "Boogie",
-      "artist": "Blair",
-      "cover": "https://i.imgur.com/43L8OKY.png",
+      "title": "Chain Reaction",
+      "artist": "Maeve",
+      "cover": "https://i.imgur.com/UpUESsA.jpeg",
       "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1340136890870923339"
     },
     {
       "title": "Reflections",
-      "artist": "Ivy Sinclair",
+      "artist": "Maya Caccini",
       "cover": "https://i.imgur.com/Kcb4ESk.png",
       "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1336096992996098181"
     },
     {
       "title": "Even After All",
-      "artist": "Even Grace",
+      "artist": "Logan",
       "cover": "https://i.imgur.com/uZemeHK.png",
       "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1330376377249173544"
     },
@@ -31,45 +31,45 @@
   ],
   "highlights": [
     {
-      "title": "SUMMER REMAINS",
+      "title": "that's my baby",
       "artist": "Nate",
-      "cover": "https://i.imgur.com/CX87G23.png",
+      "cover": "/assets/covers/thats-my-baby.jpg",
       "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1320224976699260948"
     },
     {
-      "title": "HONEY",
+      "title": "Nightshift",
       "artist": "Bianca",
-      "cover": "https://i.imgur.com/5513RiP.png",
+      "cover": "/assets/covers/nightshift.jpg",
       "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1315880115535745056"
     },
     {
-      "title": "Dandelions",
+      "title": "Maeve Meets World",
       "artist": "Riley",
-      "cover": "https://i.imgur.com/Fp8M9ZI.png",
+      "cover": "/assets/covers/maeve-meets-world.jpg",
       "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1310405514718351381"
     },
     {
-      "title": "THE COUNTRY CLUB",
-      "artist": "Hannah",
-      "cover": "https://i.imgur.com/mzd5oqC.png",
+      "title": "Nightmares",
+      "artist": "Millie",
+      "cover": "/assets/covers/nightmares.jpg",
       "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1307779024621142208"
     },
     {
-      "title": "Overgrown",
+      "title": "Who's That DJ?",
       "artist": "Eric",
-      "cover": "https://i.imgur.com/SjmmVKv.png",
+      "cover": "/assets/covers/whos-that-dj.jpg",
       "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1302077197342740483"
     },
     {
-      "title": "The Drive",
-      "artist": "Ava",
-      "cover": "https://i.imgur.com/xkyQrbf.png",
+      "title": "Still Got It",
+      "artist": "Daniel",
+      "cover": "/assets/covers/still-got-it.jpg",
       "link": "https://discord.com/channels/1200848484518080512/1200979863188799589/1302074976488132729"
     }
   ],
   "labels": [
     {
-      "title": "Dawn Records",
+      "title": "Rocktopia",
       "cover": "https://i.imgur.com/QKIzmbB.png",
       "link": "https://discord.com/channels/1200848484518080512/1200970158487904306/1251193762995245076"
     },

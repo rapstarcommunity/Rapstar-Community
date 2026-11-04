@@ -34,7 +34,7 @@
       src: url('fontes/TT Commons DemiBold.otf') format('opentype');
     }
     @media (max-width: 1200px) {
-      .menu-buttons button {
+      .menu-buttons :is(button, a.home-btn) {
         padding: 10px;
         font-size: 12px;
       }
@@ -51,7 +51,7 @@
         align-items: center;
       }
 
-      .menu-buttons button, .dropbtn {
+      .menu-buttons :is(button, a.home-btn), .dropbtn {
         margin: 5px 0;
       }
 
@@ -61,7 +61,7 @@
     }
 
     @media (max-width: 480px) {
-      .menu-buttons button, .dropbtn {
+      .menu-buttons :is(button, a.home-btn), .dropbtn {
         padding: 5px 10px;
         font-size: 10px;
       }
@@ -85,7 +85,7 @@
     }
 
     footer:hover{
-      color: #FFC0CB;
+      color: #c28310;
       cursor: pointer;
       -webkit-transition: all 1s;
       -moz-transition: all 1s;
@@ -110,7 +110,7 @@
     }
 
     .dropdown-content a {
-      color: white;
+      color: #1c1b19;
       font-family: 'Commons Regular', sans-serif;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -119,14 +119,14 @@
       padding: 6px 8px;
       text-decoration: none;
       display: block;
-      border-radius: 15px;
-      background-color: #f1a5c0;
+      border-radius: 10px;
+      background-color: #c28310;
       transition-duration: 1s;
     }
 
     .dropdown-content a:hover {
-      color: white;
-      background-color: #77eeaa;
+      color: #1c1b19;
+      background-color: #d59420;
       transition-duration: 1s;
     }
 
@@ -140,19 +140,19 @@
       font-family: 'Commons Regular', sans-serif;
       font-size: 14px;
       letter-spacing: 1px;
-      color: white;
-      background-color: #77eeaa;
+      color: #1c1b19;
+      background-color: #c28310;
       border: none;
       cursor: pointer;
       padding: 8px 20px;
-      border-radius: 20px;
+      border-radius: 10px;
       margin-left: 10px;
       margin-right: 10px;
       transition-duration: 1s;
     }
 
     .dropbtn:hover {
-      background-color: #7ea;
+      background-color: #d59420;
       transition-duration: 1s;
     }
 
@@ -163,23 +163,23 @@
       width: 100%;
     }
 
-    .menu-buttons button {
+    .menu-buttons :is(button, a.home-btn) {
       text-transform: uppercase;
       font-family: 'Commons Regular', sans-serif;
       font-size: 14px;
       letter-spacing: 2px;
-      background-color: #f1a5c0;
+      background-color: #c28310;
       border: none;
-      color: #fff;
+      color: #1c1b19;
       cursor: pointer;
       padding: 8px 20px;
-      border-radius: 20px;
+      border-radius: 10px;
       margin-left: 10px;
       margin-right: 10px;
     }
 
-    .menu-buttons button:hover {
-      background-color: #7ea;
+    .menu-buttons :is(button, a.home-btn):hover {
+      background-color: #d59420;
       cursor: pointer;
       -webkit-transition: all 1s;
       -moz-transition: all 1s;
@@ -188,7 +188,7 @@
       transition: all 1s;
     }
 
-    .menu-link {
+    .menu-link, .menu-link:hover, .menu-link:focus-visible {
       color: inherit;
       text-decoration: none;
     }
@@ -201,13 +201,13 @@
 
     h1:hover{
       cursor: pointer;
-      color: #7ea;
+      color: #c28310;
     }
 
     header {
       padding: 20px;
       text-align: center;
-      background-color: #333;
+      background-color: #1c1b19;
       border-top: 5px solid;
       border-image: linear-gradient(to right, #f1a5c0, #7ea);
       border-image-slice: 1;
@@ -237,12 +237,17 @@
       text-decoration: none;
     }
 
+    ::selection {
+      background-color: #c28310;
+      color: #1c1b19;
+    }
+
     body {
       font-family: 'Commons Regular', sans-serif;
       margin: 0;
       padding: 0;
       color: #fff;
-      background-image: linear-gradient(to top, #191414 60%, #FFC0CB);
+      background-color: #444444;
       overflow-x: hidden;
       transition: transform 0.3s ease, opacity 0.3s ease;
     }
@@ -291,20 +296,20 @@
     h2:hover{
       transition: 1s;
       cursor: pointer;
-      color: #7ea;
+      color: #c28310;
     }
 
     .show-all {
       font-family: 'Commons DemiBold', sans-serif;
       font-size: 14px;
-      color: #FFC0CB;
+      color: #c28310;
       text-decoration: none;
       transition: 1s;
     }
 
-    .show-all:hover {
+    .show-all:hover, .show-all:focus-visible {
       text-decoration: underline;
-      color: #7ea;
+      color: #c28310;
       transition: 1s;
     }
 
@@ -342,7 +347,7 @@
 
     .music-item h3:hover, .music-item p:hover{
       cursor: pointer;
-      color: #7ea;
+      color: #c28310;
       transition: 1s;
     }
 
@@ -392,7 +397,7 @@
     }
 
     .highlight-item span:hover{
-      color: #77eeaa;
+      color: #c28310;
       transition: 1s;
     }
 
@@ -470,9 +475,7 @@
 <header id="header">
   <div class="header-content">
     <div class="menu-buttons">
-      <button class="home-btn">
-        <a href="/index.html" class="menu-link"><i class="fas fa-home"></i></a>
-      </button>
+      <a href="/" class="home-btn menu-link" aria-label="Página inicial"><i class="fas fa-home" aria-hidden="true"></i></a>
       <div class="dropdown">
         <button class="dropbtn">Charts <i class="fas fa-caret-down"></i></button>
         <div class="dropdown-content">
@@ -518,9 +521,9 @@
         <h2>Gravadoras Oficiais</h2>
       </div>
       <div class="label-list d-flex flex-wrap" id="labelList">
-        <div class="label-item" data-label-name="Dawn Records">
+        <div class="label-item" data-label-name="Rocktopia">
           <a href="https://discord.com/channels/1200848484518080512/1200970158487904306/1251193762995245076">
-            <img src="https://i.imgur.com/QKIzmbB.png" alt="Dawn Records">
+            <img src="https://i.imgur.com/QKIzmbB.png" alt="Rocktopia">
           </a>
         </div>
         <div class="label-item" data-label-name="Illuminati Records">
@@ -549,7 +552,7 @@
 </div>
 
 <footer>
-  <p>© 2024 Star World Community - Beta</p>
+  <p>© 2026 Rapstar Community - Beta</p>
 </footer>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

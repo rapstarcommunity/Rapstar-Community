@@ -5,31 +5,31 @@ const grammyData = [
       {
         category: "Album of the Year",
         nominees: [
-          { artist: "Even Grace", song: "Even After All" },
+          { artist: "Logan", song: "Even After All" },
           { artist: "Bianca", song: "HONEY" },
           { artist: "Blair", song: "Red Flags" },
-          { artist: "Ivy Sinclair", song: "Reflections" },
+          { artist: "Maya Caccini", song: "Reflections" },
           { artist: "Nate", song: "SUMMER REMAINS" },
         ],
-        winner: { artist: "Even Grace", song: "Even After All" }
+        winner: { artist: "Logan", song: "Even After All" }
       },
       {
         category: "Record of the Year",
         nominees: [
           { artist: "Mia", song: "False Idols" },
-          { artist: "Even Grace & Ava & Owen Graham", song: "In The End, Just Party" },
+          { artist: "Logan & Daniel & Owen Graham", song: "In The End, Just Party" },
           { artist: "Blair", song: "NaNaNa" },
           { artist: "Bianca", song: "SOFTLY, FOREVER" },
-          { artist: "Ivy Sinclair", song: "Unanswered Questions" },
+          { artist: "Maya Caccini", song: "Unanswered Questions" },
         ],
-        winner: { artist: "Even Grace & Ava & Owen Graham", song: "In The End, Just Party" }
+        winner: { artist: "Logan & Daniel & Owen Graham", song: "In The End, Just Party" }
       },
       {
         category: "Song of the Year",
         nominees: [
-          { artist: "Ava", song: "All Over Again... Again" },
-          { artist: "Ivy Sinclair", song: "Chasing Freedom" },
-          { artist: "Even Grace", song: "RADICAL EXXXTASY" },
+          { artist: "Daniel", song: "All Over Again... Again" },
+          { artist: "Maya Caccini", song: "Chasing Freedom" },
+          { artist: "Logan", song: "RADICAL EXXXTASY" },
           { artist: "Bianca", song: "SOFTLY, FOREVER" },
           { artist: "Nate", song: "WHERE THE CORNFIELD ENDS" },
         ],
@@ -39,7 +39,7 @@ const grammyData = [
         category: "Best New Artist",
         nominees: [
           { artist: "Blair", song: "Blair" },
-          { artist: "Ivy Sinclair", song: "Ivy Sinclair"},
+          { artist: "Maya Caccini", song: "Maya Caccini"},
           { artist: "Mia", song: "Mia" },
         ],
         winner: { artist: "Blair", song: "Blair" }
@@ -48,19 +48,19 @@ const grammyData = [
         category: "Producer of the Year, Non-Classical",
         nominees: [
           { artist: "Bianca", song: "Bianca"},
-          { artist: "Even Grace", song: "Even Grace" },
-          { artist: "Ivy Sinclair", song: "Ivy Sinclair" },
+          { artist: "Logan", song: "Logan" },
+          { artist: "Maya Caccini", song: "Maya Caccini" },
           { artist: "Nate", song: "Nate" },
           { artist: "Owen Graham", song: "Owen Graham" },
         ],
-        winner: { artist: "Even Grace", song: "Even Grace" }
+        winner: { artist: "Logan", song: "Logan" }
       },
       {
         category: "Songwriter of the Year, Non-Classical",
         nominees: [
           { artist: "Bianca", song: "Bianca"},
-          { artist: "Even Grace", song: "Even Grace" },
-          { artist: "Ivy Sinclair", song: "Ivy Sinclair" },
+          { artist: "Logan", song: "Logan" },
+          { artist: "Maya Caccini", song: "Maya Caccini" },
           { artist: "Nate", song: "Nate" },
           { artist: "Blair", song: "Blair" },
         ],
@@ -69,21 +69,21 @@ const grammyData = [
       {
         category: "Best Pop Vocal Album",
         nominees: [
-          { artist: "Even Grace", song: "Even After All" },
+          { artist: "Logan", song: "Even After All" },
           { artist: "Bianca", song: "HONEY" },
           { artist: "Blair", song: "Red Flags" },
-          { artist: "Ivy Sinclair", song: "Reflections" },
+          { artist: "Maya Caccini", song: "Reflections" },
           { artist: "Nate", song: "SUMMER REMAINS" },
         ],
-        winner: { artist: "Ivy Sinclair", song: "Reflections" }
+        winner: { artist: "Maya Caccini", song: "Reflections" }
       },
       {
         category: "Best Pop Solo Performance",
         nominees: [
-          { artist: "Ivy Sinclair", song: "Chasing Freedom" },
+          { artist: "Maya Caccini", song: "Chasing Freedom" },
           { artist: "Mia", song: "False Idols" },
           { artist: "Blair", song: "NaNaNa" },
-          { artist: "Even Grace", song: "RADICAL EXXXTASY" },
+          { artist: "Logan", song: "RADICAL EXXXTASY" },
           { artist: "Bianca", song: "SOFTLY, FOREVER" },
         ],
         winner: { artist: "Blair", song: "NaNaNa" }
@@ -91,26 +91,26 @@ const grammyData = [
       {
         category: "Best Pop Duo/Group Performance",
         nominees: [
-          { artist: "Even Grace & Ava & Owen Graham", song: "In The End, Just Party" },
+          { artist: "Logan & Daniel & Owen Graham", song: "In The End, Just Party" },
           { artist: "Blair & Owen Graham", song: "Be Careful" },
-          { artist: "Nate & Even Grace", song: "WHISKEY FEVER" },
+          { artist: "Nate & Logan", song: "WHISKEY FEVER" },
         ],
-        winner: { artist: "Even Grace & Ava & Owen Graham", song: "In The End, Just Party" }
+        winner: { artist: "Logan & Daniel & Owen Graham", song: "In The End, Just Party" }
       },
       {
         category: "Best Dance Pop Recording",
         nominees: [
           { artist: "Mia", song: "False Idols" },
-          { artist: "Even Grace & Ava & Owen Graham", song: "In The End, Just Party" },
+          { artist: "Logan & Daniel & Owen Graham", song: "In The End, Just Party" },
           { artist: "Blair", song: "NaNaNa" },
-          { artist: "Ivy Sinclair", song: "Unanswered Questions" }
+          { artist: "Maya Caccini", song: "Unanswered Questions" }
         ],
         winner: { artist: "Mia", song: "False Idols" }
       },
       {
         category: "Best Rock/Alternative Album",
         nominees: [
-          { artist: "Even Grace", song: "Even After All" },
+          { artist: "Logan", song: "Even After All" },
           { artist: "Bianca", song: "HONEY" },
           { artist: "Nate", song: "SUMMER REMAINS" }
         ],
@@ -119,43 +119,43 @@ const grammyData = [
       {
         category: "Best Rock/Alternative Performance",
         nominees: [
-          { artist: "Ava", song: "All Over Again... Again" },
-          { artist: "Ivy Sinclair", song: "Chasing Freedom" },
-          { artist: "Even Grace", song: "RADICAL EXXXTASY" },
+          { artist: "Daniel", song: "All Over Again... Again" },
+          { artist: "Maya Caccini", song: "Chasing Freedom" },
+          { artist: "Logan", song: "RADICAL EXXXTASY" },
           { artist: "Bianca", song: "SOFTLY, FOREVER" },
           { artist: "Nate", song: "WHERE THE CORNFIELD ENDS" }
         ],
-        winner: { artist: "Ava", song: "All Over Again... Again" }
+        winner: { artist: "Daniel", song: "All Over Again... Again" }
       },
       {
         category: "Best Rock/Alternative Song",
         nominees: [
-          { artist: "Ava", song: "All Over Again... Again" },
-          { artist: "Ivy Sinclair", song: "Chasing Freedom" },
-          { artist: "Even Grace", song: "RADICAL EXXXTASY" },
+          { artist: "Daniel", song: "All Over Again... Again" },
+          { artist: "Maya Caccini", song: "Chasing Freedom" },
+          { artist: "Logan", song: "RADICAL EXXXTASY" },
           { artist: "Bianca", song: "SOFTLY, FOREVER" },
           { artist: "Nate", song: "WHERE THE CORNFIELD ENDS" }
         ],
-        winner: { artist: "Even Grace", song: "RADICAL EXXXTASY" }
+        winner: { artist: "Logan", song: "RADICAL EXXXTASY" }
       },
       {
         category: "Best Music Video",
         nominees: [
-          { artist: "Ava", song: "All Over Again... Again" },
+          { artist: "Daniel", song: "All Over Again... Again" },
           { artist: "Mia", song: "False Idols" },
           { artist: "Blair", song: "NaNaNa" },
-          { artist: "Even Grace", song: "RADICAL EXXXTASY" },
-          { artist: "Ivy Sinclair", song: "Unanswered Questions" },
+          { artist: "Logan", song: "RADICAL EXXXTASY" },
+          { artist: "Maya Caccini", song: "Unanswered Questions" },
         ],
         winner: { artist: "Mia", song: "False Idols" }
       },
       {
         category: "Best Engineered Album, Non-Classical",
         nominees: [
-          { artist: "Even Grace", song: "Even After All" },
+          { artist: "Logan", song: "Even After All" },
           { artist: "Bianca", song: "HONEY" },
           { artist: "Blair", song: "Red Flags" },
-          { artist: "Ivy Sinclair", song: "Reflections" },
+          { artist: "Maya Caccini", song: "Reflections" },
           { artist: "Nate", song: "SUMMER REMAINS" },
         ],
         winner: { artist: "Bianca", song: "HONEY" }
@@ -163,35 +163,35 @@ const grammyData = [
       {
         category: "Best Recording Package",
         nominees: [
-          { artist: "Even Grace", song: "Even After All" },
+          { artist: "Logan", song: "Even After All" },
           { artist: "Bianca", song: "HONEY" },
           { artist: "Blair", song: "Red Flags" },
-          { artist: "Ivy Sinclair", song: "Reflections" },
+          { artist: "Maya Caccini", song: "Reflections" },
           { artist: "Nate", song: "SUMMER REMAINS" },
         ],
-        winner: { artist: "Even Grace", song: "Even After All" }
+        winner: { artist: "Logan", song: "Even After All" }
       },
       {
         category: "Best Album Art",
         nominees: [
-          { artist: "Even Grace", song: "Even After All" },
+          { artist: "Logan", song: "Even After All" },
           { artist: "Bianca", song: "HONEY" },
           { artist: "Blair", song: "Red Flags" },
-          { artist: "Ivy Sinclair", song: "Reflections" },
+          { artist: "Maya Caccini", song: "Reflections" },
           { artist: "Nate", song: "SUMMER REMAINS" },
         ],
-        winner: { artist: "Ivy Sinclair", song: "Reflections" }
+        winner: { artist: "Maya Caccini", song: "Reflections" }
       },
       {
         category: "Best Single Art",
         nominees: [
-          { artist: "Ava", song: "All Over Again... Again" },
+          { artist: "Daniel", song: "All Over Again... Again" },
           { artist: "Blair & Owen Graham", song: "Be Careful" },
-          { artist: "Ivy Sinclair", song: "Chasing Freedom" },
+          { artist: "Maya Caccini", song: "Chasing Freedom" },
           { artist: "Mia", song: "False Idols" },
-          { artist: "Even Grace & Ava & Owen Graham", song: "In The End, Just Party" },
+          { artist: "Logan & Daniel & Owen Graham", song: "In The End, Just Party" },
         ],
-        winner: { artist: "Ava", song: "All Over Again... Again" }
+        winner: { artist: "Daniel", song: "All Over Again... Again" }
       }
     ]
   },
@@ -211,41 +211,41 @@ const grammyData = [
           { artist: "Riley", song: "Dandelions" },
           { artist: "Eric", song: "Overgrown" },
           { artist: "Trevor", song: "Poets Can't Be Murdered" },
-          { artist: "4Music", song: "Salute" },
-          { artist: "Hannah", song: "THE COUNTRY CLUB" },
-          { artist: "Ava", song: "The Drive" },
+          { artist: "Mason", song: "Salute" },
+          { artist: "Millie", song: "THE COUNTRY CLUB" },
+          { artist: "Daniel", song: "The Drive" },
         ],
-        winner: { artist: "Ava", song: "The Drive" }
+        winner: { artist: "Daniel", song: "The Drive" }
       },
       {
         category: "Record of the Year",
         nominees: [
-          { artist: "Ava", song: "Bloodsucker" },
+          { artist: "Daniel", song: "Bloodsucker" },
           { artist: "Nate", song: "HIGHWAY BOYS" },
-          { artist: "4Music & Miles Carson", song: "I Got The Power" },
+          { artist: "Mason & Miles Carson", song: "I Got The Power" },
           { artist: "Eric & Liz", song: "Late Night Talking" },
           { artist: "Riley", song: "Remains For Us" },
-          { artist: "Hannah", song: "TEXAS ON FIRE" },
+          { artist: "Millie", song: "TEXAS ON FIRE" },
         ],
         winner: { artist: "Eric & Liz", song: "Late Night Talking" }
       },
       {
         category: "Song of the Year",
         nominees: [
-          { artist: "Alana Grace", song: "AFTERMATH" },
-          { artist: "Ava", song: "Bloodsucker" },
+          { artist: "Maeve", song: "AFTERMATH" },
+          { artist: "Daniel", song: "Bloodsucker" },
           { artist: "Eric & Liz", song: "Late Night Talking" },
           { artist: "Trevor", song: "Over Those Hills" },
           { artist: "Riley", song: "Remains For Us" },
-          { artist: "Hannah", song: "TEXAS ON FIRE" },
+          { artist: "Millie", song: "TEXAS ON FIRE" },
         ],
         winner: { artist: "Trevor", song: "Over Those Hills" }
       },
       {
         category: "Best New Artist",
         nominees: [
-          { artist: "4Music", song: "4Music" },
-          { artist: "Alana Grace", song: "Alana Grace"},
+          { artist: "Mason", song: "Mason" },
+          { artist: "Maeve", song: "Maeve"},
           { artist: "Blair", song: "Blair" },
           { artist: "Eric", song: "Eric"},
           { artist: "Riley", song: "Riley" },
@@ -258,18 +258,18 @@ const grammyData = [
         nominees: [
           { artist: "Aria", song: "Aria"},
           { artist: "Eric", song: "Eric" },
-          { artist: "Even Grace", song: "Even Grace" },
-          { artist: "Hannah", song: "Hannah" },
+          { artist: "Logan", song: "Logan" },
+          { artist: "Millie", song: "Millie" },
           { artist: "Trevor", song: "Trevor" },
         ],
-        winner: { artist: "Even Grace", song: "Even Grace" }
+        winner: { artist: "Logan", song: "Logan" }
       },
       {
         category: "Songwriter of the Year, Non-Classical",
         nominees: [
-          { artist: "Ava", song: "Ava" },
+          { artist: "Daniel", song: "Daniel" },
           { artist: "Eric", song: "Eric" },
-          { artist: "Hannah", song: "Hannah" },
+          { artist: "Millie", song: "Millie" },
           { artist: "Riley", song: "Riley" },
           { artist: "Trevor", song: "Trevor" },
         ],
@@ -280,19 +280,19 @@ const grammyData = [
         nominees: [
           { artist: "Riley", song: "Dandelions" },
           { artist: "Aria", song: "Dreamscape (Deluxe)" },
-          { artist: "4Music", song: "Salute" },
-          { artist: "Hannah", song: "THE COUNTRY CLUB" },
-          { artist: "Ava", song: "The Drive" },
+          { artist: "Mason", song: "Salute" },
+          { artist: "Millie", song: "THE COUNTRY CLUB" },
+          { artist: "Daniel", song: "The Drive" },
         ],
         winner: { artist: "Riley", song: "Dandelions" }
       },
       {
         category: "Best Pop Solo Performance",
         nominees: [
-          { artist: "Ava", song: "Bloodsucker" },
+          { artist: "Daniel", song: "Bloodsucker" },
           { artist: "Nate", song: "HIGHWAY BOYS" },
           { artist: "Riley", song: "Let It Go" },
-          { artist: "Hannah", song: "SHOTGUN" },
+          { artist: "Millie", song: "SHOTGUN" },
           { artist: "Owen Graham", song: "Stolen" },
         ],
         winner: { artist: "Riley", song: "Let It Go" }
@@ -301,9 +301,9 @@ const grammyData = [
         category: "Best Pop Duo/Group Performance",
         nominees: [
           { artist: "Eric & Liz", song: "Late Night Talking" },
-          { artist: "4Music", song: "Salute" },
-          { artist: "Hannah & Megan", song: "THE DAY I DIE" },
-          { artist: "Trevor & Hannah", song: "Verlaten" },
+          { artist: "Mason", song: "Salute" },
+          { artist: "Millie & Megan", song: "THE DAY I DIE" },
+          { artist: "Trevor & Millie", song: "Verlaten" },
           { artist: "Zuri & Riley", song: "Young Night" }
         ],
         winner: { artist: "Eric & Liz", song: "Late Night Talking" }
@@ -313,16 +313,16 @@ const grammyData = [
         nominees: [
           { artist: "Aria & Miles Carson", song: "Body Language" },
           { artist: "Riley", song: "Hearthous" },
-          { artist: "4Music & Miles Carson", song: "I Got The Power" },
+          { artist: "Mason & Miles Carson", song: "I Got The Power" },
           { artist: "Zuri & Riley", song: "Young Night" }
         ],
-        winner: { artist: "4Music & Miles Carson", song: "I Got The Power" }
+        winner: { artist: "Mason & Miles Carson", song: "I Got The Power" }
       },
       {
         category: "Best Rock/Alternative Performance",
         nominees: [
-          { artist: "Alana Grace", song: "AFTERMATH" },
-          { artist: "Ava", song: "DRUNK!" },
+          { artist: "Maeve", song: "AFTERMATH" },
+          { artist: "Daniel", song: "DRUNK!" },
           { artist: "Nate", song: "HIGHWAY BOYS" },
           { artist: "Owen Graham", song: "Stolen" }
         ],
@@ -331,12 +331,12 @@ const grammyData = [
       {
         category: "Best Rock/Alternative Song",
         nominees: [
-          { artist: "Alana Grace", song: "AFTERMATH" },
-          { artist: "Ava", song: "Oh, Was That Yours?" },
+          { artist: "Maeve", song: "AFTERMATH" },
+          { artist: "Daniel", song: "Oh, Was That Yours?" },
           { artist: "Nate", song: "HIGHWAY BOYS" },
           { artist: "Owen Graham", song: "Stolen" }
         ],
-        winner: { artist: "Ava", song: "Oh, Was That Yours?" }
+        winner: { artist: "Daniel", song: "Oh, Was That Yours?" }
       },
       {
         category: "Best Rap/R&B Album",
@@ -344,7 +344,7 @@ const grammyData = [
           { artist: "Aria", song: "Dreamscape (Deluxe)" },
           { artist: "Eric", song: "Overgrown" },
           { artist: "Trevor", song: "Poets Can't Be Murdered" },
-          { artist: "Hannah", song: "THE COUNTRY CLUB" }
+          { artist: "Millie", song: "THE COUNTRY CLUB" }
         ],
         winner: { artist: "Trevor", song: "Poets Can't Be Murdered" }
       },
@@ -354,9 +354,9 @@ const grammyData = [
           { artist: "Aria & Miles Carson", song: "By My Side" },
           { artist: "Eric & Liz", song: "Late Night Talking" },
           { artist: "Trevor", song: "Over Those Hills" },
-          { artist: "Hannah", song: "TEXAS ON FIRE" }
+          { artist: "Millie", song: "TEXAS ON FIRE" }
         ],
-        winner: { artist: "Hannah", song: "TEXAS ON FIRE" }
+        winner: { artist: "Millie", song: "TEXAS ON FIRE" }
       },
       {
         category: "Best Rap/R&B Song",
@@ -364,14 +364,14 @@ const grammyData = [
           { artist: "Aria", song: "Permanent" },
           { artist: "Eric & Liz", song: "Late Night Talking" },
           { artist: "Trevor", song: "Over Those Hills" },
-          { artist: "Hannah", song: "TEXAS ON FIRE" }
+          { artist: "Millie", song: "TEXAS ON FIRE" }
         ],
         winner: { artist: "Eric & Liz", song: "Late Night Talking" }
       },
       {
         category: "Best Music Video",
         nominees: [
-          { artist: "Ava", song: "Bloodsucker" },
+          { artist: "Daniel", song: "Bloodsucker" },
           { artist: "Nate", song: "HIGHWAY BOYS" },
           { artist: "Eric & Liz", song: "Late Night Talking" },
           { artist: "Trevor", song: "Over Those Hills" },
@@ -383,32 +383,32 @@ const grammyData = [
         category: "Best Engineered Album, Non-Classical",
         nominees: [
           { artist: "Riley", song: "Dandelions" },
-          { artist: "Alana Grace", song: "MELANCHOLIA" },
+          { artist: "Maeve", song: "MELANCHOLIA" },
           { artist: "Eric", song: "Overgrown" },
-          { artist: "Hannah", song: "THE COUNTRY CLUB" },
-          { artist: "Ava", song: "The Drive" }
+          { artist: "Millie", song: "THE COUNTRY CLUB" },
+          { artist: "Daniel", song: "The Drive" }
         ],
-        winner: { artist: "Alana Grace", song: "MELANCHOLIA" }
+        winner: { artist: "Maeve", song: "MELANCHOLIA" }
       },
       {
         category: "Best Boxed Or Special Limited Edition Package",
         nominees: [
           { artist: "Riley", song: "Dandelions" },
           { artist: "Aria", song: "Dreamscape (Deluxe)" },
-          { artist: "Alana Grace", song: "MELANCHOLIA" },
-          { artist: "Hannah", song: "THE COUNTRY CLUB" },
-          { artist: "Ava", song: "The Drive" },
+          { artist: "Maeve", song: "MELANCHOLIA" },
+          { artist: "Millie", song: "THE COUNTRY CLUB" },
+          { artist: "Daniel", song: "The Drive" },
         ],
-        winner: { artist: "Ava", song: "The Drive" }
+        winner: { artist: "Daniel", song: "The Drive" }
       },
       {
         category: "Best Recording Package",
         nominees: [
           { artist: "Riley", song: "Dandelions" },
           { artist: "Eric", song: "Overgrown" },
-          { artist: "Alana Grace", song: "MELANCHOLIA" },
-          { artist: "Hannah", song: "THE COUNTRY CLUB" },
-          { artist: "Ava", song: "The Drive" },
+          { artist: "Maeve", song: "MELANCHOLIA" },
+          { artist: "Millie", song: "THE COUNTRY CLUB" },
+          { artist: "Daniel", song: "The Drive" },
         ],
         winner: { artist: "Eric", song: "Overgrown" }
       },
@@ -418,10 +418,10 @@ const grammyData = [
           { artist: "Riely", song: "Dandelions" },
           { artist: "Aria", song: "Dreamscape (Deluxe)" },
           { artist: "Trevor", song: "Poets Can't Be Murdered" },
-          { artist: "Hannah", song: "THE COUNTRY CLUB" },
-          { artist: "Ava", song: "The Drive" },
+          { artist: "Millie", song: "THE COUNTRY CLUB" },
+          { artist: "Daniel", song: "The Drive" },
         ],
-        winner: { artist: "Hannah", song: "THE COUNTRY CLUB" }
+        winner: { artist: "Millie", song: "THE COUNTRY CLUB" }
       },
       {
         category: "Best Single Art",
@@ -429,10 +429,10 @@ const grammyData = [
           { artist: "Nate", song: "HIGHWAY BOYS" },
           { artist: "Eric & Liz", song: "Late Night Talking" },
           { artist: "Riley", song: "Let It Go" },
-          { artist: "Ava", song: "Oh, Was That Yours?" },
-          { artist: "Hannah", song: "SHOTGUN" },
+          { artist: "Daniel", song: "Oh, Was That Yours?" },
+          { artist: "Millie", song: "SHOTGUN" },
         ],
-        winner: { artist: "Hannah", song: "SHOTGUN" }
+        winner: { artist: "Millie", song: "SHOTGUN" }
       }
     ]
   },
@@ -442,9 +442,9 @@ const grammyData = [
       {
         category: "Album of the Year",
         nominees: [
-          { artist: "Ava", song: "House Of The Rising Sun" },
+          { artist: "Daniel", song: "House Of The Rising Sun" },
           { artist: "Aria", song: "Dreamscape" },
-          { artist: "Even Grace", song: "What Ever Happened?" },
+          { artist: "Logan", song: "What Ever Happened?" },
           { artist: "Liz", song: "everlasting" },
           { artist: "Conan Woolridge", song: "Forbidden Whispers" },
           { artist: "Anthony", song: "meaningless" },
@@ -455,8 +455,8 @@ const grammyData = [
       {
         category: "Record of the Year",
         nominees: [
-          { artist: "Ava", song: "Soul For My Love" },
-          { artist: "Aria & Hannah & Liza", song: "Boom Boom" },
+          { artist: "Daniel", song: "Soul For My Love" },
+          { artist: "Aria & Millie & Liza", song: "Boom Boom" },
           { artist: "Fiona", song: "My Game" },
           { artist: "Liz", song: "here's to the nights" },
           { artist: "Owen Graham", song: "Rumors" },
@@ -469,10 +469,10 @@ const grammyData = [
       {
         category: "Song of the Year",
         nominees: [
-          { artist: "Even Grace", song: "Alone in Kyoto" },
+          { artist: "Logan", song: "Alone in Kyoto" },
           { artist: "Trevor", song: "Inner Self" },
           { artist: "Conan Woolridge", song: "Memories From Home" },
-          { artist: "Ava", song: "Soul For My Love" },
+          { artist: "Daniel", song: "Soul For My Love" },
           { artist: "Owen Graham", song: "Rumors" },
           { artist: "Anthony", song: "lunatic" },
           { artist: "Aria", song: "Eyes On Me" },
@@ -482,34 +482,34 @@ const grammyData = [
       {
         category: "Best New Artist",
         nominees: [
-          { artist: "Ava", song: "Ava" },
+          { artist: "Daniel", song: "Daniel" },
           { artist: "Zara", song: "Zara"},
-          { artist: "Ivy Sinclair", song: "Ivy Sinclair" },
+          { artist: "Maya Caccini", song: "Maya Caccini" },
           { artist: "Anthony", song: "Anthony"},
           { artist: "Matteo", song: "Matteo" },
           { artist: "Aria", song: "Aria" },
         ],
-        winner: { artist: "Ava", song: "Ava" }
+        winner: { artist: "Daniel", song: "Daniel" }
       },
       {
         category: "Producer of the Year, Non-Classical",
         nominees: [
           { artist: "Trevor", song: "Trevor"},
           { artist: "Fiona", song: "Fiona" },
-          { artist: "Even Grace", song: "Even Grace" },
+          { artist: "Logan", song: "Logan" },
           { artist: "Otto", song: "Otto" },
           { artist: "Anthony", song: "Anthony" },
           { artist: "Conan Woolridge", song: "Conan Woolridge" },
         ],
-        winner: { artist: "Even Grace", song: "Even Grace" }
+        winner: { artist: "Logan", song: "Logan" }
       },
       {
         category: "Songwriter of the Year, Non-Classical",
         nominees: [
           { artist: "Liz", song: "Liz" },
           { artist: "Anthony", song: "Anthony" },
-          { artist: "Even Grace", song: "Even Grace" },
-          { artist: "Ava", song: "Ava" },
+          { artist: "Logan", song: "Logan" },
+          { artist: "Daniel", song: "Daniel" },
           { artist: "Trevor", song: "Trevor" },
           { artist: "Conan Woolridge", song: "Conan Woolridge" },
         ],
@@ -521,8 +521,8 @@ const grammyData = [
           { artist: "Liz", song: "everlasting" },
           { artist: "Matteo", song: "Flourish" },
           { artist: "Aria", song: "Dreamscape" },
-          { artist: "Ava", song: "House Of The Rising Sun" },
-          { artist: "Hannah", song: "Little Mermaid (Original Soundtrack)" },
+          { artist: "Daniel", song: "House Of The Rising Sun" },
+          { artist: "Millie", song: "Little Mermaid (Original Soundtrack)" },
         ],
         winner: { artist: "Aria", song: "Dreamscape" }
       },
@@ -530,12 +530,12 @@ const grammyData = [
         category: "Best Pop Solo Performance",
         nominees: [
           { artist: "Aria", song: "Eyes On Me" },
-          { artist: "Ava", song: "Soul For My Love" },
+          { artist: "Daniel", song: "Soul For My Love" },
           { artist: "Liz", song: "here's to the nights" },
           { artist: "Matteo", song: "Forbidden" },
-          { artist: "Ivy Sinclair", song: "feel like sheet" },
+          { artist: "Maya Caccini", song: "feel like sheet" },
           { artist: "Owen Graham", song: "Rumors" },
-          { artist: "Hannah", song: "Part Of The World (From Little Mermaid)" }
+          { artist: "Millie", song: "Part Of The World (From Little Mermaid)" }
 
         ],
         winner: { artist: "Aria", song: "Eyes On Me" }
@@ -543,19 +543,19 @@ const grammyData = [
       {
         category: "Best Pop Duo/Group Performance",
         nominees: [
-          { artist: "Fiona & Ava", song: "My Game (Remix)" },
-          { artist: "Even Grace & Ava", song: "April Skies" },
-          { artist: "Aria & Hannah & Liza", song: "Boom Boom" },
+          { artist: "Fiona & Daniel", song: "My Game (Remix)" },
+          { artist: "Logan & Daniel", song: "April Skies" },
+          { artist: "Aria & Millie & Liza", song: "Boom Boom" },
           { artist: "Trevor & Zion", song: "I May Destroy You" }
         ],
-        winner: { artist: "Aria & Hannah & Liza", song: "Boom Boom" }
+        winner: { artist: "Aria & Millie & Liza", song: "Boom Boom" }
       },
       {
         category: "Best Rock/Alternative Album",
         nominees: [
           { artist: "Fiona", song: "Confessions Of A Broken Heart (Deluxe)" },
           { artist: "Conan Woolridge", song: "Forbidden Whispers" },
-          { artist: "Even Grace", song: "What Ever Happened?" },
+          { artist: "Logan", song: "What Ever Happened?" },
           { artist: "Anthony", song: "meaningless" }
         ],
         winner: { artist: "Conan Woolridge", song: "Forbidden Whispers" }
@@ -565,7 +565,7 @@ const grammyData = [
         nominees: [
           { artist: "Fiona", song: "My Game" },
           { artist: "Conan Woolridge", song: "Memories From Home" },
-          { artist: "Even Grace", song: "Alone in Kyoto" },
+          { artist: "Logan", song: "Alone in Kyoto" },
           { artist: "Anthony", song: "lunatic" }
         ],
         winner: { artist: "Conan Woolridge", song: "Memories From Home" }
@@ -575,27 +575,27 @@ const grammyData = [
         nominees: [
           { artist: "Fiona", song: "My Game" },
           { artist: "Conan Woolridge", song: "20" },
-          { artist: "Even Grace", song: "Alone in Kyoto" },
+          { artist: "Logan", song: "Alone in Kyoto" },
           { artist: "Anthony", song: "lunatic" }
         ],
-        winner: { artist: "Even Grace", song: "Alone in Kyoto" }
+        winner: { artist: "Logan", song: "Alone in Kyoto" }
       },
       {
         category: "Best Rap/R&B Performance",
         nominees: [
           { artist: "Zara", song: "Nasty" },
           { artist: "Trevor", song: "Genuine Tales" },
-          { artist: "Ava", song: "I Hope U Cried" },
+          { artist: "Daniel", song: "I Hope U Cried" },
           { artist: "Aria & Nate", song: "Journey To You" }
         ],
-        winner: { artist: "Ava", song: "I Hope U Cried" }
+        winner: { artist: "Daniel", song: "I Hope U Cried" }
       },
       {
         category: "Best Rap/R&B Song",
         nominees: [
           { artist: "Zara", song: "Nasty" },
           { artist: "Trevor", song: "Genuine Tales" },
-          { artist: "Ava", song: "I Hope U Cried" },
+          { artist: "Daniel", song: "I Hope U Cried" },
           { artist: "Aria & Nate", song: "Journey To You" }
         ],
         winner: { artist: "Trevor", song: "Genuine Tales" }
@@ -603,22 +603,22 @@ const grammyData = [
       {
         category: "Best Remixed Recording",
         nominees: [
-          { artist: "Fiona & Ava", song: "My Game (Remix)" },
+          { artist: "Fiona & Daniel", song: "My Game (Remix)" },
           { artist: "Aria", song: "Boom Boom (Otto's Remix)" },
           { artist: "Liza", song: "Boom Boom (Otto's Remix)" },
-          { artist: "Hannah", song: "Boom Boom (Otto's Remix)" },
-          { artist: "Ava", song: "Feeling (Remix)" },
+          { artist: "Millie", song: "Boom Boom (Otto's Remix)" },
+          { artist: "Daniel", song: "Feeling (Remix)" },
           { artist: "Anthony", song: "LUNATIC PARADOX REMIX" }
         ],
-        winner: { artist: "Ava & Fiona", song: "My Game (Remix)" }
+        winner: { artist: "Daniel & Fiona", song: "My Game (Remix)" }
       },
       {
         category: "Best Music Video",
         nominees: [
           { artist: "Matteo", song: "Forbidden" },
           { artist: "Trevor", song: "Genuine Tales" },
-          { artist: "Ava", song: "Soul For My Love" },
-          { artist: "Even Grace", song: "Alone in Kyoto" },
+          { artist: "Daniel", song: "Soul For My Love" },
+          { artist: "Logan", song: "Alone in Kyoto" },
           { artist: "Liz", song: "here's to the nights" },
           { artist: "Owen Graham", song: "Rumors" },
           { artist: "Fiona", song: "My Game" }
@@ -629,25 +629,25 @@ const grammyData = [
         category: "Best Engineered Album, Non-Classical",
         nominees: [
           { artist: "Liz", song: "everlasting" },
-          { artist: "Ava", song: "House Of The Rising Sun" },
+          { artist: "Daniel", song: "House Of The Rising Sun" },
           { artist: "Trevor", song: "KIDS SEE GHOSTS" },
-          { artist: "Even Grace", song: "What Ever Happened?" },
+          { artist: "Logan", song: "What Ever Happened?" },
           { artist: "Conan Woolridge", song: "Forbidden Whispers" }
         ],
-        winner: { artist: "Even Grace", song: "What Ever Happened?" }
+        winner: { artist: "Logan", song: "What Ever Happened?" }
       },
       {
         category: "Best Recording Package",
         nominees: [
           { artist: "Aria", song: "Dreamscape" },
           { artist: "Liz", song: "everlasting" },
-          { artist: "Ava", song: "House Of The Rising Sun" },
+          { artist: "Daniel", song: "House Of The Rising Sun" },
           { artist: "Trevor", song: "KIDS SEE GHOSTS" },
           { artist: "Anthony", song: "meaningless" },
-          { artist: "Even Grace", song: "What Ever Happened?" },
+          { artist: "Logan", song: "What Ever Happened?" },
           { artist: "Conan Woolridge", song: "Forbidden Whispers" }
         ],
-        winner: { artist: "Even Grace", song: "What Ever Happened?" }
+        winner: { artist: "Logan", song: "What Ever Happened?" }
       },
       {
         category: "Best Album Art",
@@ -656,7 +656,7 @@ const grammyData = [
           { artist: "Liz", song: "everlasting" },
           { artist: "Matteo", song: "Flourish" },
           { artist: "Anthony", song: "meaningless" },
-          { artist: "Even Grace", song: "What Ever Happened?" },
+          { artist: "Logan", song: "What Ever Happened?" },
           { artist: "Conan Woolridge", song: "Forbidden Whispers" }
         ],
         winner: { artist: "Liz", song: "everlasting" }
@@ -664,18 +664,18 @@ const grammyData = [
       {
         category: "Best Single Art",
         nominees: [
-          { artist: "Even Grace", song: "Beetlebum" },
+          { artist: "Logan", song: "Beetlebum" },
           { artist: "Aria", song: "Boom Boom" },
           { artist: "Liza", song: "Boom Boom" },
-          { artist: "Hannah", song: "Boom Boom" },
-          { artist: "Ivy Sinclair", song: "feel like sheet" },
+          { artist: "Millie", song: "Boom Boom" },
+          { artist: "Maya Caccini", song: "feel like sheet" },
           { artist: "Fiona", song: "My Game (Remix)" },
-          { artist: "Ava", song: "My Game (Remix)" },
+          { artist: "Daniel", song: "My Game (Remix)" },
           { artist: "Conan Woolridge", song: "20" },
           { artist: "Matteo", song: "What if my thoughts could speak?"},
           { artist: "Liz", song: "here's to the nights"}
         ],
-        winner: { artist: "Even Grace", song: "Beetlebum" }
+        winner: { artist: "Logan", song: "Beetlebum" }
       }
     ]
   },
