@@ -5,6 +5,8 @@ redirectsOrigin = "config"
 plugins = []
 
 [build]
+# The site is served directly; do not infer the legacy Webpack build script.
+command = "echo 'Publishing static site files'"
 publish = "."
 publishOrigin = "config"
 functions = "netlify/functions"
