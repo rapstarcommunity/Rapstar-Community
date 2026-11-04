@@ -11,6 +11,7 @@ const safeUrl = value => {
   } catch { return '#'; }
 };
 export function renderHome(content, root = document) {
+  renderNews(content.news ?? [], root);
   ['releases', 'highlights', 'labels'].forEach((key, index) => {
     const container = root.getElementById(['musicList', 'highlightList', 'labelList'][index]);
     const section = container.closest('.music-section, .highlight-section, .label-section');
@@ -31,6 +32,52 @@ export function renderHome(content, root = document) {
     });
   });
   root.querySelector('footer p').textContent = content.footer;
+}
+function renderNews(items, root) {
+  const section = root.getElementById('newsSection');
+  const track = root.getElementById('newsTrack');
+  if (!section || !track) return;
+  section.hidden = items.length === 0;
+  track.replaceChildren();
+  const pagination = root.getElementById('newsPagination');
+  pagination.replaceChildren();
+  let current = 0;
+  const show = index => {
+    current = (index + items.length) % items.length;
+    track.children[current]?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'nearest', inline: 'start' });
+  };
+  items.forEach((item, index) => {
+    const slide = element('article', '', 'news-slide');
+    slide.setAttribute('aria-label', `${index + 1} de ${items.length}`);
+    const card = element(item.link ? 'a' : 'div', '', 'news-card');
+    if (item.link) {
+      card.href = safeUrl(item.link);
+      card.target = '_blank'; card.rel = 'noopener noreferrer';
+    }
+    const cover = element('img'); cover.src = safeUrl(item.cover); cover.alt = ''; cover.loading = 'lazy';
+    const caption = element('div', '', 'news-caption');
+    caption.append(element('span', 'Na comunidade', 'news-kicker'), element('h3', item.title));
+    card.append(cover, caption); slide.append(card); track.append(slide);
+    const dot = element('button'); dot.type = 'button';
+    dot.setAttribute('aria-label', `Mostrar notícia ${index + 1}`);
+    dot.onclick = () => show(index);
+    pagination.append(dot);
+  });
+  const update = () => {
+    if (!track.children.length || !track.clientWidth) return;
+    current = Math.round(track.scrollLeft / track.clientWidth);
+    [...pagination.children].forEach((dot, index) => dot.setAttribute('aria-current', String(index === current)));
+    root.getElementById('newsCounter').textContent = `${current + 1} / ${items.length}`;
+  };
+  track.onscroll = update;
+  track.onkeydown = event => {
+    if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+      event.preventDefault(); show(current + (event.key === 'ArrowRight' ? 1 : -1));
+    }
+  };
+  root.getElementById('newsPrevious').onclick = () => show(current - 1);
+  root.getElementById('newsNext').onclick = () => show(current + 1);
+  update();
 }
 async function load() {
   let content;

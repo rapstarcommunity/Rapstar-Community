@@ -5,13 +5,13 @@ const grammyData = [
       {
         category: "Album of the Year",
         nominees: [
-          { artist: "Logan", song: "Even After All" },
+          { artist: "Emília Ramirez", song: "LATINAJE" },
           { artist: "Bianca", song: "HONEY" },
           { artist: "Blair", song: "Red Flags" },
-          { artist: "Maya Caccini", song: "Reflections" },
+          { artist: "Nielly", song: "Voz do Brasil" },
           { artist: "Nate", song: "SUMMER REMAINS" },
         ],
-        winner: { artist: "Logan", song: "Even After All" }
+        winner: { artist: "Emília Ramirez", song: "LATINAJE" }
       },
       {
         category: "Record of the Year",
@@ -69,13 +69,13 @@ const grammyData = [
       {
         category: "Best Pop Vocal Album",
         nominees: [
-          { artist: "Logan", song: "Even After All" },
+          { artist: "Emília Ramirez", song: "LATINAJE" },
           { artist: "Bianca", song: "HONEY" },
           { artist: "Blair", song: "Red Flags" },
-          { artist: "Maya Caccini", song: "Reflections" },
+          { artist: "Nielly", song: "Voz do Brasil" },
           { artist: "Nate", song: "SUMMER REMAINS" },
         ],
-        winner: { artist: "Maya Caccini", song: "Reflections" }
+        winner: { artist: "Nielly", song: "Voz do Brasil" }
       },
       {
         category: "Best Pop Solo Performance",
@@ -110,7 +110,7 @@ const grammyData = [
       {
         category: "Best Rock/Alternative Album",
         nominees: [
-          { artist: "Logan", song: "Even After All" },
+          { artist: "Emília Ramirez", song: "LATINAJE" },
           { artist: "Bianca", song: "HONEY" },
           { artist: "Nate", song: "SUMMER REMAINS" }
         ],
@@ -152,10 +152,10 @@ const grammyData = [
       {
         category: "Best Engineered Album, Non-Classical",
         nominees: [
-          { artist: "Logan", song: "Even After All" },
+          { artist: "Emília Ramirez", song: "LATINAJE" },
           { artist: "Bianca", song: "HONEY" },
           { artist: "Blair", song: "Red Flags" },
-          { artist: "Maya Caccini", song: "Reflections" },
+          { artist: "Nielly", song: "Voz do Brasil" },
           { artist: "Nate", song: "SUMMER REMAINS" },
         ],
         winner: { artist: "Bianca", song: "HONEY" }
@@ -163,24 +163,24 @@ const grammyData = [
       {
         category: "Best Recording Package",
         nominees: [
-          { artist: "Logan", song: "Even After All" },
+          { artist: "Emília Ramirez", song: "LATINAJE" },
           { artist: "Bianca", song: "HONEY" },
           { artist: "Blair", song: "Red Flags" },
-          { artist: "Maya Caccini", song: "Reflections" },
+          { artist: "Nielly", song: "Voz do Brasil" },
           { artist: "Nate", song: "SUMMER REMAINS" },
         ],
-        winner: { artist: "Logan", song: "Even After All" }
+        winner: { artist: "Emília Ramirez", song: "LATINAJE" }
       },
       {
         category: "Best Album Art",
         nominees: [
-          { artist: "Logan", song: "Even After All" },
+          { artist: "Emília Ramirez", song: "LATINAJE" },
           { artist: "Bianca", song: "HONEY" },
           { artist: "Blair", song: "Red Flags" },
-          { artist: "Maya Caccini", song: "Reflections" },
+          { artist: "Nielly", song: "Voz do Brasil" },
           { artist: "Nate", song: "SUMMER REMAINS" },
         ],
-        winner: { artist: "Maya Caccini", song: "Reflections" }
+        winner: { artist: "Nielly", song: "Voz do Brasil" }
       },
       {
         category: "Best Single Art",

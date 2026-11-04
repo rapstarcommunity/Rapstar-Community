@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
 <script>
   if (/^#(?:invite_token|recovery_token|confirmation_token|access_token|email_change_token)=/.test(location.hash)) {
@@ -468,6 +468,36 @@
       height: 100%;
     }
 
+    .news-container { margin-top: 0; padding-top: 20px; padding-bottom: 0; }
+    .news-section { background: #212121; padding: 40px 50px; border-radius: 15px; width: 95%; margin: 0 auto; }
+    .news-section[hidden] { display: none; }
+    .news-controls { display: flex; gap: 10px; align-items: center; }
+    .news-controls button { border: 1px solid #777; border-radius: 50%; width: 40px; height: 40px; background: #333; color: #fff; font-size: 22px; cursor: pointer; }
+    .news-controls button:hover { background: #c28310; color: #1c1b19; }
+    .news-controls button:focus-visible, .news-pagination button:focus-visible, .news-card:focus-visible { outline: 3px solid #c28310; outline-offset: 4px; }
+    .news-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; border-radius: 8px; }
+    .news-track::-webkit-scrollbar { display: none; }
+    .news-slide { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; }
+    .news-card { position: relative; display: block; height: 360px; overflow: hidden; color: #fff; }
+    .news-card img { width: 100%; height: 100%; object-fit: cover; }
+    .news-caption { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 32px; background: linear-gradient(transparent, rgba(28,27,25,.95)); }
+    .news-kicker { color: #e8b558; text-transform: uppercase; letter-spacing: 2px; font-size: 12px; margin-bottom: 10px; }
+    .news-caption h3 { font-family: 'Commons DemiBold', sans-serif; font-size: clamp(22px, 3vw, 34px); line-height: 1.15; max-width: 720px; margin: 0; }
+    .news-pagination { display: flex; justify-content: center; gap: 4px; margin-top: 16px; }
+    .news-pagination button { border: 0; background: transparent; padding: 10px; cursor: pointer; }
+    .news-pagination button::after { content: ''; display: block; width: 9px; height: 9px; background: #777; border-radius: 50%; }
+    .news-pagination button[aria-current="true"]::after { background: #c28310; }
+    #newsCounter { font-variant-numeric: tabular-nums; font-size: 14px; color: #b3b3b3; }
+    .music-section { margin-bottom: 0; }
+    .news-container + .container { margin-top: 0; padding-top: 20px; }
+    @media (max-width: 600px) {
+      .news-container { padding: 20px 15px 0; }
+      .news-section { width: 100%; padding: 24px 18px; }
+      .news-section .header h2 { font-size: 26px; }
+      .news-card { height: 320px; }
+      .news-caption { padding: 22px; }
+      #newsCounter { display: none; }
+    }
   </style>
 </head>
 <body>
@@ -502,6 +532,21 @@
     <div class="music-list row" id="musicList">
     </div>
   </div>
+</div>
+
+<div class="container news-container">
+  <section class="news-section" id="newsSection" aria-labelledby="newsTitle" aria-roledescription="carrossel" hidden>
+    <div class="header">
+      <h2 id="newsTitle">Notícias</h2>
+      <div class="news-controls">
+        <span id="newsCounter"></span>
+        <button type="button" id="newsPrevious" aria-label="Notícia anterior" aria-controls="newsTrack">&#8249;</button>
+        <button type="button" id="newsNext" aria-label="Notícia seguinte" aria-controls="newsTrack">&#8250;</button>
+      </div>
+    </div>
+    <div class="news-track" id="newsTrack" tabindex="0" aria-label="Notícias da comunidade"></div>
+    <div class="news-pagination" id="newsPagination" aria-label="Escolher notícia"></div>
+  </section>
 </div>
 
 <div class="container">

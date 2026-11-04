@@ -8,19 +8,21 @@ const albumsData = [
     featuring: []
   },
   {
-    title: "Reflections",
+    title: "Voz do Brasil",
     year: "Year 03",
-    image: "https://i.imgur.com/Kcb4ESk.png",
+    image: "https://i.imgur.com/tvOI6s2.jpeg",
+    link: "https://discord.com/channels/1279249850185154704/1279482834540826696/1560136549625241721",
     label: "℗ © Rocktopia",
-    artist: "Maya Caccini",
+    artist: "Nielly",
     featuring: []
   },
   {
-    title: "Even After All",
+    title: "LATINAJE",
     year: "Year 03",
-    image: "https://i.imgur.com/uZemeHK.png",
+    image: "https://i.imgur.com/MIhfVRk.jpeg",
+    link: "https://discord.com/channels/1279249850185154704/1279484081792487541/1560480051735167092",
     label: "℗ © Rocktopia",
-    artist: "Logan",
+    artist: "Emília Ramirez",
     featuring: []
   },
   {
@@ -40,11 +42,12 @@ const albumsData = [
     featuring: []
   },
   {
-    title: "Once Upon a Time...",
+    title: "Eletrogasm",
     year: "Year 03",
-    image: "https://i.imgur.com/dudcjbk.png",
+    image: "https://i.imgur.com/nTdddCx.jpeg",
+    link: "https://discord.com/channels/1279249850185154704/1279482057105342567/1557209440548298783",
     label: "℗ © Starlight Studios",
-    artist: "Conan Woolridge",
+    artist: "Aiddan King",
     featuring: []
   },
   {

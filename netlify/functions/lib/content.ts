@@ -13,6 +13,13 @@ export function validUrl(value: unknown) {
 }
 export function validContent(value: any) {
   if (!value || typeof value !== 'object') return false;
+  if (value.news !== undefined) {
+    if (!Array.isArray(value.news) || value.news.length > 30) return false;
+    for (const item of value.news) {
+      if (!item || typeof item.title !== 'string' || !item.title.trim() || item.title.length > 200 || !validUrl(item.cover)) return false;
+      if (item.link && !validUrl(item.link)) return false;
+    }
+  }
   for (const key of ['releasesTitle', 'highlightsTitle', 'labelsTitle', 'footer']) {
     if (typeof value[key] !== 'string' || !value[key].trim() || value[key].length > 250) return false;
   }

@@ -17,8 +17,8 @@ var tabelaDados = [
   },
   {
     posicao: 4,
-    musica: "Even After All",
-    artista: "Logan"
+    musica: "LATINAJE",
+    artista: "Emília Ramirez", link: "https://discord.com/channels/1279249850185154704/1279484081792487541/1560480051735167092"
   },
   {
     posicao: 5,
@@ -27,8 +27,8 @@ var tabelaDados = [
   },
   {
     posicao: 6,
-    musica: "Reflections",
-    artista: "Maya Caccini"
+    musica: "Voz do Brasil",
+    artista: "Nielly", link: "https://discord.com/channels/1279249850185154704/1279482834540826696/1560136549625241721"
   },
   {
     posicao: 7,
@@ -42,8 +42,8 @@ var tabelaDados = [
   },
   {
     posicao: 9,
-    musica: "Once Upon a Time...",
-    artista: "Conan Woolridge"
+    musica: "Eletrogasm",
+    artista: "Aiddan King", link: "https://discord.com/channels/1279249850185154704/1279482057105342567/1557209440548298783"
   },
   {
     posicao: 10,
@@ -88,6 +88,12 @@ function atualizarTabela() {
     posicaoCell.textContent = dado.posicao;
     imagemCell.src = obterImagemPorTituloEArtista(dado.musica, dado.artista);
     musicaCell.textContent = dado.musica;
+    if (dado.link) {
+      const link = document.createElement('a');
+      link.href = dado.link; link.target = '_blank'; link.rel = 'noopener noreferrer';
+      link.textContent = dado.musica;
+      musicaCell.replaceChildren(link);
+    }
     artistaCell.textContent = dado.artista;
   });
 }
