@@ -2,13 +2,15 @@
 
 A static music community website imported from https://github.com/paperrings273/repository (the `master` branch). It includes artist profiles, release listings, highlights, and record labels.
 
-The site uses HTML, CSS, and browser JavaScript, with Bootstrap, jQuery, Swiper, and Font Awesome loaded from CDNs. Netlify serves the existing files directly without a build step. The original Webpack configuration is retained from the upstream repository.
+The site uses HTML, CSS, and browser JavaScript, with Bootstrap, jQuery, Swiper, and Font Awesome loaded from CDNs. Netlify serves the existing files from `dist`, prepared by a dependency-free copy script. The original Webpack configuration is retained from the upstream repository but is not used for publishing.
 
 ## Netlify publishing
 
 The production site at `https://rapstarcommunity.netlify.app/` tracks `main`. Branch preview addresses show separate deployments and do not update production automatically. Merge the desired changes into `main` and confirm that its production deployment succeeds.
 
-`netlify.toml` explicitly uses a no-op publish command and publishes the repository root. This prevents automatic detection from running the legacy `npm run build` script, which references files that are no longer present. A failed production deployment leaves the previous successful version online.
+`netlify.toml` runs `node scripts/prepare-publish.cjs` and publishes `dist`. The script copies the current `index.html` and public assets, without rewriting pages or using the legacy Webpack template (`index-antigo.html`). Server code, dependencies, and internal configuration stay outside the public directory; Netlify bundles Functions separately. The `build` package script uses the same preparation command.
+
+This dedicated output directory replaces publishing the checkout root, which failed in production with `Deploy directory '/opt/build/repo' does not exist`. A failed production deployment leaves the previous successful version online. Verify the resulting production deploy before treating the main domain as updated.
 
 ## Local development
 

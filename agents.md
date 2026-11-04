@@ -9,7 +9,7 @@ This repository contains the Star World Community static website imported from `
 - `artistas-antigo/` contains older artist pages.
 - `css/`, `js/`, `img/`, and `fontes/` contain styles, scripts, images, and fonts.
 - Other HTML pages and JSON datasets support the music catalog.
-- `netlify.toml` publishes the repository root directly with no build command.
+- `netlify.toml` prepares public files with `scripts/prepare-publish.cjs` and publishes `dist`; Functions are bundled separately.
 
 ## Conventions
 
