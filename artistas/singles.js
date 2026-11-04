@@ -111,7 +111,7 @@ const singlesData = [
     title: "In My Eyes",
     year: "Year 02",
     image: "https://i.imgur.com/SjmmVKv.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Eric",
     single: "nao",
     featuring: []
@@ -120,7 +120,7 @@ const singlesData = [
     title: "Too Late",
     year: "Year 02",
     image: "https://i.imgur.com/SjmmVKv.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Eric",
     single: "nao",
     featuring: []
@@ -129,7 +129,7 @@ const singlesData = [
     title: "Midnight Drive",
     year: "Year 02",
     image: "https://i.imgur.com/SjmmVKv.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Eric",
     single: "nao",
     featuring: []
@@ -138,7 +138,7 @@ const singlesData = [
     title: "Bambino",
     year: "Year 02",
     image: "https://i.imgur.com/SjmmVKv.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Eric",
     single: "nao",
     featuring: []
@@ -147,7 +147,7 @@ const singlesData = [
     title: "Die For You",
     year: "Year 02",
     image: "https://i.imgur.com/SjmmVKv.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Eric",
     single: "nao",
     featuring: []
@@ -201,7 +201,7 @@ const singlesData = [
     title: "King Cry-Baby (A-Remix) (feat. Liza & Nate)",
     year: "Year 03",
     image: "https://i.imgur.com/RM6TK6q.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Kadu",
     single: "sim",
     featuring: ["Liza", "Nate"]
@@ -210,7 +210,7 @@ const singlesData = [
     title: "hit-and-run",
     year: "Year 03",
     image: "https://i.imgur.com/wVxKqgv.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Suzy",
     single: "sim",
     featuring: []
@@ -282,7 +282,7 @@ const singlesData = [
     title: "Don't Play Me (feat. Logan)",
     year: "Year 02",
     image: "https://i.imgur.com/SQWX8YB.png",
-    label: "℗ © Illuminati Records",
+    label: "℗ © Empire Music Group",
     artist: "Aria",
     single: "sim",
     featuring: ["Logan"]
@@ -291,7 +291,7 @@ const singlesData = [
     title: "Sweetheart",
     year: "Year 01",
     image: "https://i.imgur.com/o82pNnr.png",
-    label: "℗ © Pacific Records",
+    label: "℗ © Sterling Records",
     artist: "Holligan",
     single: "sim",
     featuring: []
@@ -327,7 +327,7 @@ const singlesData = [
     title: "Young Night (feat. Riley)",
     year: "Year 02",
     image: "https://i.imgur.com/tyNmNHt.png",
-    label: "℗ © Pacific Records",
+    label: "℗ © Sterling Records",
     artist: "Zuri",
     single: "sim",
     featuring: ["Riley"]
@@ -381,7 +381,7 @@ const singlesData = [
     title: "Farewell",
     year: "Year 02",
     image: "https://i.imgur.com/tEUHtTy.png",
-    label: "℗ © Illuminati Records",
+    label: "℗ © Empire Music Group",
     artist: "Aria",
     single: "nao",
     featuring: []
@@ -444,7 +444,7 @@ const singlesData = [
     title: "Late Night Talking (feat. Liz)",
     year: "Year 02",
     image: "https://i.imgur.com/w22xntp.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Eric",
     single: "sim",
     featuring: ["Liz"]
@@ -453,7 +453,7 @@ const singlesData = [
     title: "here's to the nights",
     year: "Year 01",
     image: "https://i.imgur.com/o7RIEal.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Liz",
     single: "sim",
     featuring: []
@@ -507,7 +507,7 @@ const singlesData = [
     title: "Overthinking",
     year: "Year 02",
     image: "https://i.imgur.com/hFoBnej.jpeg",
-    label: "℗ © Pacific Records",
+    label: "℗ © Sterling Records",
     artist: "Harper",
     single: "sim",
     featuring: []
@@ -534,7 +534,7 @@ const singlesData = [
     title: "Stronger Than Love (feat. Trevor)",
     year: "Year 02",
     image: "https://i.imgur.com/aWhaA8L.png",
-    label: "℗ © Illuminati Records",
+    label: "℗ © Empire Music Group",
     artist: "Aria",
     single: "sim",
     featuring: ["Trevor"]
@@ -588,7 +588,7 @@ const singlesData = [
     title: "Set Myself On Fire",
     year: "-",
     image: "https://i.imgur.com/PfZcBlz.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Liz",
     single: "sim",
     featuring: []
@@ -714,7 +714,7 @@ const singlesData = [
     title: "Dilemma (feat. Zara)",
     year: "Year 01",
     image: "https://i.imgur.com/1BYSxa1.png",
-    label: "℗ © Illuminati Records",
+    label: "℗ © Empire Music Group",
     artist: "Aria",
     single: "sim",
     featuring: ["Zara"]
@@ -723,7 +723,7 @@ const singlesData = [
     title: "Boom Boom (feat. Millie & Liza)",
     year: "Year 01",
     image: "https://i.imgur.com/3JncPKv.png",
-    label: "℗ © Illuminati Records",
+    label: "℗ © Empire Music Group",
     artist: "Aria",
     single: "sim",
     featuring: ["Millie", "Liza"]
@@ -732,7 +732,7 @@ const singlesData = [
     title: "Eyes On Me",
     year: "Year 01",
     image: "https://i.imgur.com/FoMPgwM.png",
-    label: "℗ © Illuminati Records",
+    label: "℗ © Empire Music Group",
     artist: "Aria",
     single: "sim",
     featuring: []
@@ -795,7 +795,7 @@ const singlesData = [
     title: "Back To You (Logan Remix)",
     year: "-",
     image: "https://i.imgur.com/8LdVvx7.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Starlights",
     single: "sim",
     featuring: ["Logan"]
@@ -804,7 +804,7 @@ const singlesData = [
     title: "Back To You",
     year: "-",
     image: "https://i.imgur.com/gscGZOi.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Starlights",
     single: "sim",
     featuring: []
@@ -885,7 +885,7 @@ const singlesData = [
     title: "Forbidden",
     year: "Year 01",
     image: "https://i.imgur.com/XEnbAmV.png",
-    label: "℗ © Illuminati Records",
+    label: "℗ © Empire Music Group",
     artist: "Matteo",
     single: "sim",
     featuring: []
@@ -894,7 +894,7 @@ const singlesData = [
     title: "Pleasure Addiction",
     year: "Year 01",
     image: "https://i.imgur.com/LzQProT.png",
-    label: "℗ © Illuminati Records",
+    label: "℗ © Empire Music Group",
     artist: "Matteo",
     single: "sim",
     featuring: []
@@ -903,7 +903,7 @@ const singlesData = [
     title: "What if my thoughts could speak?",
     year: "Year 01",
     image: "https://i.imgur.com/9fKs4HG.png",
-    label: "℗ © Illuminati Records",
+    label: "℗ © Empire Music Group",
     artist: "Matteo",
     single: "sim",
     featuring: []
@@ -975,7 +975,7 @@ const singlesData = [
     title: "Sweethearts",
     year: "-",
     image: "https://i.imgur.com/sIxgav3.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Liza",
     single: "sim",
     featuring: []
@@ -984,7 +984,7 @@ const singlesData = [
     title: "Fantasmagoric Feelings",
     year: "-",
     image: "https://i.imgur.com/9oaSzSe.png",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Liza",
     single: "sim",
     featuring: []
@@ -993,7 +993,7 @@ const singlesData = [
     title: "Stroke",
     year: "-",
     image: "https://i.imgur.com/ImMRtsL.jpeg",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Liza",
     single: "sim",
     featuring: []
@@ -1002,7 +1002,7 @@ const singlesData = [
     title: "Sugar",
     year: "-",
     image: "https://i.imgur.com/RsPKu6x.jpeg",
-    label: "℗ © YG Entertainment",
+    label: "℗ © Joint Nation",
     artist: "Liza",
     single: "sim",
     featuring: []
